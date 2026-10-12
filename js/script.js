@@ -1,3 +1,33 @@
+// ---------- Work-in-progress banner ----------
+(function () {
+  const DISMISS_KEY = 'wipBannerDismissed';
+  let dismissed = false;
+  try { dismissed = localStorage.getItem(DISMISS_KEY) === '1'; } catch (err) {}
+  if (dismissed) return;
+
+  const banner = document.createElement('div');
+  banner.className = 'wip-banner';
+  banner.innerHTML =
+    '<span class="wip-banner-text">&#128679; This website is a work in progress &mdash; some pages and content may be incomplete.</span>' +
+    '<button type="button" class="wip-banner-close" aria-label="Dismiss">&times;</button>';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.appendChild(banner);
+
+    // start off-screen, then animate in on the next frame so the
+    // transition actually plays instead of snapping into place
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => banner.classList.add('wip-banner-visible'));
+    });
+
+    banner.querySelector('.wip-banner-close').addEventListener('click', () => {
+      banner.classList.remove('wip-banner-visible');
+      banner.addEventListener('transitionend', () => banner.remove(), { once: true });
+      try { localStorage.setItem(DISMISS_KEY, '1'); } catch (err) {}
+    });
+  });
+})();
+
 // ---------- Dark mode toggle ----------
 const themeToggle = document.getElementById('themeToggle');
 const rootEl = document.documentElement;
