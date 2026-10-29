@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results | Stuttgart - iGEM 2025</title>
+<link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+<script src="static/tailwind.min.css"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+i[class^="ri-"], i[class*=" ri-"] {
+  font-size: 1.2rem;     
+  line-height: 1;        
+  vertical-align: middle; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+#source8 {
+  white-space: normal;
+}
+
+.page-content {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.sidenav {
+  width: 130px;
+  position: sticky;
+  z-index: 1;
+  top: 110px;
+  left: 20px;
+  padding: 8px 0;
+  border-radius: 12px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+.main {
+}
+
+.gallery-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gallery-col {
+float: center;
+width: 25%;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.gallery-col img {
+width: 100%;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.gallery-col img:hover {
+transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 9999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+margin: auto;
+display: block;
+max-width: 80%;
+max-height: 80%;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+</style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+<!-- Reiter -->
+  <header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+  </a>
+  <nav class="hidden md:flex items-center space-x-8">
+  <a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+  <div class="relative" id="projectDropdown">
+  <button class="text-sky-700 hover:text-sky-500 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+  Project
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+  <a href="project.html" class="block px-4 py-2 text-gray-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+  <a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+  <a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+  <a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+  <a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+  <a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+  <a href="results.html" class="block px-4 py-2 text-sky-700 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+  </div>
+  </div>
+  <div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+  <div class="relative" id="groupsDropdown">
+  <button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+  Team
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+  <a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+  <a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+  <a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+  </div>
+  </div>
+  <a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+  <button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+  Dark Mode
+  </button>
+  </nav>
+  <div class="md:hidden w-10 h-10 flex items-center justify-center">
+  <i class="ri-menu-line ri-lg"></i>
+  </div>
+  </div>
+  </header>
+
+<div class="page-content">
+<aside class="sidenav mt-24 bg-sky-50 dark:bg-black text-gray-900 dark:text-sky-200 outline outline-2 outline-sky-50 dark:outline-black shadow-lg">
+  <h2 class="text-center text-lg font-bold text-gray-900 dark:text-sky-200">Contents</h2>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#proofofconcept">Proof of concept</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#dasgip">Scale-up DASGIP</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#parameters">Optimization - cultivation parameters</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#integration">Optimization - genome integration</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#oxalate">Oxalate analysis</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900 text-xs" href="#chem">Leaching results</a>
+</aside>
+<!-- Überschrift -->
+<div class="main">
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Results</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400">Our objective regarding biotechnology was to engineer an oxalic acid producer that is</p>
+  <ul class="list-inside text-lg text-gray-600 dark:text-gray-400" style="list-style-type: disc;">
+    <li>Safe</li>
+    <li>Easy to handle and</li>
+    <li>Produces high quantities of oxalic acid for bioleaching of PGMs.</li>
+  </ul>
+</div>
+</div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center">
+<h2 id="proofofconcept" class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-28">Proof of concept</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mb-4">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Creating an oxalate producer
+    </h2>
+    </div>
+    <div class="flex flex-col items-start gap-6">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The first big goal was to genetically engineer <i>Corynebacterium glutamicum</i> to produce oxalic acid. In order to achieve this,
+        we introduced the codon-optimized <i>oahA</i>-gene originating from <i>Aspergillus niger</i> into the expression vectors <i>pEKEx2</i> and <i>pPBEx2</i> by DNA assembly using NEB’s assembly protocol.
+        <i>OahA</i> encodes the oxaloacetate acetylhydrolase which converts oxaloacetate into oxlaate and acetate. Since oxaloacetate is a key metabolite in the TCA cycle,
+        it was important to check whether the cells could even survive this interference.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        The two plasmids were transformed into <i>E. coli</i> and subsequently electroporated into <i>C. glutamicum</i>. Colony PCR followed by gel electrophoresis confirmed the successful transformation (Fig. 1).
+      </p>
+    </div>
+    <!-- image -->
+    <figure class="gallery-col w-[80%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/proofofconcept.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 1: Gel electrophoresis of cPCR results. The expected length of positive clones is 1138 bp. The red arrow indicates positive clones.            </figcaption>
+    </figure>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-4">
+      The positive clones were sent for sequencing which confirmed the positive gel electrophoresis results.
+    </p>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4">
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        First cultivation experiment
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 justify-end">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Viability and production-capability of the plasmid-containing mutants <i>C. glutamicum pEKEx2_oahA</i> and <i>C. g. pPBEx2_oahA</i> were tested in a first cultivation:
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        Five 50 mL cultures on CGXII-medium in baffled shake flasks were inoculated with
+      </p>
+      <ul class="list-decimal pl-6 mt-2">
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C.g.</i> wildtype
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C.g. pEKEx2_oahA</i>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C.g. pEKEx2_oahA</i> (+)
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C.g. pPBEx2_oahA</i>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C.g. pPBEx2_oahA</i> (+)
+        </li>
+      </ul>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        and cultivated until growth stagnated. Cultures 3) and 5) were induced with 2 mM IPTG after 3 hours to start oxalate production.
+        Optical density was measured every 1.5 hours and oxalate levels were quantified using a commercial enzymatic oxalate assay kit.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        Results showed that the growth rate of plasmid containing cultures was only slightly decreased in comparison to the wildtype.
+        This prooves viablity and good growth performance on CGXII-medium.
+      </p>
+    </div>
+    <!-- image -->
+    <div class="flex flex-col md:flex-row justify-center items-start gap-8 w-[95%] mx-auto">
+            <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/growthcurve1.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 2: Growth curve of the first cultivation with induction (+) after 3 hours. High variance after 20 hours is probably due to dilution errors.
+            </figcaption>
+            </figure>
+          <figure class="w-[50%] flex flex-col items-center justify-center mx-auto">
+          <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+            Table 1: Growth rates in exponential phase. Induced mutants show slightly decreased values.
+          </figcaption>
+          <table class="text-xs">
+            <thead class="bg-sky-300">
+              <tr>
+                <th class="border px-4 py-2 text-left">culture</th>
+                <th class="border px-4 py-2 text-left">µ<sub>max</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white">
+                <td class="border px-4 py-2">WT</td>
+                <td class="border px-4 py-2">0.43</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pEKEx2</i></td>
+                <td class="border px-4 py-2">0.42</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pEKEx2+</i></td>
+                <td class="border px-4 py-2">0.37</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pPBEx2</i></td>
+                <td class="border px-4 py-2">0.40</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pPBEx2</i></td>
+                <td class="border px-4 py-2">0.38</td>
+              </tr>
+            </tbody>
+          </table>
+          </figure>
+          </div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        As expected, growth rates of induced cultures are lower than those not induced. This is a first hint that oxalate production was
+        indeed induced upon addition of IPTG which increases the metabolic burden. Oxalate quantification unfortunately showed no reliable results.
+      </p>
+      <figure class="gallery-col w-[70%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/oxalatelevels.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 3: Oxalate levels in culture supernatants in µM over time. One extremely high value is not shown (156235,3 µM at <i>pEKEx2_oahA</i>+, 28 h).
+            </figcaption>
+      </figure>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+      Fig. 3 shows that oxalate was produced in the induced cultures but not/only to a low extend in the uninduced controls as well as the wildtype.
+      However, oxalate levels after 28 h in the induced cultures show extremely high variance (156235.3 µM vs. 1239.0 µM for <i>pEKEx2_oahA</i> and <i>pPBEx2_oahA</i>, resprectively).
+      This can only be attributed to errors in measurement, since it is highly unlikely that two plasmids so similar behave so differently at the end of cultivation.
+      In conclusion, oxalate production can be proved qualitatively but no quantitative results are obtained at this point.
+    </p>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Conclusion
+    </h2>
+    </div>
+    <div class="flex items-center gap-6 justify-start">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+          The key findings for this first stage are:
+      </p>
+      <ul class="list-disc pl-6 mt-2">
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          <i>C. g. pEKEx2_oahA</i> and <i>pPBEx2_oahA</i> are not only viable but show excellent growth performance
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Oxalate production is possible by introducing just one new enzyme in <i>C. glutamicum’s</i> metabolism
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Oxalate is exported out of the cells
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Oxalate quantification proves difficult
+        </li>
+      </ul>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        Open questions are:
+      </p>
+      <ul class="list-disc pl-6 mt-2">
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          How much oxalate can be produced?
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          How much oxalate remains intracellular?
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          How can oxalate production be increased?
+        </li>
+      </ul>
+    </div>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 id="dasgip" class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Scale-up DASGIP
+    </h2>
+    </div>
+    <div class="flex items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div class="gallery-col flex-shrink-0 w-[25%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/dasgipreactor.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+    </div>
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        DASGIP bioreactors are stirred-tank reactors with a working volume of 1.5 liters. All reactors were equipped with Rushton turbines.
+        In this experiment, <i>Corynebacterium glutamicum</i>, a model organism commonly employed in bioprocess engineering, was cultivated in six parallel reactors
+        with CGXII medium to examine the impact of oxalate production on bacterial growth kinetics. The wild type was cultivated in three reactors,
+        while the remaining three reactors contained the bacterium with the plasmid <i>pPBEx2_oahA</i> for oxalate production.
+        This plasmid contains a repressor system in which the gene for oxalate production is only transcribed upon addition of IPTG.
+        After 3 hours of cultivation, two <i>pPBEx2_oahA</i> cultures were induced with 2 mM IPTG to investigate the effects of oxalate production on growth,
+        while one wild-type culture was induced with IPTG as a control to assess the effects of the inducer itself on growth.
+        Samples were taken hourly throughout the experiment to determine the OD₆₀₀, biomass dry weight, and oxalate concentration.
+        The experiment was terminated when exhaust gas analysis indicated an increase in O₂ content in the off-gas, signifying that the bacteria no longer
+        consumed the supplied oxygen. This occurred after approximately 10 hours for the wild type and after approximately 14 hours for the plasmid-bearing cultures.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Kinetic and yield parameters of the reactors
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        To quantitatively characterize and compare the growth behavior of the different cultures, the maximum growth rate (µ<sub>max</sub>),
+        the biomass yield on substrate (glucose) (Y<sub><sup>X</sup>&frasl;<sub>Glc</sub></sub>), and the specific glucose uptake rate (q<sub>Glc</sub>) were calculated from the measurement data
+        and are given in the following table.
+      </p>
+      <div class="gallery-col w-[80%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/tabelle-mit-einheiten.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Maximum growth rate (µ<sub>max</sub>)
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        The wild type achieved a maximum specific growth rate of 0.41 h<sup>-1</sup>. The non-induced plasmid-bearing culture exhibited a reduced growth rate of 0.33 h<sup>-1</sup>,
+        representing a 19.51% decrease. The IPTG-induced plasmid cultures displayed a further reduction of 4.88%,
+        corresponding to a maximum specific growth rate of 0.31 h<sup>-1</sup> and thus a total reduction of 24.39% compared to the wild type.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        This reduction can be attributed to the increased metabolic burden imposed by the plasmid. The bacteria must allocate additional
+        energy and resources for plasmid replication and expression of the kanamycin resistance gene encoded on the plasmid, as well as,
+        following IPTG addition, for the expression of the <i>oahA</i> gene responsible for oxalate production.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The IPTG-induced wild-type culture exhibited a growth rate of 0.40 h-1, comparable to that of the non-induced wild type.
+        This indicates that IPTG itself does not exert a significant influence on the growth of <i>C. glutamicum</i>.
+      </p>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 mt-4">
+       Biomass yield per glucose (Y<sub><sup>X</sup>&frasl;<sub>Glc</sub></sub>)
+    </h2>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        During the determination of the biomass yield on glucose, relatively high standard deviations were observed for both the wild type and the plasmid-bearing strain.
+        To assess whether the mean values differ significantly, a Student's t-test was performed. The resulting p-value did not indicate significance,
+        suggesting that the biomass yield on glucose does not differ between the strains. This outcome contrasts with our initial hypothesis that the yield
+        would decrease in the plasmid-bearing strains, as part of the substrate is redirected towards oxalate production.
+        The reason for this is presumably that the amount of oxalate produced by the bacteria is too low to cause a measurable change in biomass substrate yield.
+      </p>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 mt-4">
+      Specific glucose uptake rate (q<sub>Glc</sub>)
+    </h2>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The specific glucose uptake rate was 0.19 <sup>g</sup>&frasl;<sub>(g·h)</sub> for the wild type and 0.14 <sup>g</sup>&frasl;<sub>(g·h)</sub> for the plasmid-bearing cultures,
+        representing a 19% reduction that corresponds to the decreased maximum specific growth rate.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Oxalate Production
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        To measure oxalate production in samples from Reactor 1 and Reactor 3, an enzymatic oxalate assay kit from Sigma-Aldrich (MAK315)  was used.
+        This assay employs HRP and OX enzymes to catalyze a colorimetric reaction, with color intensity being directly proportional to oxalate concentration.
+        The optical density values of samples from Reactor 1 (Fig. 4)  demonstrate qualitatively that bacteria harboring the induced <i>pEPEX2_oahA</i> plasmid exhibited
+        increasing oxalate production over the course of cultivation. No oxalate production was detected in the wild-type strain.
+      </p>
+    </div>
+      <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/oxalatproduktion.webp"
+            alt="Scale-up growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 4: Optical density values of samples from Reactor 1 show oxalate production by the <i>pEPEX2_oahA</i> containing bacteria.
+            </figcaption>
+      </figure>
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        Due to an imprecise standard curve and the limited number of samples that could be analyzed with this assay, duplicates or triplicates were not possible,
+        and the quantitative results lack validity. Only a rough estimate can be provided: approximately 582.8 µM oxalate was produced after 15 hours.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        Due to the high costs, limited sample numbers, and unsatisfactory results in the evaluation of this and previous cultivation experiments,
+        the development of an in-house oxalate assay was initiated concurrently.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Conclusion
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        The results of this bioreactor cultivation experiment provide clear evidence for the metabolic cost of oxalate production in <i>C. glutamicum</i>.
+        Plasmid-bearing strains showed a 19.51% reduction in maximum specific growth rate and a 19% decrease in specific glucose uptake rate compared to the wild type.
+        Notably, IPTG induction further reduced the growth rate by 4.88%, indicating that active oxalate production imposes an additional burden beyond plasmid maintenance.
+        The cell dry weight over time, depicted in the following figure, visually confirms this growth impairment, with plasmid-bearing cultures requiring
+        approximately 4 additional hours to reach stationary phase. The absence of a significant change in biomass yield on glucose suggests that the amount of oxalate secreted by the bacterium was too low to exert a measurable effect.
+        These findings provide a quantitative baseline while revealing substantial optimization potential for future strain engineering to enhance oxalate production.
+      </p>
+      <div class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/growthcurve-largescale.webp"
+            alt="Scale-up growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 5: The growth curve of the DASGIP experiment shows decreased growth for oxalate producing variants.
+            </figcaption>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <div>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    <h2 id="parameters" class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+        Optimization
+    </h2>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    </div>
+    <div class="flex flex-col items-center gap-6 justify-end">
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Cultivation parameters
+    </h2>
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        To elevate oxalate production, different induction times and inducer concentrations were tested to find the optimal conditions.
+        However, results were inconclusive (data not shown) and need to be repeated in future experiments.
+      </p>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    <div>
+    <h2 id="integration" class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+        Genome integration
+    </h2>
+    </div>
+    <div class="flex items-center gap-6 justify-start">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        Another approach to enhance oxalate production is to create a more stable production strain by integrating <i>oahA</i> into the genome.
+        This way, no more antibiotics are needed for prevention of plasmid-loss. If integration is successful, the next step is to introduce
+        the plasmid again to see how the combination of plasmid and genome integrated <i>oahA</i> influences the production.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+        For genome integation, we chose <i>pK19mobsacB</i> as the integration vector. <i>pK19</i> contains an origin of replication for <i>E. coli</i>,
+        which means that it can be amplified in <i>E. coli</i> for subsequent integration in <i>C. glutamicum‘s</i> genome via 2 step homologue recombination.
+        After extensive literature research, we identified the region between <i>cg3228</i> and <i>IldA</i> as a suitable locus [<a href="#lange" class="hover:underline">Lange et al., 2017</a>].
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Three different attempts were carried out:
+      </p>
+      <ul class="list-decimal mt-2 mb-2 pl-6">
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Integration of <i>oahA</i>
+          <figure class="gallery-col w-[40%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/intoaha.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 6: Integration of <i>oahA</i> into <i>cg3228/IldA</i>.
+            </figcaption>
+          </figure>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Integration of <i>oahA</i> with addition of a <i>lacI</i> repressor system
+          <figure class="gallery-col w-[40%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/secondintegration.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 7: Integration of <i>oahA</i> with <i>lacI</i> repressor system into <i>cg3228/IldA</i>.
+            </figcaption>
+          </figure>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Integration of <i>oahA</i> with <i>lacI</i> repressor system and terminator
+          <figure class="gallery-col w-[80%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/fourthintegration.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+               Figure 8: Integration of <i>oahA</i> with <i>lacI</i> repressor system and terminator into <i>cg3228/IldA</i>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+      <ul class="list-decimal pl-6 mb-2 mt-4">
+        <li class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+          Integration of <i>oahA</i>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+           In the first trial, <i>oahA</i> with <i>tac</i> promoter and <i>lac</i> operator was assembled into <i>pK19</i> together with Upstream and
+            Downstream adapters homologue to the <i>C. glutamicum</i> genome integration locus flanks.
+          </p>
+          <figure class="gallery-col w-[60%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/pk19oaha.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 9: Integration vector <i>pK19_oahA</i> containing <i>oahA</i> under <i>Ptac</i> and with <i>lac</i> operator. Upstream and Downstream flanking regions are homologue
+              to the integration locus in the <i>C. g.</i> genome. <i>pK19</i> contains <i>SacB</i> and <i>KanR</i> for two-step selection.
+            </figcaption>
+          </figure>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+            After assembly, <i>pK19_oahA</i> was introduced into <i>E. coli</i> via heat shock. After selection on Kan50 agar plates, colonies were tested with
+            cPCR for correctly assembled plasmids and sent for sequencing. However, no positive clones could be confirmed.
+          </p>
+          <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/sequencing-firstintegration.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 10: Sequencing results aligned with the expected sequence. Each line shows one tested sequence. Red indicates matches, blank indicates mismatches/missing basepairs.
+            </figcaption>
+          </figure>
+          <p class="text-gray-900 dark:text-sky-200 text-justify">
+            The sequencing results all have in common that no tested sequence contains a functional tac promoter. This led us to conclude that
+            the plasmid is too high of a burden for <i>E. coli</i> if not regulated since the expressed <i>oahA</i> gene constantly removes oxaloacetate from the TCA cycle.
+            This means that no cell containing the whole <i>Ptac-oahA</i> sequence could survive which is exactly what we see in the sequencing results.
+          </p>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify">
+          Integration of <i>oahA</i> with addition of a <i>lacI</i> repressor system
+          <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2">
+            To solve this problem, we decided to try integrating an additional <i>lacI</i>-repressor system alongside the <i>oahA</i> and <i>Ptac</i> to inhibit constant <i>OAH</i>-expression.
+            Without addition of the inducer IPTG, the repressor system consisting of <i>lacI</i>, its promoter <i>lacIq</i> and the <i>lac</i> operator should inhibit the expression of <i>oahA</i>.
+            LacI is a DNA binding protein which binds to the <i>lac</i> operator and inhibits transcription of subsequent genes [<a href="#bell" class="hover:underline">Bell, Lewis, 2001</a>].
+          </p>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+            After assembly, the reactions were directly transformed into <i>E. coli</i> by heat shock. After selection on agar plates containing Kanamycin overnight,
+            the surviving colonies were checked with colony PCR and subsequent gel electrophoresis. Unfortunately, no positive colonies had formed:
+          </p>
+          <figure class="gallery-col w-[70%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/gel-thirdintegration.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 11: cPCR results. Expected size of the correctly assembled fragment was 4170 bp. However none of the 40 tested colonies contained the right fragment; most  had a size of 500-1000 bp.
+            </figcaption>
+          </figure>
+          <p class="text-gray-900 dark:text-sky-200 text-justify">
+            The results proved our previous theory wrong; integrating a repressor system alone does not lead to survival of correctly transformed colonies.
+            We suspected that one cause could be that we did not add a terminator to our <i>oahA</i> gene. To eliminate this problem we decided to try including the T7 terminator and see how this influences colony formation.
+          </p>
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+          Integration of <i>oahA</i> with <i>lacI</i> repressor system and terminator
+          <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2">
+            To design a functional integration vector, we decided to add the <a href="https://parts.igem.org/Part:BBa_B0012" class="hover:underline">T7 terminator</a>
+            to our oahA unit. The terminator is supposed to end
+            transcription after reaching the end of the protein coding sequence <i>oahA</i> which should decrease energy demand.
+          </p>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+            This time, the whole fragment was ordered from TwistBiosciences to eliminate any assembly mistakes. The fragment was amplified
+            using Q5-PCR and cloned into the linearized <i>pK19</i> vector. This time, <i>pK19</i> was linearized with HindIII and BamHI.
+          </p>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mb-2">
+            The assembled <i>pK19_lacI_oahA_TE</i> was tested by transforming it into <i>E. coli</i> and testing for positive colonies with cPCR after selection on Kan50 agar plates.
+            However, the gel electrophoresis of the PCR-products showed no positive results.
+          </p>
+          <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/gel-fourthintegration.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 12: Results of <i>E. coli pK19_lacI-oahA_TE</i> cPCR. Expected length was 3642 bp -> no positive clones.
+            </figcaption>
+          </figure>
+          <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+            We learned that adding a terminator alongside the lac-repressor system did not help with decreasing the metabolic burden on <i>E. coli</i>.
+            After some further literature research, we found that a possible problem could be the high copy number of <i>pK19</i> (~500).
+            In comparison, the expression vector <i>pEKEx2</i> we used in previous experiments only has a copy number of 30.
+            Possible solutions could be choosing a different integration vector with medium copy number for <i>E. coli</i> or directly electroporating
+            the assembly product into <i>C. glutamicum</i> for direct genome integration. Although not optimal due to low plasmid concentrations,
+            this would eliminate the need for a plasmid that is suitable not only for <i>C. glutamicum</i> but also for <i>E. coli</i>.
+            This will be tested in further experiments.
+          </p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    </div>
+    <div class="flex flex-col items-center gap-6 justify-end">
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Conclusion
+    </h2>
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The failed genome integration remains to be solved. Possible solutions are:
+      </p>
+      <ul class="list-disc pl-6 mb-2 mt-4">
+        <li class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+          Using a different integration vector with lower copy number
+        </li>
+        <li class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+          Directly electroporating the integration vector in <i>C. glutamicum</i>
+        </li>
+      </ul>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2">
+        Cultivation parameters need to be further tested to increase oxalate production. Apart from inducer concentration and induction time,
+        we want to test different supplements (e.g. ethanol) and their influence on production.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Our main problem however is oxalate quantification. With the commercial oxalate assay kit, no reliable results could be obtained.
+        To address this issue, we tried measuring oxalate using HPLC and even designed our own oxalate assay with a precipitation based approach.
+      </p>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-4 flex flex-col">
+    <div>
+    <h2 id="oxalate" class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 scroll-mt-28">
+       Oxalate measurements
+    </h2>
+    </div>
+    <div class="flex flex-col items-center gap-6 mx-8 mb-8">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The graph displayed below
+        illustrates a representative test using standards with known oxalate concentrations created in CGXII
+        medium as their matrix. It compares both the expected values with those measured by our RevION
+        assay.
+      </p>
+      <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+      <img
+      src="assets/teams/5829/images/oxalate-calibrationcurve.avif"
+      class="w-full h-full object-cover rounded-md"
+      />
+      <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+        Figure 13: The calibration curve of our RevION assay matches the expected curve closely with an R2 value of 0,9692.
+      </figcaption>
+    </figure>
+    <p class="text-gray-900 dark:text-sky-200 text-justify">
+        The mean absolute error (MAE) of this calibration set was approximately 6,82%, which is an excellent outcome for the first
+        successful validation. Moreover, the calibration equation achieved an R2 value of 0,9692, indicating
+        that the model describes oxalate concentrations with a precision of roughly 97% relative to the
+        measured absorbance data.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center">
+<h2 id="chem" class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-28">Leaching results</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mb-4">
+    <div class="flex flex-col items-start gap-6">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Our leaching experiments were performed under three different conditions A, B and C with oxalate as the leaching agent.
+        After the leaching, the three samples and a reference samples as standard were sent to the labs of the polymer chemistry department of the university
+        and analyzed there via ICP.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        ICP, short for Inductively Coupled Plasma, is an analytical method which relies on spectroscopy to detect several metals of interest at once,
+        like the PGMs rhodium, platinum and palladium in our case.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        For doing so, the samples are placed into a plasma flame, which is very hot and electrically conductive. The heat disrupts all chemical bonds
+        and so isolating the single molecules. So the PGM oxalate complexes are destroyed and the PGMs are then free to be detected.
+        For detection and quantification, the PGMs are analyzed via mass spectroscopy.
+      </p>
+    <!-- image -->
+    <div class="flex flex-col md:flex-row justify-center items-start gap-8 w-[95%] mx-auto">
+    <figure class="w-[50%] flex flex-col items-center justify-center mx-auto">
+          <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+            Table 2: Different leaching conditions for the samples.
+          </figcaption>
+    <table class="text-xs mt-12">
+            <thead class="bg-sky-300">
+              <tr>
+                <th class="border px-4 py-2 text-left">Sample</th>
+                <th class="border px-4 py-2 text-left">A</th>
+                <th class="border px-4 py-2 text-left">B</th>
+                <th class="border px-4 py-2 text-left">C</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white">
+                <td class="border px-4 py-2">Leaching duration [h]</td>
+                <td class="border px-4 py-2">5</td>
+                <td class="border px-4 py-2">6</td>
+                <td class="border px-4 py-2">8</td>
+              </tr>
+            </tbody>
+          </table>
+    </figure>
+    <figure class="gallery-col w-[60%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/pgmmeasurement.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+              Figure 13: PGM measurement of the three samples and reference via ICP-OES in <sup>mg</sup>&frasl;<sub>L</sub>
+            </figcaption>
+    </figure>
+    </div>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-4">
+      In the reference sample, 0,02 <sup>mg</sup>&frasl;<sub>L</sub> rhodium, 0,94 <sup>mg</sup>&frasl;<sub>L</sub> platinum and 0,19 <sup>mg</sup>&frasl;<sub>L</sub> palladium were detected. That means a weight percentage
+      of 0,03 of rhodium, 1,35 of platinum and 0,27 of palladium.
+    </p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-2">
+      In the sample treated under condition A, 0 <sup>mg</sup>&frasl;<sub>L</sub> rhodium and palladium and 0,13 <sup>mg</sup>&frasl;<sub>L</sub> platinum were detected, which matches a weight percentage of 0,16 of platinum.
+    </p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-2">
+      In both samples treated under conditions B and C, 0 <sup>mg</sup>&frasl;<sub>L</sub> rhodium and palladium and 0,03 <sup>mg</sup>&frasl;<sub>L</sub> platinum were detected,
+      which matches in both conditions a weight percentage of 0,04 of platinum.
+    </p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-2">
+      Statistical analysis of the results revealed for all three conditions revealed a standard error of around 0,02 and a r-value of nearly one.
+    </p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify items-start mt-2">
+      Regarding our results so far, the need for further optimization of our experimental set-up becomes obvious. What immediately catches the attention is that for every condition,
+      only one experiment and so one analysis has been performed. This of course makes our results look vague and unproven.
+      In the time given, we couldn't perform more experiments. In the future, we will conduct more experiments and together with our consultants in the
+      chemistry department improve our experimental set-up. We want to extend our set-up to specifically detect rhodium, palladium and other PGMs
+      and to improve our leaching and analysis of each PGM.
+    </p>
+    </div>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4">
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Referenzen-->
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+  <div class="container mx-auto">
+    <div class="flex justify-center relative">
+      <div class="w-[95%] bg-white dark:bg-black shadow-lg p-6 flex items-center gap-6 rounded-lg">
+        <div>
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-sky-200 mb-4">
+        References
+        </h2>
+          <p id="lange" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          1. Lange, J. et al. (2018). Harnessing novel chromosomal integration loci to utilize an organosolv-derived hemicellulose fraction for isobutanol production with engineered <i>Corynebacterium glutamicum</i>. Microb Biotechnol., 11(1), 257-263. URL: <a href="https://doi.org/10.1111/1751-7915.12879" target="_blank">https://doi.org/10.1111/1751-7915.12879</a>
+          </p>
+          <p id="bell" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          2. Bell, L. (2001). The Lac repressor: a second generation of structural and functional studies. Current Opinion in Structural Biology, 11, 1, 19-25. URL: <a href="https://doi.org/10.1016/S0959-440X(00)00180-9" target="_blank">https://doi.org/10.1016/S0959-440X(00)00180-9</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Links -->
+<div>
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+</a>
+<p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+<div class="flex space-x-4">
+<a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+</a>
+<a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+</a>
+</div>
+</div>
+<!-- Quick links -->
+  <div>
+  <h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+  <ul class="space-y-3">
+  <li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+  <li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+  <li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Ladocumentation</a></li>
+  <li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+  <li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Member</a></li>
+  <li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+  </ul>
+  </div>
+<!-- Kontakt -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+<ul class="space-y-3">
+<li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Datenschutz -->
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+</div>
+</div>
+</footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+const images = document.querySelectorAll('.gallery-col img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox if clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+    }
+  });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+
+    let content = document.querySelector(".content");
+    let preview = document.querySelector(".preview");
+    const clickme = document.getElementById("clickme");
+
+    preview.addEventListener("click", () => {
+      content.classList.toggle("hidden");
+      clickme.classList.toggle("hidden");
+    });
+
+    let content2 = document.querySelector(".content2");
+    let preview2 = document.querySelector(".preview2");
+    const clickme2 = document.getElementById("clickme2");
+
+    preview2.addEventListener("click", () => {
+      content2.classList.toggle("hidden");
+      clickme2.classList.toggle("hidden");
+    });
+
+
+    const colonies = document.querySelectorAll(".colony");
+    const infoBox = document.getElementById("info-box");
+    const colonyName = document.getElementById("colony-name");
+    const colonyInfo = document.getElementById("colony-info");
+
+    let infoBoxOpen = false;
+    colonies.forEach(colony => {
+    colony.addEventListener("click", () => {
+        const name = colony.dataset.name;
+        const info = colony.dataset.info;
+        colonyName.textContent = name;
+        colonyInfo.textContent = info;
+        infoBox.classList.remove("hidden");
+        infoBoxOpen = true;
+        event.stopPropagation();
+    });
+    });
+    function closeInfo() {
+    infoBox.classList.add("hidden");
+    infoBoxOpen = false;
+    }
+    document.addEventListener("click", (event) => {
+    if (
+        infoBoxOpen &&
+        !infoBox.contains(event.target) &&
+        !event.target.classList.contains("colony") &&
+        !event.target.closest("#darkToggle")
+    ) {
+        closeInfo();
+    }
+    });
+
+    </script>
+</body>
+</html>

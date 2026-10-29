@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education | Stuttgart - iGEM 2025</title>
+<link rel="icon" type="image/jpeg" href="assets/teams/5829/images/logo-icon.webp">
+<script src="static/tailwind.min.css"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+i[class^="ri-"], i[class*=" ri-"] {
+  font-size: 1.2rem;     
+  line-height: 1;        
+  vertical-align: middle; 
+}
+
+body {
+font-family: 'Inter', sans-serif;
+}
+
+.page-content {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.sidenav {
+  width: 130px;
+  position: sticky;
+  z-index: 1;
+  top: 120px;
+  left: 20px;
+  padding: 8px 0;
+  border-radius: 12px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+.main {
+}
+
+.row::after {
+content: "";
+display: table;
+clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.gallery-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gallery-col {
+float: left;
+width: 25%;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.gallery-col img {
+width: 100%;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.gallery-col img:hover {
+transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 9999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+margin: auto;
+display: block;
+max-width: 80%;
+max-height: 80%;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.flip-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Flip box base styles */
+.flip-box {
+  background-color: transparent;
+  width: 214px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 15px;
+  overflow: visible;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Horizontal flip */
+.flip-horizontal:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Vertical flip */
+.flip-vertical:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+/* Front and back faces */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 20px;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+}
+
+.flip-vertical .flip-box-back {
+  transform: rotateX(180deg);
+}
+</style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+<!-- Reiter -->
+<header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+<div class="relative" id="projectDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+Project
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+<a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+<a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+<a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+<a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+<a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+<a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+<a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+</div>
+</div>
+<div class="relative" id="engagementDropdown">
+<button class="text-sky-700 hover:text-sky-900 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-sky-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+<div class="relative" id="groupsDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+Team
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+<a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+<a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+<a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+</div>
+</div>
+<a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+<button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+Dark Mode
+</button>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+
+<div class="page-content">
+<aside class="sidenav mt-24 bg-sky-50 dark:bg-black text-gray-900 dark:text-sky-200 outline outline-2 outline-sky-50 dark:outline-black shadow-lg">
+  <h2 class="text-center text-lg font-bold text-gray-900 dark:text-sky-200">Contents</h2>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900" href="#tagderwissenschaft">Tag der Wissenschaft</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900" href="#schools">School visits</a>
+</aside>
+
+<!-- Überschrift -->
+<div class="main">
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Education</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 text-justify">
+    Education is powerful. That's why bringing attention to the current issues in the PGM mining and
+    recycling industry is just as important as the lab work for the project. Read about the amazing
+    opportunities we had to show people the importance of this issue, iGem, and synthetic biology as a whole below.
+</p>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 id="tagderwissenschaft" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 py-12 scroll-mt-28">Tag der Wissenschaft</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Why did we choose Tag der Wissenschaft to teach about our project?
+    </h2>
+    </div>
+    <div class="flex items-center gap-6">
+    <!-- image -->
+    <div class="gallery-col w-[30%] flex-shrink-0 mt-2" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/tagderwissenschaftstand.webp"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+          The <strong>Tag der Wissenschaft</strong> takes place once a year at the University of Stuttgart and attracts a wide audience:
+          families, children, teenagers, prospective students, and the general public.
+          With more than <strong>270 hands-on stations, talks, and exhibits</strong> from all areas of science and research,
+          the event is designed to make science tangible and accessible for everyone.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+          Having our own booth at this event gave us the <strong>perfect platform to connect with people from many different backgrounds.</strong>
+          Our goal was to use our project to <strong>share the fascination of synthetic biology,</strong> show how research can help shape the future,
+          and spark curiosity across generations. Our <strong>interactive stations</strong> invited playful exploration and highlighted
+          that science is more than theory – it has the power to address real challenges and make a tangible impact.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white">Our core message</h2>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    <div class="flex items-center gap-6 justify-end">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+          At our booth, we wanted to show that <strong>synthetic biology is not an abstract laboratory concept, but something
+          everyone can relate to.</strong> With hands-on activities and playful learning, we invited visitors to rethink how
+          they see biology and bacteria.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4 mb-4">
+          <strong>Key takeaways:</strong>
+      </p>
+      <ul class="list-none space-y-2 text-gray-900 dark:text-sky-200 text-justify">
+          <li class="before:content-['🧬'] before:mr-2"><strong>Biology is exciting and powerful</strong> –
+          it sparks creativity and can drive real change.
+          </li>
+          <li class="before:content-['🦠'] before:mr-2"><strong>Not all bacteria are harmful</strong> – many are beneficial,
+              and synthetic biology allows us to unlock their potential.
+          </li>
+          <li class="before:content-['🌍'] before:mr-2"><strong>Synthetic biology opens doors to solutions</strong> – from
+              sustainability and medicine to protecting our environment.
+      </ul>
+    </div>
+    <!-- image -->
+    <div class="gallery-col flex-shrink-0 w-[25%]" onClick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/tdwprep.webp"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+  </div>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+  </div>
+  </div>
+
+
+<div class="flex justify-center">
+<div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">Stations of the booth</h2>
+    </div>
+    <p class="text-xl text-gray-900 dark:text-sky-200 text-center mb-2">Click through the stations to find out more!</p>
+<div class="row">
+<div class="h-[130px] column bg-indigo-300 dark:bg-indigo-600 hover:bg-green-600 dark:hover:bg-green-300 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('b1');">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="absolute inset-0 w-full h-[90%] top-[5%] opacity-70" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="175.85" y="265.257" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 584.2336 337.5442)" style="fill:#146A8A;" width="92.718" height="49.028"></rect> <polygon style="fill:#F7B93F;" points="184.599,285.028 8.171,461.456 29.357,482.642 125.271,402.128 205.785,306.215 "></polygon> <rect x="3.405" y="390.04" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 505.1665 600.7956)" style="fill:#F79A30;" width="249.499" height="29.962"></rect> <path style="fill:#82C8DB;" d="M238.094,52.798c-61.057,61.057-61.057,160.05,0,221.108l126.07-95.037l95.038-126.071 C398.145-8.26,299.151-8.26,238.094,52.798z"></path> <path style="fill:#62B3CD;" d="M459.202,52.798L238.094,273.906c61.057,61.057,160.05,61.057,221.108,0 C520.259,212.848,520.259,113.855,459.202,52.798z"></path> <path style="fill:#9EF3D3;" d="M428.388,83.612L268.911,243.089c44.036,44.036,115.44,44.036,159.477,0 C472.425,199.051,472.425,127.648,428.388,83.612z"></path> <path style="fill:#C7FFEA;" d="M428.388,83.612c-44.036-44.036-115.44-44.036-159.477,0 c-44.034,44.034-44.036,115.433-0.007,159.471c32.299,32.299,94.183,22.78,138.219-21.257 C451.162,177.788,460.681,115.904,428.388,83.612z"></path> <path d="M463.93,48.07c-64.097-64.094-168.387-64.091-232.482,0c-55.982,55.982-63.064,142.627-21.254,206.373l-22.867,22.867 c-0.868-0.307-1.788-0.478-2.726-0.478c-2.167,0-4.246,0.861-5.778,2.393L2.393,455.652c-3.191,3.192-3.191,8.365,0,11.557 l42.398,42.398c1.532,1.532,3.611,2.393,5.778,2.393c2.167,0,4.246-0.861,5.778-2.393l176.428-176.428 c2.301-2.301,2.934-5.63,1.916-8.506l22.866-22.867c27.253,17.875,58.692,26.818,90.131,26.818 c42.096,0,84.192-16.024,116.24-48.071C528.023,216.457,528.023,112.166,463.93,48.07z M50.569,492.272L19.728,461.43 l164.871-164.871l30.841,30.842L50.569,492.272z M223.702,312.549l-24.252-24.252l20.502-20.502 c3.571,4.402,7.4,8.663,11.496,12.757c4.094,4.094,8.354,7.923,12.756,11.494L223.702,312.549z M452.372,268.997 c-57.722,57.724-151.646,57.723-209.37,0c-57.723-57.723-57.723-151.647,0-209.369c28.866-28.865,66.769-43.292,104.686-43.292 c37.907,0,75.827,14.434,104.684,43.292C510.095,117.35,510.095,211.273,452.372,268.997z"></path>
+    <path d="M332.513,60.936c4.467-0.645,7.565-4.79,6.92-9.256c-0.646-4.468-4.796-7.565-9.256-6.92 c-25.837,3.733-49.321,15.533-67.913,34.126c-18.515,18.515-30.294,41.997-34.062,67.906c-0.649,4.466,2.445,8.613,6.91,9.262 c0.399,0.059,0.795,0.086,1.186,0.086c3.992,0,7.485-2.93,8.077-6.997c3.258-22.396,13.439-42.695,29.446-58.701 C289.899,74.364,310.194,64.161,332.513,60.936z"></path> <path d="M362.862,60.936c17.064,2.466,33.384,9.224,47.194,19.546c1.469,1.098,3.184,1.627,4.885,1.627 c2.488,0,4.946-1.132,6.551-3.279c2.702-3.614,1.962-8.735-1.653-11.437c-15.991-11.953-34.886-19.778-54.642-22.632 c-4.456-0.65-8.611,2.451-9.256,6.92C355.299,56.147,358.395,60.291,362.862,60.936z"></path> <path d="M421.557,238.179c-19.731,19.73-45.967,30.597-73.87,30.597s-54.137-10.867-73.869-30.597 c-3.19-3.19-8.364-3.191-11.556,0.001c-3.191,3.191-3.191,8.365,0.001,11.556c22.818,22.817,53.156,35.383,85.423,35.383 c32.268,0,62.606-12.566,85.424-35.383c3.192-3.191,3.192-8.365,0.001-11.556C429.922,234.99,424.748,234.989,421.557,238.179z"></path> </g></svg>
+  <span class="relative z-10 text-white font-bold text-xxl">1</span>
+</div>
+<div class="h-[130px] column bg-sky-600 dark:bg-sky-300 hover:bg-green-600 dark:hover:bg-green-300 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('b2');">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="absolute inset-0 w-full h-[90%] top-[5%] opacity-70" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#F0AEB0;" points="42.837,446.269 8.46,487.915 23.644,502.979 65.614,468.863 77.33,434.461 "></polygon> <polygon style="fill:#E99398;" points="175.252,314.749 42.837,446.269 65.614,468.863 198.029,337.345 "></polygon> <polygon style="fill:#F7CAC9;" points="489.048,58.314 443.416,103.946 409.729,70.413 455.439,24.858 "></polygon> <polygon style="fill:#F0AEB0;" points="270.471,295.842 197.932,367.934 182.465,352.59 182.527,352.528 239.597,265.093 "></polygon> <polygon style="fill:#F7CAC9;" points="255.003,280.499 182.527,352.528 182.465,352.59 144.651,315.085 217.197,242.985 "></polygon>
+    <path style="fill:#941108;" d="M404.864,41.699c0.008-0.008-30.643-30.412-30.643-30.412L178.805,235.59l15.321,15.198 l45.409,45.055l0.093-0.093l120.097-89.285L449.449,85.93C449.449,85.93,404.872,41.691,404.864,41.699z"></path>
+    <polygon style="fill:#5A0A08;" points="504.125,140.174 481.015,163.097 449.757,131.839 262.737,318.859 239.536,295.842 239.628,295.75 449.449,85.93 "></polygon> <path d="M341.125,159.97c-3.203,3.179-3.224,8.351-0.046,11.554c1.597,1.611,3.698,2.416,5.8,2.416c2.081,0,4.161-0.79,5.754-2.37 l59.409-58.944c3.203-3.179,3.223-8.351,0.046-11.554c-3.179-3.204-8.352-3.223-11.555-0.046L341.125,159.97z"></path> <path d="M509.584,133.239l-42.433-42.101l20.227-20.07l9.688,9.646c1.594,1.587,3.68,2.381,5.765,2.381 c2.096,0,4.193-0.802,5.789-2.405c3.184-3.198,3.173-8.371-0.024-11.554l-14.876-14.813c-0.158-0.191-0.322-0.379-0.5-0.558 c-0.207-0.209-0.424-0.403-0.647-0.585L444.431,5.242c-3.196-3.182-8.37-3.174-11.554,0.025c-3.184,3.198-3.173,8.371,0.024,11.554 l9.617,9.577l-20.309,20.15L410.38,34.811c-0.001-0.001-0.001-0.001-0.002-0.002c-0.001-0.001-0.002-0.002-0.003-0.002 L379.685,4.355c-1.604-1.59-3.787-2.43-6.051-2.365c-2.257,0.082-4.38,1.095-5.863,2.797L172.355,229.082 c-2.829,3.248-2.652,8.133,0.406,11.167l15.273,15.153c0.001,0.001,0.002,0.002,0.002,0.003c0.001,0.001,0.002,0.002,0.004,0.003 l1.864,1.85l-51.29,50.89c-1.547,1.534-2.416,3.622-2.416,5.8c0,2.178,0.869,4.266,2.415,5.8l9.345,9.272L36.792,439.334 c-0.192,0.19-0.374,0.389-0.546,0.598L1.869,481.579c-2.689,3.257-2.451,8.026,0.547,11.001l15.185,15.063 c1.585,1.572,3.666,2.37,5.755,2.37c1.819,0,3.644-0.605,5.152-1.83l41.97-34.114c0.209-0.17,0.411-0.351,0.601-0.541 l111.253-110.401l9.554,9.479c1.593,1.58,3.673,2.37,5.755,2.37c2.081,0,4.161-0.791,5.754-2.37l51.383-50.98l1.911,1.897 c1.593,1.58,3.673,2.37,5.754,2.37s4.161-0.791,5.754-2.37l182-180.575l24.894,24.699c3.185,3.159,8.323,3.159,11.509,0 l22.986-22.807c1.546-1.534,2.415-3.622,2.415-5.8C512,136.861,511.13,134.773,509.584,133.239z M454.097,37.927l21.702,21.611 l-20.248,20.091L433.81,58.058L454.097,37.927z M59.857,461.644l-35.96,29.229l-4.68-4.642l29.372-35.584l110.967-110.119 l11.176,11.089L59.857,461.644z M197.64,355.295l-9.492-9.418c-0.005-0.005-0.01-0.012-0.015-0.017 c-0.008-0.008-0.016-0.014-0.024-0.022l-32.142-31.89l45.536-45.18l41.674,41.347L197.64,355.295z M480.844,150.335l-24.893-24.699 c-3.185-3.159-8.325-3.159-11.509,0L262.443,306.211l-57.002-56.555l156.94-155.602c3.204-3.178,3.226-8.35,0.049-11.554 c-3.178-3.205-8.35-3.227-11.555-0.05L193.841,238.145l-4.135-4.103L374.363,22.094l18.614,18.468l-26.692,26.482 c-3.203,3.179-3.223,8.351-0.046,11.554c1.597,1.611,3.698,2.416,5.8,2.416c2.081,0,4.161-0.79,5.754-2.37l26.783-26.573 l87.652,86.966L480.844,150.335z"></path> </g></svg>
+    <span class="relative z-10 text-white font-bold text-xxl">2</span>
+</div>
+<div class="h-[130px] column bg-indigo-300 dark:bg-indigo-600 hover:bg-green-600 dark:hover:bg-green-300 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('b3');">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="absolute inset-0 w-full h-[90%] top-[5%] left-[7%] opacity-70" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="337.702" y="8.17" style="fill:#4FC297;" width="65.362" height="43.574"></rect> <path style="fill:#6DDEB4;" d="M209.157,51.745l-40.306,447.096c4.662,3.159,10.294,4.989,16.34,4.989 c13.65,0,25.11-9.336,28.356-21.972l47.899-186.695V51.745H209.157z"></path> <path style="fill:#9EF3D3;" d="M209.157,51.745l-17.759,354.123l-6.263,59.353l-4.268,16.637 c-1.808,7.037-6.155,13.04-12.016,16.983c-5.861-3.943-10.207-9.946-12.016-16.983l-47.9-186.695V51.745H209.157z"></path> <polygon style="fill:#FFFFFF;" points="217.328,51.745 153.055,51.745 153.055,173.889 185.191,211.472 217.328,173.889 "></polygon> <polygon style="fill:#C7FFEA;" points="152.511,173.454 152.511,292.398 185.191,411.342 217.872,292.398 217.872,173.454 "></polygon> <path d="M424.851,43.574h-13.617V8.17c0-4.513-3.657-8.17-8.17-8.17h-65.362c-4.513,0-8.17,3.657-8.17,8.17v35.404H87.149 c-4.513,0-8.17,3.657-8.17,8.17s3.657,8.17,8.17,8.17h13.617v235.248c0,0.685,0.086,1.367,0.256,2.031l47.898,186.69 C153.169,500.439,168.084,512,185.191,512s32.023-11.561,36.271-28.116l47.898-186.69c0.17-0.663,0.256-1.345,0.256-2.031V59.915 h155.234c4.513,0,8.17-3.657,8.17-8.17S429.364,43.574,424.851,43.574z M345.872,16.34h49.021v27.234h-49.021V16.34z M253.277,294.132l-47.641,185.69c-2.393,9.325-10.801,15.837-20.444,15.837s-18.051-6.512-20.444-15.837l-47.641-185.69V59.915 h136.17V294.132z"></path>
+        <path d="M144.596,291.693l32.681,127.379c0.927,3.612,4.184,6.14,7.914,6.14s6.987-2.526,7.914-6.14l32.681-127.379 c0.17-0.663,0.256-1.345,0.256-2.031v-41.764c0-4.513-3.657-8.17-8.17-8.17s-8.17,3.657-8.17,8.17v40.732l-24.511,95.533 l-24.511-95.534V181.623h49.021v33.594c0,4.513,3.657,8.17,8.17,8.17s8.17-3.657,8.17-8.17v-41.764c0-4.513-3.657-8.17-8.17-8.17 h-65.362c-4.513,0-8.17,3.657-8.17,8.17v116.209C144.34,290.346,144.426,291.028,144.596,291.693z"></path> </g></svg>
+    <span class="relative z-10 text-white font-bold text-xxl">3</span>
+</div>
+<div class="h-[130px] column bg-sky-600 dark:bg-sky-300 hover:bg-green-600 dark:hover:bg-green-300 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('b4');">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="absolute inset-0 w-full h-[90%] top-[5%] left-[5%] opacity-70" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#6DDEB4;" d="M245.719,198.809l-32.681-21.787l10.894,326.809h32.681c17.974,0,32.681-14.706,32.681-32.681 V242.383C289.293,218.417,269.685,198.809,245.719,198.809z"></path> <path style="fill:#9EF3D3;" d="M213.038,198.809l-32.681-21.787l-32.681,21.787c-23.966,0-43.574,19.609-43.574,43.574v228.766 c0,17.974,14.706,32.681,32.681,32.681h43.574l16.34-10.894l16.34,10.894h10.894c17.974,0,32.681-14.706,32.681-32.681V242.383 C256.613,218.417,237.004,198.809,213.038,198.809z"></path> <path style="fill:#6DDEB4;" d="M242.448,9.054c-16.022-2.826-31.929,1.196-43.647,11.031c-11.72,9.834-18.443,24.804-18.443,41.069 v104.974h32.681V61.154c0-6.677,2.404-12.371,6.768-16.034c4.365-3.661,10.387-5.038,16.967-3.881L405.06,62.616l2.837-16.092 L242.448,9.054z"></path> <rect x="180.355" y="187.915" style="fill:#FFFFFF;" width="32.681" height="315.915"></rect> <polygon style="fill:#084B63;" points="213.038,144.34 202.145,171.575 213.038,198.809 245.719,198.809 245.719,144.34 "></polygon> <rect x="147.674" y="144.34" style="fill:#146A8A;" width="65.362" height="54.468"></rect>
+        <path d="M409.702,38.555L244.253,1.085c-0.129-0.028-0.256-0.054-0.386-0.077c-18.403-3.244-36.743,1.427-50.319,12.819 c-13.576,11.39-21.361,28.64-21.361,47.327v75.017h-24.511c-4.512,0-8.17,3.658-8.17,8.17v19.064h-2.723 c-4.512,0-8.17,3.658-8.17,8.17c0,4.512,3.658,8.17,8.17,8.17h2.723v11.545c-24.663,3.929-43.574,25.342-43.574,51.093v228.766 c0,22.526,18.325,40.851,40.851,40.851h119.83c22.525,0,40.85-18.325,40.85-40.851V242.383c0-25.751-18.911-47.164-43.573-51.093 v-11.545h2.723c4.512,0,8.169-3.658,8.169-8.17c0-4.512-3.657-8.17-8.169-8.17h-2.723V144.34c0-4.512-3.658-8.17-8.17-8.17h-24.511 V61.154c0-4.22,1.367-7.692,3.849-9.775c2.482-2.081,6.141-2.825,10.301-2.094c0.127,0.023,0.256,0.042,0.385,0.059L404.03,70.721 c4.33,0.544,8.318-2.394,9.075-6.687l2.837-16.092C416.701,43.649,413.953,39.518,409.702,38.555z M112.272,471.149V242.383 c0-19.521,15.883-35.404,35.404-35.404h24.511V495.66h-35.404C123.268,495.66,112.272,484.665,112.272,471.149z M204.868,495.66 h-16.34V206.979h16.34V495.66z M237.549,198.809c0,4.512,3.658,8.17,8.17,8.17c19.521,0,35.403,15.883,35.403,35.404v228.766 c0,13.516-10.996,24.511-24.51,24.511h-35.404V198.809c0-4.512-3.658-8.17-8.17-8.17h-57.191v-10.894h81.702L237.549,198.809 L237.549,198.809z M237.549,163.404h-81.702v-10.894h81.702V163.404z M398.366,53.53L237.985,33.156 c-8.922-1.516-17.234,0.508-23.43,5.705c-6.245,5.243-9.686,13.159-9.686,22.292v75.018h-16.34V61.154 c0-13.845,5.658-26.532,15.525-34.811c9.821-8.241,23.221-11.617,36.789-9.276L398.5,52.772L398.366,53.53z"></path> </g></svg>
+    <span class="relative z-10 text-white font-bold text-xxl">4</span>
+</div>
+</div>
+
+<div id="b1" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+    <h2 class="text-xl text-gray-900 dark:text-sky-200 text-justify"><ins>Station 1: The Idea – What could your bacterium do?</ins></h2>
+    <div class="flex gap-6">
+    <div class="gallery-col w-[30%] flex-shrink-0 mt-2" onclick="openLightbox(this)">
+    <img src="assets/teams/5829/images/station1booth.webp" alt="Station 1 PDF preview" class="w-full h-auto rounded-md border border-gray-300" />
+    </div>
+    <div class="flex-1 overflow-y-auto pr-4">
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Goal:</strong> Spark curiosity and make the project idea understandable.</p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Content:</strong></p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">For teenagers and adults:</p>
+    <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify mt-2">
+        <li> Interactive wall: “If you could genetically modify a bacterium – what ability would you give it? → Visitors write ideas on cards and add them to the wall.</li>
+        <li> Info poster: “What our bacterium can do” </li>
+    </ul>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">For children:</p>
+    <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify mt-2">
+        <li> Digging challenge: Large sandbox with 7 hidden metal discs → “Can you find 5 in 2 minutes?”</li>
+        <li> Children’s lab coats to wear → promotes identification with science. </li>
+        <li> Participation prize: Falcon tubes filled with candy.</li>
+    </ul>
+    </div>
+    </div>
+</div>
+
+<div id="b2" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+  <h2 class="text-xl text-gray-900 dark:text-sky-200 text-justify"><ins>Station 2: The Laboratory – How do we teach our bacterium a new ability?</ins></h2>
+    <div class="flex gap-6">
+    <div class="flex-1 overflow-y-auto pr-4">
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Goal:</strong> Show in a simplified way the path from gene to functioning bacterium.</p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Content:</strong></p>
+    <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify mt-2">
+        <li> Info poster: “How does the gene get into the bacterium?” </li>
+        <li> Photo station: Visitors put on a lab coat and safety glasses and take memory photos.</li>
+    </ul>
+    </div>
+    <div class="gallery-col w-[30%] flex-shrink-0 mt-2" onclick="openLightbox(this)">
+    <img src="assets/teams/5829/images/station2booth.webp" alt="Station 1 PDF preview" class="w-full h-auto rounded-md border border-gray-300" />
+    </div>
+    </div>
+</div>
+
+<div id="b3" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+  <h2 class="text-xl text-gray-900 dark:text-sky-200 text-justify"><ins>Station 3: The Test – Did it work?</ins></h2>
+    <div class="flex gap-6">
+    <div class="gallery-col w-[30%] flex-shrink-0 mt-2 onclick="openLightbox(this)"">
+    <img src="assets/teams/5829/images/station3booth.webp" alt="Station 1 PDF preview" class="w-full h-auto rounded-md border border-gray-300" />
+    </div>
+    <div class="flex-1 overflow-y-auto pr-4">
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Goal:</strong> Understand how to check in a simplified way whether the bacterium took up the plasmid.</p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Content:</strong></p>
+    <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify mt-2">
+        <li> Guessing game: “How many colonies do you see?” on a printed Petri dish.</li>
+        <li> Info poster: “Did it work?” </li>
+        <li> Hands-on: Petri dish made of jelly with sugar sprinkles as colonies. </li>
+    </ul>
+    </div>
+    </div>
+</div>
+
+<div id="b4" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+  <h2 class="text-xl text-gray-900 dark:text-sky-200 text-justify"><ins>Station 4: The Application – Good bacteria, bad bacteria?</ins></h2>
+    <div class="flex gap-6">
+    <div class="flex-1 overflow-y-auto pr-4">
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Goal:</strong> Show application and societal relevance.
+        Bacteria are not just “bad germs.” Clear link to the project at the end: “Our bacterium helps recycle platinum!”</p>
+    <p class="text-gray-900 dark:text-sky-200 text-justify mt-2"><strong>Content:</strong></p>
+    <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify mt-2">
+        <li> Bacteria card game “Good or Bad?”: Visitors get cards with bacterial names and pictures (e.g. <i>Escherichia coli, Lactobacillus, Salmonella,
+            Streptococcus, Corynebacterium glutamicum</i>) and guess: Is it helpful or harmful? On the back: the answer with a short explanation. </li>
+        <li> Info poster: “Our bacterium helps!” </li>
+    </ul>
+    </div>
+    <div class="gallery-col w-[30%] flex-shrink-0 mt-2" onclick="openLightbox(this)">
+    <img src="assets/teams/5829/images/station4booth.webp" alt="Station 1 PDF preview" class="w-full h-auto rounded-md border border-gray-300" />
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container mx-auto px-4 mt-16">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Visitor feedback
+    </h2>
+    </div>
+    <div class="flex items-center gap-6">
+    <!-- text -->
+    <div>
+      <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify">
+          <li>Parents praised our <strong>child-friendly approach</strong> and patience when explaining.</li>
+      </ul>
+          <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+          <i class="text-gray-900 dark:text-sky-200 text-justify">One boy was so interested that he asked questions for half an hour, and we asked him challenging questions
+          back to make him think. At the end, his mother revealed that she is a biologist herself. She was thrilled by our entire presentation.</i>
+          <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+      <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify">
+          <li>Children: <strong>Digging challenge, lab coats, and candy</strong> were the highlights. There was even a line of kids waiting for their turn.</li>
+          <li>Teenagers: Particularly fascinated by the <strong>guessing game & quiz</strong>.</li>
+          <li>Adults: Preferred <strong>direct conversations</strong> about our project.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white">What we took away from it</h2>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    <div class="flex items-center gap-6 justify-end">
+    <!-- text -->
+    <div>
+      <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify">
+          <li>Overall, it was a very <strong>positive experience</strong>: we had content for every age group and could engage with very diverse audiences.</li>
+          <li class="mt-2"><strong>Flexibility</strong> was key, since visitors did not move through the stations in chronological order. We <strong>adapted our conversations
+              spontaneously</strong> and learned to go into different levels of detail at each station.</li>
+          <li class="mt-2">For children, <strong>lab coats were an ideal icebreaker</strong>. From there, we could start with playful questions. On the day itself, we noticed that
+              connecting everything to the <strong>digging challenge</strong> worked particularly well.</li>
+          <li class="mt-2">To help children connect the digging challenge to our project, we started with <strong>simple questions</strong>:
+              “What do the tree outside, your pet, and you have in common?” → “They live!”
+              Then: “What do parents always say when we come home?” → “Wash your hands – because of bacteria!”
+              This opened the door to talk about how bacteria not only cause disease but can also help. After the challenge, we smoothly transitioned
+              to the topic of resource scarcity and recycling – and then explained <strong>how our bacterium can help recycle platinum.</strong>
+          </li>
+          <li class="mt-2"><strong>Storytelling and everyday examples</strong> proved very helpful to make complex content tangible.</li>
+          <li class="mt-2">We learned to <strong>tailor content differently depending on the target group</strong>: playful for children, discussion-oriented for teenagers,
+              and more detailed/scientific for adults or experts.</li>
+          <li class="mt-2">Materials such as games, lab coats, or interactive elements were essential to actively involve visitors – they made our topic <strong>tangible and experiential</strong>.</li>
+          <li class="mt-2">Overall, <strong>the event also gave us confidence</strong>: we realized we can explain our project spontaneously, in an age-appropriate way, and still scientifically sound.</li>
+      </ul>
+    </div>
+  </div>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+  </div>
+  </div>
+
+<div class="flex flex-wrap w-[90%] justify-center mx-auto gap-4">
+<div class="gallery-row">
+  <div class="gallery-col">
+    <img src="assets/teams/5829/images/station1.webp" alt="Pic 1" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-col">
+    <img src="assets/teams/5829/images/station2.webp" alt="Pic 2" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-col">
+    <img src="assets/teams/5829/images/station3.webp" alt="Pic 3" onclick="openLightbox(this)">
+  </div>
+  <div class="gallery-col">
+    <img src="assets/teams/5829/images/station4.webp" alt="Pic 4" onclick="openLightbox(this)">
+  </div>
+</div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+
+<div class="container mx-auto px-4 mt-16">
+<div class="text-center mb-12">
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        How we want to improve in the future
+    </h2>
+    </div>
+    <div class="flex items-center gap-6">
+    <!-- text -->
+    <div>
+        <ul class="list-disc pl-6 text-gray-900 dark:text-sky-200 text-justify">
+          <li>Tailor content even more clearly to target groups: <strong>separate stations for children, teenagers, and adults</strong>; the project storyline
+              (Idea → Lab → Test → Application) works better for schools, since it’s too complex for a mixed audience.</li>
+          <li class="mt-2">Add <strong>digital elements</strong>: quiz with guessing questions, more “Good or Bad?” bacteria cards, coloring pages
+              for children, online experiments and materials to try at home.</li>
+          <li class="mt-2">Create <strong>guides for team members</strong> to help lead spontaneous, target-group-specific conversations with children, teenagers, and adults.</li>
+          <li class="mt-2"><strong>Highlight that we also visit schools</strong>, so people know they can invite us to their school.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white">Take the quiz yourself!</h2>
+    </div>
+  </div>
+</div>
+<div class="flip-container">
+
+  <!-- Horizontal Flip -->
+  <div class="flip-box flip-horizontal">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/corynefront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/coryneback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Flip -->
+  <div class="flip-box flip-vertical">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/lactobacillusfront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/lactobacillusback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Horizontal Flip -->
+  <div class="flip-box flip-horizontal">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/staphyloccocusfront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/staphyloccocusback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Flip -->
+  <div class="flip-box flip-vertical">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/borreliafront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/borreliaback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="flip-container">
+
+  <!-- Vertical Flip -->
+  <div class="flip-box flip-vertical">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/salmonellafront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/salmonellaback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Horizontal Flip -->
+  <div class="flip-box flip-horizontal">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/bacillusfront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/bacillusback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Flip -->
+  <div class="flip-box flip-vertical">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/vibriofront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/vibrioback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Horizontal Flip -->
+  <div class="flip-box flip-horizontal">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="assets/teams/5829/images/ecolifront.webp" alt="Pic 4">
+      </div>
+      <div class="flip-box-back">
+        <img src="assets/teams/5829/images/ecoliback.webp" alt="Pic 4">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 id="schools" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 py-12 scroll-mt-28">School Visits</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        Why did we present our project and synthetic biology to students?
+    </h2>
+    </div>
+    <div class="flex items-center gap-6">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+          School visits are a great way to present young people world wide problems and how to solve them with synthetic biology.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4">
+        We visited schools which were visited by our members to give more vicinity to the students as they can relate more to our life course and possibly use that as inspiration for their own life.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white">Our core message</h2>
+    </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+    <div class="flex items-center gap-6 justify-end">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-4 mb-4">
+          <strong>Why is teaching school kids about synthetic biology important?</strong> Getting relatable insights at a young age is very important to introduce a possible path and showing that problems can be solved using distinct concepts. Synthetic biology requires critical thinking and interdisciplinary skills, which are useful abilities not only in science!
+      </p>
+      <ul class="list-none space-y-2 text-gray-900 dark:text-sky-200 text-justify">
+          <li class="before:content-['🧬'] before:mr-2"><strong>What was the core message we tried to communicate?</strong>
+          Problems which affect the whole population can be approached using methods from other disciplines. On first thoughts no one would believe that bacteria can be used to recycle spent catalysts. By thinking innovative and out of the box almost any problem can be solved.
+          </li>
+          <li class="before:content-['🦠'] before:mr-2"><strong>How did we bring the message across?</strong> We introduced the classes to the problem by presenting statistics about PGM waste. Then we linked it to our project by using their ideas on what bacteria could possibly do to create the understanding of thinking more broadly. Using their ideas we guided them through our project from the very beginning to the end. We also briefly presented our own life course to show that we once were in their phase of life.
+          </li>
+          <li class="before:content-['🌍'] before:mr-2"><strong>What did we take away from it?</strong> Synthetic biology is despite its importance still quite unknown to the broad population and what possible applications it has. By doing more and better science communication not only to young people but also non-specialists can help solving world wide problems using synthetic biology.
+      </ul>
+    </div>
+  </div>
+      <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+  </div>
+  </div>
+
+
+<div class="flex justify-center">
+<div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col scroll-mt-28">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-2">The Schools</h2>
+    <h3 class="w-full text-l text-center text-gray-900 dark:text-white mb-4">Click on the boxes to learn about our school visits.</h3>
+    </div>
+<div class="flex">
+<div class="h-[130px] flex-1 p-4 bg-indigo-300 dark:bg-indigo-600 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('bb1');">
+  <span class="relative z-10 text-white font-bold text-xxl">Laura Schradin Schule</span>
+</div>
+<div class="h-[130px] flex-1 p-4 bg-sky-600 dark:bg-sky-300 rounded-lg relative p-6 cursor-pointer overflow-hidden flex items-center justify-center" onclick="openTab('bb2');">
+    <span class="relative z-10 text-white font-bold text-xxl">Theodor-Heuss-Gymnasium</span>
+</div>
+</div>
+
+<div id="bb1" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+  <p class="text-gray-900 dark:text-sky-200 text-justify">We were able to visit the <a href="https://www.lss-rt.de/" target="_blank">Laura Schradin Schule</a> in Reutlingen, which was the school <a href="students.html#baumann">Manuel Baumann</a> went to. As having a similar audience as on Tag der Wissenschaft, we used the posters of the stations to give a more visual explanation of the project.</p>
+  <div class="mt-2">
+    <div class="flex gap-4 items-start">
+      <div class="flex-shrink-0 w-1/4">
+        <img src="assets/teams/5829/images/ls-schule.webp" class="w-full h-full object-cover rounded-md" alt="LS image">
+      </div>
+          <div class="flex-1">
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-4">
+        The lesson began with a presentation of us and our group to give the students an insight into the human beings behind the group. Then we went into more detail regarding our project, by taking them along our journey on this project.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Using a quiz on what they already know about the applications of bacteria and PGM-usage, we showed them how such on first sight abstract ideas arise. </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        Further a quick brainstorming was done with the students on what they would want to achieve using modified Bacteria. Their ideas were discussed to spark interest in their very creative suggestions. </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        To pursue the story of our project we presented companies and experts we consulted. After that we in the state of the project, and the students here, were ready to go into the lab to conduct the planned work. 
+        <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        The students had to create a specific solution using pipettes, as a little competition, the study group, which came closest to the reference solution won gummy bears.
+        </p>
+    </div>
+    </div>
+      <div class="flex gap-4 items-start">
+    <div class="flex-1">
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+      Not only at the end, but throughout the whole 90 minutes the students were encouraged to ask Questions regarding not only the Project, but also synthetic biology in General or the University everyday life.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        We are very thankful for <a href="https://www.lss-rt.de/kontakt/ansprechpartner" target="_blank">Martin Sautter</a>, who gave us the opportunity! Teaching students at a young age about the importance of interdisciplinarity and some insight beyond the Classroom.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        The students were very interested in our project as they asked many follow-up questions on applicability. Scientific communication has immense potential, this is a skill everybody should aim to improve. 
+      </p>
+    </div>
+    <div class="flex-shrink-0 w-1/3">
+      <img src="assets/teams/5829/images/mentimeter-ergebnisse-reutlingen-1.webp" class="w-full h-auto object-contain rounded-md" alt="Mentimeter THG"/>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">Caption: If you could genetically change bacteria - what would you teach it?</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div id="bb2" class="containerTab bg-white dark:bg-black rounded-lg" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn text-black dark:text-white">x</span>
+  <p class="text-gray-900 dark:text-sky-200 text-justify">We also had the possibility to present our project for 90 minutes at the <a href="https://www.thg-es.de/" target="_blank">Theodor-Heuss Gymnasium</a>. This was the School <a href="students.html#schneider">Amasia Schneider Rocha</a> went to. As having a similar audience as on Tag der Wissenschaft, we used the posters of the stations to give a more visual explanation of the project. 
+  </p>
+ <div class="mt-2">
+
+  <div class="flex gap-4 items-start">
+    <div class="flex-shrink-0 w-1/4">
+      <img src="assets/teams/5829/images/th-schule.webp" class="w-full h-full object-cover rounded-md" alt="THG image"/>
+    </div>
+    <div class="flex-1">
+      <p class="text-gray-900 dark:text-sky-200 text-justify mb-4">
+        The lesson began with a presentation of us and our group to give the students an insight into the human beings behind the group. Then we went into more detail regarding our project, by taking them along our journey on this project.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">
+        Using a quiz on what they already know about the applications of bacteria and PGM-usage, we showed them how such on first sight abstract ideas arise. </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        Further a quick brainstorming was done with the students on what they would want to achieve using modified Bacteria. Their ideas were discussed to spark interest in their very creative suggestions. </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        To pursue the story of our project we presented companies and experts we consulted. After that we in the state of the project, and the students here, were ready to go into the lab to conduct the planned work. 
+        <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        The students had to create a specific solution using pipettes, as a little competition, the study group, which came closest to the reference solution won gummy bears.
+        </p>
+    </div>
+  </div>
+  <div class="flex gap-4 items-start">
+    <div class="flex-1">
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+      Not only at the end, but throughout the whole 90 minutes the students were encouraged to ask questions regarding not only the project, but also synthetic biology in general or the university everyday life.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        We are very thankful for <a href="https://www.thg-es.de/schulgemeinschaft/kollegium/" target="_blank">Benedikt Büchler</a>, who gave us the opportunity! Teaching students at a young age about the importance of interdisciplinarity and some insight beyond the classroom.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify mt-2">
+        The students were very interested in our project as they asked many follow-up questions on applicability. Scientific communication has immense potential, this is a skill everybody should aim to improve. 
+      </p>
+    </div>
+    <div class="flex-shrink-0 w-1/3">
+      <img src="assets/teams/5829/images/mentimeter-ergebnisse-thg-1.webp" class="w-full h-auto object-contain rounded-md" alt="Mentimeter THG"/>
+      <p class="text-gray-900 dark:text-sky-200 text-justify">Caption: If you could genetically change bacteria - what would you teach it?</p>
+    </div>
+  </div>
+</div>
+
+  
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Links -->
+<div>
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+</a>
+<p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+<div class="flex space-x-4">
+<a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+</a>
+<a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+</a>
+</div>
+</div>
+<!-- Quick links -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+<li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+<li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+<li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Member</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+</ul>
+</div>
+<!-- Kontakt -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+<ul class="space-y-3">
+<li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Datenschutz -->
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+</div>
+</div>
+</div>
+</footer>
+
+    <script>
+
+    function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+ const images = document.querySelectorAll('.gallery-col img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox if clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+    </script>
+</body>
+
+
+</html>

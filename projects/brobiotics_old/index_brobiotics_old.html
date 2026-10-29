@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 – SynBio Stuttgart</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header: logo + navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://igem-stuttgart.local/" class="logo-link">
+        <img src="images/logo.png" alt="SynBioTeam University of Stuttgart" class="logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Header menu">
+        <button type="button" class="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v1.5H4z"/><path d="M4 15h16v1.5H4z"/></svg>
+        </button>
+
+        <div class="menu" id="menu">
+          <button type="button" class="menu-close" aria-label="Close menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"/></svg>
+          </button>
+          <ul class="menu-list">
+            <li><a href="https://igem-stuttgart.local/laboratory/">Laboratory</a></li>
+            <li><a href="https://igem-stuttgart.local/">About Us</a></li>
+            <li><a href="https://igem-stuttgart.local/contact-us">Contact</a></li>
+            <li class="has-submenu">
+              <a href="#">Projects</a>
+              <button type="button" class="submenu-toggle" aria-label="Projects submenu" aria-expanded="false">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 4L6 8l4.5-4" stroke="currentColor" stroke-width="1.5"/></svg>
+              </button>
+              <ul class="submenu">
+                <li><a href="https://2025.igem.wiki/stuttgart/index.html">2025</a></li>
+                <li><a href="https://igem-stuttgart.local/2026-2" aria-current="page">2026</a></li>
+              </ul>
+            </li>
+            <li><a href="https://igem-stuttgart.local/newsletter">Newsletter</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Banner -->
+    <img src="images/banner.png" alt="brobiotics – they've gut your back" class="banner">
+
+    <!-- The Problem / A Next-Generation Probiotic -->
+    <section class="cards reveal">
+      <article class="card">
+        <h3>The Problem</h3>
+        <p>Chronic inflammatory bowel diseases, such as Crohn’s disease or ulcerative colitis, affect millions of people worldwide. Existing therapies often act systemically, which frequently brings <strong>side effects</strong> and permanently burdens the patients’ quality of life.</p>
+        <p>Our approach starts directly at the site of the occurrence – local, precise, and demand-driven.</p>
+      </article>
+
+      <article class="card card-wide">
+        <h3>A Next-Generation Probiotic</h3>
+        <p>A harmless intestinal bacterium that has been genetically modified to <strong>independently recognize</strong> inflammation in the gut and subsequently produce therapeutic agents directly on-site. No systemic active ingredient that spreads throughout the entire body – but rather targeted delivery exactly where it is needed. The bacterium (E. coli Nissle 1917) has been medically established for over 100 years and is considered safe.</p>
+        <p>We equip it with a <strong>genetic circuit</strong> that must detect two different inflammation markers simultaneously before it becomes active – a <strong>two-key mechanism</strong> for maximum precision.</p>
+      </article>
+    </section>
+
+    <!-- The Mechanism -->
+    <section class="mechanism">
+      <div class="mechanism-inner reveal reveal-delay-1">
+        <div class="mechanism-text">
+          <h3>The Mechanism</h3>
+          <hr>
+          <p>The bacterium carries two biological sensors, each of which recognizes a specific inflammation marker in the gut. Only when <strong>both signals are present simultaneously</strong> is the production of the active ingredient triggered.</p>
+          <p>This principle – known in engineering as an <strong>AND-Gate</strong> – prevents false responses and makes the system controllable.</p>
+        </div>
+
+        <div class="mechanism-figure">
+          <img src="images/mechanism.png" alt="The mechanism – brobiotics" width="1021" height="1024">
+          <!-- Animated signal waves from the bacterium and glowing inflammation spots -->
+          <svg class="mechanism-overlay" viewBox="0 0 566 552" aria-hidden="true">
+            <g transform="translate(215, 255) rotate(35)">
+              <path class="wave wave-1" d="M 25,-20 A 32,28 0 0,1 25,20"/>
+              <path class="wave wave-2" d="M 55,-36 A 65,58 0 0,1 55,36"/>
+              <path class="wave wave-3" d="M 90,-52 A 98,88 0 0,1 90,52"/>
+              <path class="wave wave-4" d="M 130,-68 A 135,118 0 0,1 130,68"/>
+              <path class="wave wave-5" d="M 175,-84 A 178,155 0 0,1 175,84"/>
+            </g>
+            <g transform="translate(200, 180) rotate(-15)">
+              <path class="wave wave-3 wave-orange" d="M 90,-52 A 98,88 0 0,1 90,52"/>
+              <path class="wave wave-4 wave-orange" d="M 130,-68 A 135,118 0 0,1 130,68"/>
+              <path class="wave wave-5 wave-orange" d="M 175,-84 A 178,155 0 0,1 175,84"/>
+            </g>
+            <g transform="translate(457, 119)">
+              <circle class="glow-outer-1" r="36" fill="#ff6a00" opacity="0.5"/>
+              <circle class="glow-core-1" r="18" fill="#ffcc44" opacity="0.9"/>
+            </g>
+            <g transform="translate(455, 398)">
+              <circle class="glow-outer-2" r="36" fill="#ff3a00" opacity="0.45"/>
+              <circle class="glow-core-2" r="18" fill="#ffaa22" opacity="0.9"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="contact-inner reveal reveal-delay-2">
+      <div>
+        <p class="contact-team">🧬 <strong>SynBio Team</strong> of the University of Stuttgart</p>
+        <p class="contact-address">Institute of Biochemical Engineering<br>Allmandring 31, 70569 Stuttgart</p>
+      </div>
+      <div>
+        <p class="contact-instagram">📸 <a href="https://www.instagram.com/igem_stuttgart/">@igem_stuttgart</a></p>
+        <p>✉️ <a href="mailto:synbioteam@ibmg.uni-stuttgart.de">synbioteam@ibmg.uni-stuttgart.de</a></p>
+        <p>🌐 <a href="https://igem-stuttgart.local/">https://igem-stuttgart.local/</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner reveal">
+      <p>
+        <a href="https://igem-stuttgart.local/#">Direct Contact</a><br>
+        <a href="mailto:synbioteam@ibmg.uni-stuttgart.de">synbioteam@ibmg.uni-stuttgart.de</a><br>
+        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&amp;ved=1t:8290&amp;ictx=111">Allmandring 31, 70569 Stuttgart</a><br>
+        <a href="tel:071168564574">0711 68564574</a>
+      </p>
+
+      <p class="footer-title"><a href="https://igem-stuttgart.local">SynBio Stuttgart</a></p>
+
+      <div>
+        <p><a href="https://creativecommons.org/licenses/by/4.0/">Copyright © 2026 iGEM Stuttgart – Content on this site is licensed under a Creative Commons Attribution 4.0 International</a></p>
+        <p class="footer-made">Made in Stuttgart 🐴 ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

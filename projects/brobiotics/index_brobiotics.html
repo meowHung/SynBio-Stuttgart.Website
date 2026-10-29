@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>brobiotics* - SynBio Team University of Stuttgart</title>
+  <meta name="description" content="brobiotics* they've gut your back — the 2027 iGEM project of the SynBio Team University of Stuttgart.">
+  <link rel="icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-brobiotics">
+
+  <!-- Work In Progress (WIP) Top Banner -->
+  <aside class="wip-bar" id="wipBar" role="status" aria-label="Work In Progress Notice">
+    <div class="wip-bar-content">
+      <span class="wip-badge">
+        <span class="wip-pulse-dot" aria-hidden="true"></span>
+        WIP • 2026/2027
+      </span>
+      <span>This website is actively evolving for the upcoming iGEM competition cycle.</span>
+      <button type="button" class="wip-bar-link open-wip-modal">View Roadmap &amp; Status &rarr;</button>
+    </div>
+    <button type="button" class="wip-bar-close" id="wipBarClose" aria-label="Dismiss work in progress banner">&times;</button>
+  </aside>
+
+  <!-- Floating WIP Badge when banner is dismissed -->
+  <button type="button" class="wip-floating-pill" id="wipFloatingPill" style="display: none;" title="Open Website Status &amp; Milestones">
+    <span class="wip-pulse-dot" aria-hidden="true"></span>
+    <span>WIP STATUS</span>
+  </button>
+
+  <!-- WIP Modal Dialog -->
+  <div class="wip-modal-backdrop" id="wipModal" role="dialog" aria-modal="true" aria-labelledby="wipModalTitle">
+    <div class="wip-modal">
+      <div class="wip-modal-header">
+        <h2 class="wip-modal-title" id="wipModalTitle">
+          <span>🔬</span> Project &amp; Website Status
+        </h2>
+        <button type="button" class="wip-modal-close" id="wipModalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="wip-modal-body">
+        <p>Welcome to the SynBio Stuttgart development environment! We are actively designing and engineering our research presentation for the iGEM 2026/2027 cycle.</p>
+        
+        <div class="wip-milestones">
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>1:1 Wireframe Implementation:</strong> Faithful desktop and mobile layout from the Hang Minh Hoang wireframes.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Instant Sponsor Explorer:</strong> Direct search and category filters replacing slow infinite ticker.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Interactive Project Discography:</strong> Smooth interactive timeline from 2017 to 2027.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">In Progress</span>
+            <div>
+              <strong>Lab Data &amp; Modeling:</strong> Finalizing wet-lab assays and dry-lab molecular simulations for <em>brobiotics</em>.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a4a8b5;">Have feedback on the design? Feel free to reach out via our contact page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Header (Wireframe page 3: red background) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index_brobiotics.html" class="brand-link" aria-label="brobiotics home">
+        <img class="bro-header-logo" src="../../images/brobiotics_logo.png" alt="brobiotics* – they've gut your back" width="900" height="261">
+      </a>
+
+      <ul class="nav-links nav-links-left" id="navWrap">
+        <li class="nav-item"><a href="../../index.html">SynBio</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <ul class="nav-links nav-links-right">
+          <li class="nav-item"><a href="../../about.html">About Us</a></li>
+          <li class="nav-item"><a href="../../contact.html">CONTACT US!</a></li>
+        </ul>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bro-hero">
+      <div class="container">
+        <h1 class="bro-hero-title">
+          <span>EXPLORE OUR MOST RECENT</span>
+          <span class="bro-hero-row">
+            <span>PROJECT!</span>
+            <span class="bro-hero-cta">
+              <svg class="bro-arrow" viewBox="0 0 252 40" aria-hidden="true"><path d="M3 20H246M229 4l17 16-17 16"/></svg>
+              <span class="bro-pill"><img src="../../images/brobiotics_wordmark_white.png" alt="brobiotics*" width="900" height="183"></span>
+            </span>
+          </span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- Project content (empty in the wireframe for now) -->
+    <section class="bro-content"></section>
+  </main>
+
+  <!-- Footer (Wireframe page 3: red background) -->
+  <footer class="wireframe-footer">
+    <div class="container footer-inner-content">
+      <a href="../../index.html" class="footer-logo-row" aria-label="SynBio Stuttgart Home">
+        <img src="../../images/SynBio_logo_white.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <a href="index_brobiotics.html" class="bro-footer-logo" aria-label="brobiotics home">
+        <img src="../../images/brobiotics_logo.png" alt="brobiotics* – they've gut your back" width="900" height="261">
+      </a>
+
+      <a href="../../contact.html" class="btn-footer-contact">
+        <span>CONTACT US</span>
+        <svg class="bro-btn-arrow" viewBox="0 0 48 14" aria-hidden="true"><path d="M0 7H46M40 1l6 6-6 6"/></svg>
+      </a>
+
+      <div class="footer-social-squares">
+        <a href="https://www.instagram.com/synbioteam_stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="Instagram">
+          <span>📷</span>
+        </a>
+        <a href="https://www.linkedin.com/company/synbio-team-stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://gitlab.igem.org" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="GitLab">
+          <span>🧬</span>
+        </a>
+        <a href="mailto:synbioteam@uni-stuttgart.de" class="social-square-box" aria-label="Email">
+          <span>✉️</span>
+        </a>
+      </div>
+
+      <div class="footer-wireframe-credits">
+        <p>Research group at Uni Stuttgart in COOP with iGEM &bull; 2026/2027</p>
+        <p>Design by Hang Minh Hoang [<a href="https://www.instagram.com/lu_lounaa/" target="_blank" rel="noopener noreferrer">lu_lounaa on Instagram</a>]</p>
+      </div>
+
+      <p class="footer-legal"><a href="../../impressum.html">Legal Notice</a> &bull; <a href="../../datenschutz.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="../../js/script.js"></script>
+</body>
+</html>

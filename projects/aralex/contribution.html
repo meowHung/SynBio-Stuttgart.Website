@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contribution  | Stuttgart - iGEM 2025</title>
+<link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+<script src="static/tailwind.min.css"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+i[class^="ri-"], i[class*=" ri-"] {
+  font-size: 1.2rem;     
+  line-height: 1;        
+  vertical-align: middle; 
+}
+
+body {
+font-family: 'Inter', sans-serif;
+}
+
+.page-content {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.sidenav {
+  width: 130px;
+  position: sticky;
+  z-index: 1;
+  top: 120px;
+  left: 20px;
+  padding: 8px 0;
+  border-radius: 12px;
+  flex-shrink: 0;
+  height: fit-content;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+.main {
+}
+
+.gallery-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gallery-col {
+float: center;
+width: 25%;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.gallery-col img {
+width: 100%;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.gallery-col img:hover {
+transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 9999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+margin: auto;
+display: block;
+max-width: 80%;
+max-height: 80%;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+
+</style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+<!-- Reiter -->
+<header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+<div class="relative" id="projectDropdown">
+<button class="text-sky-700 hover:text-sky-900 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+Project
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+<a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+<a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+<a href="contribution.html" class="block px-4 py-2 text-sky-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+<a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+<a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+<a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+<a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+</div>
+</div>
+<div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+<div class="relative" id="groupsDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+Team
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+<a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+<a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+<a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+</div>
+</div>
+<a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+<button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+Dark Mode
+</button>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<div class="page-content">
+<aside class="sidenav mt-24 bg-sky-50 dark:bg-black text-gray-900 dark:text-sky-200 outline outline-2 outline-sky-50 dark:outline-black shadow-lg">
+  <h2 class="text-center text-lg font-bold text-gray-900 dark:text-sky-200">Contents</h2>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900" href="#biobrick">BioBrick</a>
+  <a class="rounded-lg hover:bg-sky-200 dark:hover:bg-gray-900" href="#revion">RevION Assay</a>
+</aside>
+<!-- Überschrift -->
+<div class="main">
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Contribution</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 text-justify">Find out how our project contributes to the iGem competition and the world.
+    To support future iGem teams and scientists, we've compiled information on our part contribution and oxalate assay.
+</p>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 id="biobrick" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 py-12 scroll-mt-28">BioBrick</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-50 dark:bg-black rounded-lg p-6 flex flex-col">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        oahA_CG
+    </h2>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 hover:text-underlined">
+        Parts ID: <a href="https://registry.igem.org/parts/bba-25z0pigd" class="hover:underline">BBa_25Z0PIGD</a>
+    </h2>
+    </div>
+    <div class="flex items-center pl-4 gap-6">
+    <!-- image -->
+    <div class="gallery-col flex-shrink-0 w-[35%]" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/biobrick.webp"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify pr-6">
+          Our Biobrick oahA_CG was developed to insert the expression of oxaloacetate hydrolase into our host organism.
+          This allows oxalate to be formed from oxaloacetate, an intermediate of the TCA cycle.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 text-justify pr-6 mt-4">
+          The part is based on the oahA-gene from <i>Aspergillus niger</i>. The sequence was codon-optimized for <i>Corynebacterium
+          glutamicum</i> and provided with a ribosome binding site, a His₆ tag, and a terminator.
+      </p>
+    </div>
+    </div>
+    <div class="flex items-center gap-6">
+    <div>
+      <p class="text-gray-900 dark:text-sky-200 text-justify px-6 mt-4">
+          The functionality of the part was tested in <i>Corynebacterium glutamicum</i> ATCC 13032. Using the commercially
+          available oxalate assay kit MAK315-1KT from Sigma Aldrich, we were able to confirm the successful production
+          of oxalate. This is a metabolite that the wild type cannot produce without genetic modification. Our Biobrick
+          thus expands the metabolic capabilities of the host organism.
+      </p>
+        <!-- image -->
+    <figure class="gallery-col mx-auto flex flex-col items-center w-[50%] mt-4" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/oxalateproduction.webp"
+      class="w-full h-full object-cover rounded-md"
+      />
+      <figcaption class="text-sm text-gray-700 dark:text-gray-200 text-justify mt-2 w-[150%]">Experimental validation of the funcionality of our bio part. The graph shows the oxalate concentration [µM]
+          over time in cell-free supernatant of 1 L stirred tank reactor fermentation with C. glutamicum pPBEx2_oahA_CG in CGXII-medium.
+          Oxalate was measured using an commercial enzymatic assay (Sigma-Aldrich) to ensure specifity. After 15 h of cultivation, approx.
+          270 µM oxalate are reached. This confirms oxalate production.</figcaption>
+    </figure>
+      <p class="text-gray-900 dark:text-sky-200 text-justify px-4 mt-4">
+          The part is fully documented and submitted to the Registry of Standard Biological Parts. It enables the iGEM
+          community to introduce oxalate production into their own organisms. As an organic acid, oxalate has a wide
+          range of applications and can also serve as a starting metabolite for further metabolic pathways.
+      </p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+    <div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 id="revion" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 py-12 scroll-mt-28">Our RevION assay</h2>
+</div>
+</div>
+    <div class="w-[75%] mx-auto mb-12">
+<div class="notebook-container">
+    <iframe src="assets/teams/5829/images/revionassay.pdf" width="100%" height="800" id="Notebook-1" class="notebook-pdf"></iframe>
+</div>
+</div>
+</div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Links -->
+<div>
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-16 w-auto">
+</a>
+<p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+<div class="flex space-x-4">
+<a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+</a>
+<a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+</a>
+</div>
+</div>
+<!-- Quick links -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+<li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+<li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+<li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Member</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+</ul>
+</div>
+<!-- Kontakt -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+<ul class="space-y-3">
+<li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Datenschutz -->
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+</div>
+</div>
+</div>
+</footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+
+ const images = document.querySelectorAll('.gallery-col img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox if clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+    }
+  });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+    </script>
+</body>
+
+
+</html>

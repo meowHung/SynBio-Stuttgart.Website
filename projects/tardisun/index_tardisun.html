@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SynBio Stuttgart - Tardisun</title>
+  <link rel="icon" type="image/x-icon" href="../../images/icons/favicon.ico">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Work In Progress (WIP) Top Banner -->
+  <aside class="wip-bar" id="wipBar" role="status" aria-label="Work In Progress Notice">
+    <div class="wip-bar-content">
+      <span class="wip-badge">
+        <span class="wip-pulse-dot" aria-hidden="true"></span>
+        WIP • 2026/2027
+      </span>
+      <span>This website is actively evolving for the upcoming iGEM competition cycle.</span>
+      <button type="button" class="wip-bar-link open-wip-modal">View Roadmap &amp; Status &rarr;</button>
+    </div>
+    <button type="button" class="wip-bar-close" id="wipBarClose" aria-label="Dismiss work in progress banner">&times;</button>
+  </aside>
+
+  <!-- Floating WIP Badge when banner is dismissed -->
+  <button type="button" class="wip-floating-pill" id="wipFloatingPill" style="display: none;" title="Open Website Status &amp; Milestones">
+    <span class="wip-pulse-dot" aria-hidden="true"></span>
+    <span>WIP STATUS</span>
+  </button>
+
+  <!-- WIP Modal Dialog -->
+  <div class="wip-modal-backdrop" id="wipModal" role="dialog" aria-modal="true" aria-labelledby="wipModalTitle">
+    <div class="wip-modal">
+      <div class="wip-modal-header">
+        <h2 class="wip-modal-title" id="wipModalTitle">
+          <span>🔬</span> Project &amp; Website Status
+        </h2>
+        <button type="button" class="wip-modal-close" id="wipModalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="wip-modal-body">
+        <p>Welcome to the SynBio Stuttgart development environment! We are actively designing and engineering our research presentation for the iGEM 2026/2027 cycle.</p>
+        
+        <div class="wip-milestones">
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>1:1 Wireframe Implementation:</strong> Faithful desktop and mobile layout from the Hang Minh Hoang wireframes.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Instant Sponsor Explorer:</strong> Direct search and category filters replacing slow infinite ticker.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Interactive Project Discography:</strong> Smooth interactive timeline from 2017 to 2027.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">In Progress</span>
+            <div>
+              <strong>Lab Data &amp; Modeling:</strong> Finalizing wet-lab assays and dry-lab molecular simulations for <em>brobiotics</em>.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a4a8b5;">Have feedback on the design? Feel free to reach out via our contact page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Top Header (Wireframe: Light Background #E6E7EA) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../index.html" class="brand-link" aria-label="SynBio Team University of Stuttgart">
+        <img class="brand-logo-img" src="../../images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <!-- Left nav: Projects + What is iGEM? immediately after logo -->
+      <ul class="nav-links nav-links-left" id="navWrap">
+        <li class="nav-item nav-dropdown">
+          <a href="#discography" class="nav-dropdown-toggle">
+            Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="../brobiotics/index_brobiotics.html">2027 &mdash; brobiotics</a>
+            <a href="../aralex/index_aralex.html">2025 &mdash; ARALEX</a>
+            <a href="../dentozym/index_dentozym.html">2023 &mdash; DentoZym</a>
+            <a href="../tardisun/index_tardisun.html">2021 &mdash; Tardisun</a>
+            <a href="../lac-man/index_lac-man.html">2020 &mdash; LAC-MAN</a>
+            <a href="../PhyCoVi/index_PhyCoVi.html">2019 &mdash; PhyCoVi</a>
+            <a href="../TAGC/index_TAGC.html">2018 &mdash; TAGC</a>
+            <a href="../LOTP/index_LOTP.html">2017 &mdash; LOTP</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="../../igem.html">What is iGEM?</a></li>
+      </ul>
+
+      <!-- Right nav: spacer pushes About Us + CONTACT US! to far right -->
+      <div class="nav-right">
+        <ul class="nav-links nav-links-right">
+          <li class="nav-item"><a href="../../about.html">About Us</a></li>
+        </ul>
+        <a href="../../contact.html" class="nav-contact-btn">CONTACT US!</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2021 project: Tardisun -->
+    <section class="section-who-we-are project-placeholder">
+      <div class="container">
+        <div class="split-2col-wireframe">
+          <div class="wireframe-placeholder-box"></div>
+          <div class="info-content-wireframe">
+            <p class="project-year">iGEM 2021</p>
+            <h1 class="wireframe-purple-title">Tardisun</h1>
+            <p>Details about this project are coming soon.</p>
+            <a href="../../index.html#discography" class="btn-wireframe-pill">
+              <span>BACK TO PROJECTS</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Wireframe Purple Footer -->
+  <footer class="wireframe-footer">
+    <div class="container footer-inner-content">
+      <a href="../../index.html" class="footer-logo-row" aria-label="SynBio Stuttgart Home">
+        <img src="../../images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <a href="../../contact.html" class="btn-footer-contact">
+        <span>CONTACT US</span>
+        <span class="btn-arrow" aria-hidden="true">──────►</span>
+      </a>
+
+      <div class="footer-social-squares">
+        <a href="https://www.instagram.com/synbioteam_stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="Instagram">
+          <span>📷</span>
+        </a>
+        <a href="https://www.linkedin.com/company/synbio-team-stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://gitlab.igem.org" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="GitLab">
+          <span>🧬</span>
+        </a>
+        <a href="mailto:synbioteam@uni-stuttgart.de" class="social-square-box" aria-label="Email">
+          <span>✉️</span>
+        </a>
+      </div>
+
+      <div class="footer-wireframe-credits">
+        <p>Research group at Uni Stuttgart in COOP with iGEM &bull; 2026/2027</p>
+        <p>Design by Hang Minh Hoang [<a href="https://www.instagram.com/lu_lounaa/" target="_blank" rel="noopener noreferrer">lu_lounaa on Instagram</a>]</p>
+      </div>
+
+      <p class="footer-legal"><a href="../../impressum.html">Legal Notice</a> &bull; <a href="../../datenschutz.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="../../js/script.js"></script>
+</body>
+</html>

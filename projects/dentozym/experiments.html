@@ -1,0 +1,2187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <title> | Stuttgart - iGEM 2023</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  <html>
+<head>
+
+<style>
+nav { 
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 24%, rgba(16,255,148,1) 66%, rgba(0,212,255,1) 100%);
+}
+li {
+  color: #ffffff;
+}
+a 
+{
+  color: #ffffff; 
+}
+</style>
+</head>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+
+    <!---- TEAM NAME ---->
+    <a class="navbar-brand" href="../../index.html">Stuttgart 
+    <img src="assets/teams/4575/wiki/logo.png" alt="DentoZym-logo" width="90" height="auto" align="left-aligned"/> 
+    </a>
+
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        <!---- HOME ---->
+        <li class="nav-item">
+          <a class="nav-link" href="index_dentozym.html">Home</a>
+        </li>
+
+                <!---- Description ---->
+        <li class="nav-item">
+          <a class="nav-link" href="description.html">Description</a>
+        </li>
+
+        <!---- PROJECT ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="contribution.html">Contribution</a></li>
+            <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+            <li><a class="dropdown-item" href="engineering.html">Engineering</a></li>
+            <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
+            <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
+            <li><a class="dropdown-item" href="results.html">Results</a></li>
+          </ul>
+        </li>
+
+        <!---- Human Practice mit Edu ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practice and Education
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="human-practices.html">Human Practices</a></li>
+            <li><a class="dropdown-item" href="education.html">Education</a></li>
+            <li><a class="dropdown-item" href="collaboration.html">Collaboration</a></li>
+            <li><a class="dropdown-item" href="socialmedia.html">Social Media</a></li>
+          </ul>
+        
+       <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="team.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="team.html">Team</a></li>
+            <li><a class="dropdown-item" href="attributions.html">Attributions</a></li>
+          </ul>
+        </li> 
+        <!---- AWARDS ---->
+        <!--
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Awards
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="education.html">Education</a></li>
+            <li><a class="dropdown-item" href="human-practices.html">Human Practices</a></li>
+          </ul>
+        </li> --->
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</html>
+
+  <!-- Header -->
+  
+
+  <!-- Page Content -->
+  <div class="container">
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(#00153f,#3bad98);
+      margin-top: 30px;
+    }
+    
+    .logo {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .team-member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .team-member:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    .team-member img {
+      max-width: 100px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .team-member-info {
+      flex: 1;
+      display: none;
+      padding-left: 15px;
+    }
+    h1 {
+    color: white;
+  }
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 5px 0;
+      color: #555;
+    }
+    li {
+      color: #000000
+    }
+  </style>
+  <script>
+    function toggleInfo(memberInfo) {
+      var infoDisplay = memberInfo.style.display;
+      var allMemberInfo = document.querySelectorAll('.team-member-info');
+      
+      allMemberInfo.forEach(function(info) {
+        info.style.display = 'none';
+      });
+      
+      memberInfo.style.display = (infoDisplay === 'block') ? 'none' : 'block';
+    }
+  </script>
+</head>
+
+<body>
+  <br>
+<div class="text-center">
+      <figure class="figure">
+      <img src= "assets/teams/4575/wiki/experiments.png" class="img-fluid" alt="experiments banner">
+   </div>
+
+<h1><b>Agar and Media</b></h1>
+  
+  <div class="container">
+    <h2 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 16px;"></h2></div>
+    <div class="team-member" onclick="toggleInfo(member1Info)">
+      <h2>LB-Agar-Medium (+ Amp)</h2>
+      <div class="team-member-info" id="member1Info">
+        <ul>
+          <li>10 g/L tryptone</li>
+          <li>10 g/L NaCL</li>
+          <li>5 g/L yeast extract</li>
+          <li>20 g/L agar</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium</li>
+          <li>Add 1 ml of 100 mg/mL ampicillin solution into 1 liter medium</li>
+          </ul>
+      
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member2Info)">
+      <h2>LB-Medium (+ Amp)</h2>
+      <div class="team-member-info" id="member2Info">
+        <ul>
+          <li>10 g/L tryptone</li>
+          <li>10 g/L NaCl.</li>
+          <li>5 g/L yeast extract</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium.</li>
+          <li>Add 1ml of 150 mg/mL of ampicillin solution into 1 liter medium.</li>
+          </ul>
+    
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member3Info)">
+      <h2>TB-Medium</h2>
+      <div class="team-member-info" id="member3Info">
+        <ul>
+          <li>12 g tryptone in 900 ml</li>
+          <li>5 g (4 ml) glycerol in 900 ml</li>
+          <li>24 g yeast extract in 900 ml</li>
+          <li>Fill up with water to 900 ml</li>
+          <li>Autoclave the bottle with medium</li>
+          <li>Add 100 ml 10x TB-salt to 900 ml TB media</li>
+          </ul>
+      </div>
+    </div>
+     <div class="team-member" onclick="toggleInfo(member4Info)">
+       <h2>TB-Salt</h2>
+      <div class="team-member-info" id="member4Info">
+        <ul>
+          <li> 23.1 g/L KH<sub>2</sub>PO<sub>4</sub></li>
+          <li> 125.4 g/L K<sub>2</sub>HPO<sub>4</sub></li>
+          <li> Autoclave the bottle.</li>
+          </ul>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member5Info)">
+      <h2>SOC-Medium</h2>
+      <div class="team-member-info" id="member5Info">
+        <ul>
+          <li>20 g/L tryptone</li>
+          <li>0.584 g/L NaCl</li>
+          <li>0.186 g/L KCl</li>
+          <li>2.4 g/L MgSO<sub>4</sub></li>
+          <li>5 g/L yeast extract</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium</li>
+          <li>Per 1L of SOB, add 20mL of filter-sterilized 20% glucose solution</li>
+          </ul>
+    
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member6Info)">
+      <h2>Pichia Pastoris YPD</h2>
+      <div class="team-member-info" id="member6Info">
+        <ul>
+          <li>20 g/L tryptone/peptone</li>
+          <li>20 g/L glucose</li>
+          <li>10 g/L yeast extract</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium</li>
+          </ul>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member7Info)">
+      <h2>Pichia Pastoris YPD Agar Plates</h2>
+      <div class="team-member-info" id="member7Info">
+        <ul>
+          <li>20 g/L tryptone/peptone</li>
+          <li>20 g/L glucose</li>
+          <li>10 g/L yeast extract</li>
+          <li>20 g/L agar</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium</li>
+          </ul>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member8Info)">
+      <h2>Pichia Pastoris YPD + Histidin Agar Plates</h2>
+      <div class="team-member-info" id="member8Info">
+        <ul>
+          <li>20 g/L tryptone/peptone</li>
+          <li>20 g/L glucose</li>
+          <li>10 g/L yeast extract</li>
+          <li>1.56 g/L histidin</li>
+          <li>20 g/L agar</li>
+          <li>Fill up with water to 1 L</li>
+          <li>Autoclave the bottle with medium</li>
+          </ul>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member9Info)">
+      <h2>Pichia Pastoris minimal Agar Plates</h2>
+      <div class="team-member-info" id="member9Info">
+        <ul>
+          <li>15 g/L agar</li>
+          <li>Fill up with water to 800 ml</li>
+          <li>Autoclave the bottle with medium</li>
+          <li>Cool solution to below 60°C and add YNB, Dextrose and Biotin solutions.</li>
+          <li>100 ml YNB solution (13.4%)</li>
+          <li>100 ml dextrose (20%)</li>
+          <li>2 ml Biotion (0.02%)</li>
+          </ul>
+      </div>
+    </div>
+
+<hr>
+
+<h1><b>Buffers</b></h1>
+ <div class="team-member" onclick="toggleInfo(member10Info)">
+      <h2>50x TAE-Buffer</h2>
+      <div class="team-member-info" id="member10Info">
+  <ul>
+    <li>242 g Tris base</li>
+    <li>57.1 ml Glacial acetic acid</li>
+    <li>37.2 g EDTA</li>
+    <li>Fill up with distilled water to approximately 950 ml</li>
+    <li>Measure the pH of the solution using a pH meter. Adjust the pH to approximately 8.2 with concentrated acetic acid or concentrated NaOH as needed.</li>
+    <li>Stirring plate or magnetic stir bar</li>
+    <li>Fill up with distilled water to 1000 ml</li>
+  </ul>
+      </div>
+  </div>
+<div class="team-member" onclick="toggleInfo(member11Info)">
+<h2>10x SDS running-Buffer</h2>
+      <div class="team-member-info" id="member11Info">
+  <ul>
+    <li>30.3 g Tris base</li>
+    <li>144 g glycin</li>
+    <li>100g SDS (Sodium Dodecyl Sulfate) </li>
+    <li>Fill up with distilled water to approximately 950 ml</li>
+    <li>Fill up with distilled water to 1000 ml</li>
+  </ul>
+      </div>
+    </div>
+
+<hr>
+
+
+<h1><b>Cloning</b></h1>
+ <div class="team-member" onclick="toggleInfo(member12Info)">
+      <h2>Processing of primers and fragments</h2>
+      <div class="team-member-info" id="member12Info">
+        <ul>
+    <li>Centrifuge the fragments and primers with Short Spin for approx. 10 sec.</li>
+    <li>Dilute the fragments and primers with ddH<sub>2</sub>O (final concentrations 50 nM for fragments and 100 µM for primers).</li>
+    <li>Vortex thoroughly</li>
+    <li>Short spin for approx. 10 sec.</li>
+        </ul>
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member13Info)">
+      <h2>PCR Protocol for 50 µl Approach</h2>
+      <div class="team-member-info" id="member13Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Q5 2x Master Mix</li>
+    <li>10 µM Primer fw</li>
+    <li>10 µM Primer rv</li>
+    <li>Distilled water (ddH<sub>2</sub>O)</li>
+    <li>DNA template</li>
+    <li>PCR tubes/strips</li>
+    <li>PCR machine</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of PCR Reaction Mix (50 µl):</strong>
+      <ul>
+        <li>Mix the following components in a PCR tube to achieve a total volume of 50 µl per reaction:</li>
+        <table border="1">
+          <tr>
+            <th>Components</th>
+            <th>Volume</th>
+            <th>Concentration</th>
+          </tr>
+          <tr>
+            <td>Q5 2x Master Mix</td>
+            <td>25 µl</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>10 µM Primer fw</td>
+            <td>2.5 µl</td>
+            <td>0.5 µM</td>
+          </tr>
+          <tr>
+            <td>10 µM Primer rv</td>
+            <td>2.5 µl</td>
+            <td>0.5 µM</td>
+          </tr>
+          <tr>
+            <td>ddH<sub>2</sub>O</td>
+            <td>19 µl</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>DNA Template</td>
+            <td>1 µl</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </ul>
+    </li>
+
+    <li><strong>PCR Amplification (Cycling Conditions):</strong>
+      <p>Set up the PCR machine with the following cycling conditions listed in Table 2.</p>
+    </li>
+
+    <li><strong>PCR Cycling Conditions (Table 2):</strong>
+      <table border="1">
+        <tr>
+          <th>Step</th>
+          <th>Temp for Fragment</th>
+          <th>Time for Fragment</th>
+          <th>Temp for Vector</th>
+          <th>Time for Vector</th>
+        </tr>
+        <tr>
+          <td>Initial Denaturation</td>
+          <td>98°C</td>
+          <td>30 s</td>
+          <td>98°C</td>
+          <td>30 s</td>
+        </tr>
+        <tr>
+          <td>Cycle: Denaturation</td>
+          <td>98°C</td>
+          <td>10 s</td>
+          <td>98°C</td>
+          <td>10 s</td>
+        </tr>
+        <tr>
+          <td>Cycle: Annealing</td>
+          <td>70°C</td>
+          <td>30 s</td>
+          <td>70°C</td>
+          <td>30 s</td>
+        </tr>
+        <tr>
+          <td>Cycle: Elongation</td>
+          <td>72°C</td>
+          <td>90 s</td>
+          <td>72°C</td>
+          <td>180 s</td>
+        </tr>
+        <tr>
+          <td>Final Extension</td>
+          <td>70°C</td>
+          <td>150 s</td>
+          <td>70°C</td>
+          <td>210 s</td>
+        </tr>
+        <tr>
+          <td>Hold</td>
+          <td>8°C</td>
+          <td>-</td>
+          <td>8°C</td>
+          <td>-</td>
+        </tr>
+      </table>
+    </li>
+
+    <li><strong>PCR Amplification:</strong>
+      <p>Run the PCR program for the specified number of cycles, 30 times for the fragments and 40 times for the vector.</p>
+    </li>
+
+    <li><strong>PCR Product Analysis:</strong>
+      <p>Analyze the PCR products by running a portion of the reaction on an agarose gel for size comparison.</p>
+    </li>
+  </ol>
+          
+      </div>
+    </div>
+
+
+
+ <div class="team-member" onclick="toggleInfo(member14Info)">
+      <h2>Linkage PCR</h2>
+      <div class="team-member-info" id="member14Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>DNA samples containing the target DNA sequences</li>
+    <li>Q5 MasterMix</li>
+    <li>Primers specific to the target DNA sequences</li>
+    <li>PCR tubes/strips</li>
+    <li>PCR machine</li>
+    <li>Agarose gel</li>
+    <li>Gel electrophoresis equipment</li>
+    <li>DNA ladder</li>
+  </ul>
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>DNA Extraction and Quantification:</strong>
+      <ul>
+        <li>Extract DNA from the respective sources and quantitate the DNA using a suitable method.</li>
+      </ul>
+    </li>
+
+    <li><strong>Primer Design:</strong>
+      <ul>
+        <li>Design primers specific to the target DNA sequences that will be used to amplify the linkage between the two DNA regions.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Reaction Mix Preparation:</strong>
+      <ul>
+        <li>Calculate the amount of each component for a single PCR reaction based on the number of reactions you plan to perform and prepare the PCR reaction mix accordingly.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Reaction Setup:</strong>
+      <ul>
+        <li>Place a PCR tube or strip into a PCR tube rack.</li>
+        <li>Dispense an appropriate volume of the PCR reaction mix into each PCR tube according to the calculations.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Template Addition:</strong>
+      <ul>
+        <li>Add the DNA templates to the respective PCR tubes, ensuring the appropriate amount of DNA is added for each sample.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Amplification:</strong>
+      <ul>
+        <li>Load the PCR tubes into the PCR machine.</li>
+        <li>Set up the PCR program, including denaturation, annealing, and extension temperatures and times based on the primer specifications and target DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Product Analysis:</strong>
+      <ul>
+        <li>After PCR amplification, analyze the PCR products by running a portion of the reaction on an agarose gel with a DNA ladder for size comparison.</li>
+        <li>Visualize the DNA bands under UV light using a gel documentation system.</li>
+      </ul>
+    </li>
+  </ol>
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member15Info)">
+      <h2>0,8 % Gel</h2>
+      <div class="team-member-info" id="member15Info">
+        <ul>
+          <li>0,4 g Agarose</li>
+          <li>50 ml 1x TAE-Puffer</li>
+          </ul>
+
+          <p>1. Heat in microwave until the agarose is completely dissolved.</p>
+           <p> -Use 3,0 μl Midori-Green (Advance DNA stain) per 50 ml.</p>
+            <p>2. Allow to harden for 30 min.</p>
+            <br>
+             <p>For 1% Gel use 0,5g Agarose, etc.</p>
+              <p>For a larger gel-chamber and 0,8% gel: use 250 ml TAE-Puffer on 2 g Agarose</p>
+          
+      </div>
+    </div>
+
+ <div class="team-member" onclick="toggleInfo(member16Info)">
+      <h2>Agarose Gel</h2>
+      <div class="team-member-info" id="member16Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Agarose powder</li>
+    <li>1x TAE buffer</li>
+    <li>Loading dye (6x)</li>
+    <li>PCR product</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of 0.8% w/v Agarose Gel:</strong>
+      <ul>
+        <li>Measure the required amount of agarose powder (w/v) for a 0.8% gel according to the desired gel size/volume.</li>
+        <li>Add the measured agarose powder to an appropriate volume of 1x TAE buffer in a microwave-safe flask or container.</li>
+        <li>Mix well to ensure the agarose is completely dissolved.</li>
+        <li>Microwave the mixture until the agarose is fully dissolved, but be cautious to avoid boiling over.</li>
+        <li>Allow the mixture to cool to around 50-60°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Addition of Loading Dye to PCR Product:</strong>
+      <ul>
+        <li>Add 5 µl or 10 µl of loading dye (6x) to 25 µl or 50 µl of the PCR product, respectively.</li>
+        <li>Mix the mixture well using a pipette to ensure thorough mixing of the PCR product and loading dye.</li>
+      </ul>
+    </li>
+
+    <li><strong>Loading PCR Product on Agarose Gel:</strong>
+      <ul>
+        <li>Prepare the agarose gel mold and comb to create gel pockets suitable for loading the PCR product.</li>
+        <li>Once the agarose mixture has cooled to around 50-60°C, pour it into the gel mold to create the gel.</li>
+        <li>Allow the gel to solidify by cooling at room temperature.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Electrophoresis:</strong>
+      <ul>
+        <li>Carefully remove the comb from the solidified agarose gel to create wells for loading the DNA samples.</li>
+        <li>Place the gel in the gel electrophoresis chamber and add enough 1x TAE buffer till the fill band.</li>
+        <li>Load the PCR product mixed with loading dye into the wells created in the gel.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Electrophoresis Running:</strong>
+      <ul>
+        <li>Run the gel at 100 V for 60 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Fragment Visualization:</strong>
+      <ul>
+        <li>After electrophoresis, carefully remove the gel from the gel chamber.</li>
+        <li>Visualize the DNA fragments by placing the gel on a UV table and turning on the UV light.</li>
+        <li>Observe and document the DNA fragments based on their migration pattern and size.</li>
+      </ul>
+    </li>
+  </ol>
+      </div>
+    </div>
+    
+  
+<div class="team-member" onclick="toggleInfo(member17Info)">
+        <h2>Gel Extraction</h2>
+      <div class="team-member-info" id="member17Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Agarose gel containing DNA fragments</li>
+    <li>NEB Monarch® DNA Gel Extraction Kit (or similar)</li>
+    <li>Midori Green solution</li>
+    <li>Sterile water</li>
+    <li>Microcentrifuge tubes</li>
+    <li>Microcentrifuge</li>
+    <li>Vortex mixer</li>
+    <li>Refrigerated centrifuge</li>
+    <li>UV table</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of the Gel:</strong>
+      <ul>
+        <li>Prepare an agarose gel containing DNA fragments using standard agarose gel electrophoresis procedures.</li>
+        <li>Stain the gel with Midori Green according to the manufacturer's instructions.</li>
+        <li>Visualize the DNA bands using a UV table.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Excision:</strong>
+      <ul>
+        <li>Using a clean scalpel or razor blade, carefully cut out the DNA band of interest from the gel.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Extraction Preparation:</strong>
+      <ul>
+        <li>Weigh the gel slice to accurately determine the amount of gel for subsequent steps.</li>
+        <li>Transfer the gel slice into a microcentrifuge tube.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Dissolution:</strong>
+      <ul>
+        <li>Add 3-4 volumes (in μl) of Monarch Gel Dissolving Buffer to the gel slice, based on the weight of the gel slice.</li>
+        <li>Incubate the tube at 50°C for 5-10 minutes or until the gel slice is completely dissolved.</li>
+        <li>Mix the contents by inverting the tube periodically.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Binding:</strong>
+      <ul>
+        <li>Place a Monarch DNA Gel Extraction Column in a collection tube.</li>
+        <li>Transfer the dissolved gel mixture onto the column.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute to bind the DNA to the column.</li>
+      </ul>
+    </li>
+
+    <li><strong>Wash Steps:</strong>
+      <ul>
+        <li>Discard the flow-through and place the column back into the collection tube.</li>
+        <li>Wash the column by adding 200 μl of Monarch DNA Wash Buffer to the column.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute. Discard the flow-through and repeat this wash step once more.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Elution:</strong>
+      <ul>
+        <li>Transfer the column to a clean 1.5 ml microcentrifuge tube.</li>
+        <li>Add 10 μl of Monarch DNA Elution Buffer directly onto the center of the column membrane.</li>
+        <li>Incubate at room temperature for 1 minute.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute to elute the purified DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Quantification:</strong>
+      <ul>
+        <li>Measure the concentration and purity of the purified DNA using a spectrophotometer or Nanodrop.</li>
+      </ul>
+    </li>
+  </ol>
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member18Info)">
+        <h2>PCR Purification</h2>
+      <div class="team-member-info" id="member18Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>PCR reaction mixture</li>
+    <li>NEB Monarch® PCR & DNA Cleanup Kit (or similar)</li>
+    <li>Ethanol (95-100%)</li>
+    <li>Sterile water</li>
+    <li>Microcentrifuge tubes</li>
+    <li>Microcentrifuge</li>
+    <li>Vortex mixer</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>PCR Amplification:</strong>
+      <ul>
+        <li>Perform a standard PCR amplification according to the PCR protocol for your target DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>Preparation of PCR Products:</strong>
+      <ul>
+        <li>After PCR amplification, proceed with the purification process immediately or store the PCR reaction mixture at -20°C for later purification.</li>
+      </ul>
+    </li>
+
+    <li><strong>Sample Preparation for Cleanup:</strong>
+      <ul>
+        <li>Add 5 volumes of Monarch Binding Buffer to the PCR reaction mixture for dsDNA below 2 kb.</li>
+        <li>Add 2 volumes of Monarch Binding Buffer to the PCR reaction mixture for dsDNA above 2 kb.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Binding:</strong>
+      <ul>
+        <li>Mix the sample thoroughly by pipetting or vortexing.</li>
+        <li>Transfer the mixture to a Monarch column placed in a collection tube.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute to bind the DNA to the column.</li>
+      </ul>
+    </li>
+
+    <li><strong>Wash Steps:</strong>
+      <ul>
+        <li>Discard the flow-through and place the column back into the collection tube.</li>
+        <li>Add 200 μl of Monarch Wash Buffer to the column.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute. Discard the flow-through and repeat this wash step once more.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Elution:</strong>
+      <ul>
+        <li>Transfer the column to a clean 1.5 ml microcentrifuge tube.</li>
+        <li>Eluate with 10 μl of Monarch Elution Buffer by putting it directly onto the center of the column membrane.</li>
+        <li>Incubate at room temperature for 1 minute.</li>
+        <li>Centrifuge at 16,000 x g for 1 minute to elute the purified DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Quantification:</strong>
+      <ul>
+        <li>Measure the concentration and purity of the purified DNA using a spectrophotometer or Nanodrop.</li>
+      </ul>
+    </li>
+  </ol>
+      </div>
+    </div>
+
+
+<div class="team-member" onclick="toggleInfo(member19Info)">
+        <h2>Gibson Assembly </h2>
+      <div class="team-member-info" id="member19Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>DNA fragments to be assembled</li>
+    <li>NEBuilder® HiFi DNA Assembly Master Mix</li>
+    <li>Distilled water</li>
+    <li>PCR machine or thermal cycler</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Calculate Amounts of DNA Fragments:</strong>
+      <ul>
+        <li>Calculate the amount of each DNA fragment to be used in the Gibson Assembly based on their respective lengths and concentrations. Typically, equimolar amounts of fragments are used.</li>
+        <li>In the table below are the molar concentrations used.</li>
+      </ul>
+    </li>
+    <table> <thead> cool</thead></table>
+
+    <li><strong>Mix DNA Fragments and Master Mix:</strong>
+      <ul>
+        <li>In a sterile microcentrifuge tube, combine the DNA fragments in equimolar amounts. The total DNA amount should be within the recommended range for Gibson Assembly.</li>
+        <li>Add an appropriate volume of NEBuilder® HiFi DNA Assembly Master Mix based on the total DNA amount. Refer to the manufacturer's instructions for the correct ratio.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation:</strong>
+      <ul>
+        <li>Mix the DNA fragments and Master Mix thoroughly by gentle pipetting.</li>
+        <li>Incubate the reaction at the 50°C for the 15 minutes.</li>
+      </ul>
+    </li>
+    <li><strong>Transformation:</strong>
+      <ul>
+        <li>Use 3 µl of the Gibson Assembly reaction to transform into 25 µl competent <i>E. coli</i> cells as per standard transformation protocols.</li>
+      </ul>
+    </li>
+
+    <li><strong>Plating and Selection:</strong>
+      <ul>
+        <li>Plate the transformed cells on selective agar plates containing the appropriate antibiotic(.</li>
+        <li>Incubate the plates overnight at the 37°C.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+<div class="team-member" onclick="toggleInfo(member20Info)">
+        <h2>BioBrick Assembly</h2>
+      <div class="team-member-info" id="member20Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>BioBrick DNA parts (recipient and insert)</li>
+    <li>Restriction enzymes (EcoRI, XbaI, SpeI, PstI)</li>
+    <li>DNA ligase</li>
+    <li>10X restriction enzyme buffer</li>
+    <li>Gel extraction kit</li>
+    <li>Sterile water</li>
+    <li>PCR machine</li>
+    <li>Incubator set to 37°C</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of DNA Parts:</strong>
+      <ul>
+        <li>Retrieve the BioBrick DNA parts (recipient and insert) from the freezer and thaw on ice.</li>
+        <li>Quantify the DNA concentration using a spectrophotometer or Nanodrop.</li>
+      </ul>
+    </li>
+
+    <li><strong>Digestion of DNA Parts:</strong>
+      <ul>
+        <li>Set up separate digestion reactions for the recipient and insert DNA parts.</li>
+        <li>Mix 1000 ng of each DNA part, 5 μl of 10X restriction enzyme buffer, and appropriate restriction enzymes according to RFC10 (EcoRI and XbaI for recipient, SpeI and PstI for insert).</li>
+        <li>Incubate the reactions at 37°C for 15 minutes and after that at 80°C for 20 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Electrophoresis:</strong>
+      <ul>
+        <li>Prepare a 1% agarose gel and load the digested DNA samples alongside a DNA ladder.</li>
+        <li>Run the gel at 100 V for about 60 minutes.</li>
+        <li>Visualize the bands using a UV table.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Extraction:</strong>
+      <ul>
+        <li>Cut out the gel bands corresponding to the digested DNA fragments.</li>
+        <li>Purify the DNA fragments using a gel extraction kit following the manufacturer's protocol.</li>
+      </ul>
+    </li>
+
+    <li><strong>Ligation:</strong>
+      <ul>
+        <li>Mix the purified insert DNA (SpeI-PstI digested) and the purified recipient DNA (EcoRI-XbaI digested) in a 1:1 molar ratio.</li>
+        <li>Add DNA ligase and ligase buffer according to the manufacturer's instructions.</li>
+        <li>Incubate the ligation reaction at 16°C overnight.</li>
+      </ul>
+    </li>
+
+    <li><strong>Transformation:</strong>
+      <ul>
+        <li>Heat-shock E. coli competent cells with the ligated DNA according to standard protocols.</li>
+        <li>Plate the transformed cells on appropriate selective agar plates.</li>
+      </ul>
+    </li>
+
+    <li><strong>Colony PCR and Sequencing:</strong>
+      <ul>
+        <li>Pick colonies from the selective agar plates and perform colony PCR using BioBrick-specific primers to confirm successful assembly.</li>
+        <li>Sequence the PCR products to validate the correct assembly.</li>
+      </ul>
+    </li>
+  </ol>>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member21Info)">
+          <h2>DNA cleanup</h2>
+      <div class="team-member-info" id="member21Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>DNA sample to be purified</li>
+    <li>Monarch® PCR & DNA Cleanup Kit</li>
+    <li>Microcentrifuge tubes</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Binding DNA to Monarch® Columns:</strong>
+      <ul>
+        <li>Place a Monarch® Column in a provided collection tube.</li>
+        <li>Add the DNA sample (not exceeding 5 μg) to the Monarch® Column.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Binding and Washing:</strong>
+      <ul>
+        <li>Add 2 volumes of Binding Buffer to the DNA sample in the Monarch® Column.</li>
+        <li>Mix the contents by pipetting gently.</li>
+        <li>Centrifuge at maximum speed for 30 seconds.</li>
+        <li>Discard the flow-through.</li>
+      </ul>
+    </li>
+
+    <li><strong>Washing Steps:</strong>
+      <ul>
+        <li>Add 700 µl of Wash Buffer to the Monarch® Column.</li>
+        <li>Centrifuge at maximum speed for 30 seconds.</li>
+        <li>Discard the flow-through.</li>
+        <li>Repeat the wash step once.</li>
+      </ul>
+    </li>
+
+    <li><strong>Elution of DNA:</strong>
+      <ul>
+        <li>Transfer the Monarch® Column to a clean microcentrifuge tube.</li>
+        <li>Add the provided Elution Buffer or distilled water directly to the center of the column membrane (min. 10 µl and up to 100 µl) for DNA elution.</li>
+        <li>Incubate at room temperature for 1 minute.</li>
+        <li>Centrifuge at maximum speed for 30 seconds to elute the DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>Checking DNA Concentration:</strong>
+      <ul>
+        <li>Measure the DNA concentration using a Nanodrop.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member22Info)">
+        <h2>Overnight culture</h2>
+      <div class="team-member-info" id="member22Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>LB (Luria-Bertani) or TB (Terrific Broth) medium</li>
+    <li>Ampicillin solution (5 µL per culture tube)</li>
+    <li>Sterile pipette tips</li>
+    <li>Bacterial culture plate</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of Culture Medium:</strong>
+      <ul>
+        <li>Depending on the purpose, select either LB or TB medium for the bacterial culture.</li>
+        <li>Measure 5 mL of the chosen medium and add it to a sterile culture tube.</li>
+      </ul>
+    </li>
+
+    <li><strong>Addition of Ampicillin:</strong>
+      <ul>
+        <li>Measure 5 µL of ampicillin using a micropipette and add it to the culture tube containing the medium. Ampicillin is added to promote the growth of bacteria harboring a plasmid with ampicillin resistance.</li>
+      </ul>
+    </li>
+
+    <li><strong>Colony Selection and Inoculation:</strong>
+      <ul>
+        <li>Using a sterile pipette tip, carefully pick a single bacterial colony from the culture plate that you want to inoculate.</li>
+        <li>Transfer the picked colony into the culture tube containing the medium and ampicillin.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation:</strong>
+      <ul>
+        <li>Immerse the pipette tip with the picked colony into the medium-antibiotic mixture in the culture tube.</li>
+        <li>Incubate the culture tube at 37°C to promote bacterial growth and propagation. The culture can be incubated in an appropriate incubator or shaker.</li>
+      </ul>
+    </li>
+  </ol>
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member23Info)">
+        <h2>Competent cell production <i> E. coli</i> </h2>
+      <div class="team-member-info" id="member23Info">
+        <h3>Materials:</h3>
+<ul>
+    <li>Bacterial culture in LB medium (10 mL)</li>
+    <li>LB medium</li>
+    <li>CaCl2 (50 mM)</li>
+    <li>CC Buffer</li>
+    <li>Liquid Nitrogen</li>
+</ul>
+
+<h3>Procedure:</h3>
+
+<ol>
+    <li>
+        <h4>Overculture in LB Medium:</h4>
+        <p>Prepare an overculture by incubating the bacterial culture in 10 mL of LB medium at the appropriate temperature and conditions until reaching the desired growth phase.</p>
+    </li>
+
+    <li>
+        <h4>Inoculation and Growth:</h4>
+        <ul>
+            <li>Inoculate 50 mL of fresh LB medium with the overculture to achieve an initial OD600 of 0.1.</li>
+            <li>Incubate the culture at 37°C until the OD600 reaches approximately 0.6.</li>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Centrifugation and Supernatant Discard:</h4>
+        <ul>
+            <li>Centrifuge the bacterial culture at 5000 rpm and 4°C for 5 minutes.</li>
+            <li>Discard the supernatant.</li>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Resuspension in CaCl2 (50 mM):</h4>
+        <ul>
+            <li>Resuspend the bacterial pellet in 25 mL of CaCl2 (50 mM).</li>
+            <li>Centrifuge at 5000 rpm and 4°C for 5 minutes.</li>
+            <li>Discard the supernatant.</li>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Resuspension in CC Buffer:</h4>
+        <ul>
+            <li>Resuspend the bacterial pellet in 10 mL of CC Buffer.</li>
+            <li>Centrifuge at 5000 rpm and 4°C for 5 minutes.</li>
+            <li>Discard the supernatant.</li>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Division into Aliquots:</h4>
+        <ul>
+            <li>Resuspend the bacterial pellet in 6 mL of CC Buffer.</li>
+            <li>Divide the suspension into 200 µl aliquots.</li>
+            <li>Freeze each aliquot immediately in liquid nitrogen.</li>
+        </ul>
+    </li>
+</ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member24Info)">
+        <h2>Competent cell production <i> P. pastoris</i> </h2>
+      <div class="team-member-info" id="member24Info">
+        <h3>Materials:</h3>
+<ul>
+    <li>Pichia pastoris cells (grown to mid-log phase)</li>
+    <li>1 M Sorbitol solution</li>
+    <li>Lithium chloride (LiCl) solution (0.1 M)</li>
+    <li>Ice</li>
+    <li>Centrifuge</li>
+    <li>Sterile microcentrifuge tubes</li>
+    <li>Luria-Bertani (LB) agar plates</li>
+</ul>
+
+<h3>Procedure:</h3>
+
+<h4>1. Prepare Pichia pastoris Culture:</h4>
+<p>Grow Pichia pastoris cells in YPD (Yeast extract Peptone Dextrose) medium to mid-log phase (OD600 ≈ 0.6-1.0) by incubating at 30°C with shaking at 220 rpm.</p>
+
+<h4>2. Harvest the Cells:</h4>
+<ul>
+    <li>Transfer the culture to a sterile centrifuge tube and centrifuge at 3000 rpm for 5 minutes at 4°C.</li>
+    <li>Discard the supernatant and resuspend the pellet gently in an equal volume of 1 M sorbitol.</li>
+</ul>
+
+<h4>3. Wash and Resuspend the Cells:</h4>
+<ul>
+    <li>Centrifuge the cells again at 3000 rpm for 5 minutes at 4°C.</li>
+    <li>Discard the supernatant and resuspend the pellet gently in an equal volume of ice-cold 1 M sorbitol.</li>
+</ul>
+
+<h4>4. Centrifuge and Resuspend in LiCl:</h4>
+<ul>
+    <li>Centrifuge the cells at 3000 rpm for 5 minutes at 4°C.</li>
+    <li>Discard the supernatant and resuspend the pellet in an equal volume of ice-cold 0.1 M LiCl.</li>
+    <li>Incubate the cells on ice for 1 hour.</li>
+</ul>
+
+<h4>5. Centrifuge and Wash with LiCl:</h4>
+<ul>
+    <li>Centrifuge the cells again at 3000 rpm for 5 minutes at 4°C.</li>
+    <li>Discard the supernatant and resuspend the pellet in 1 mL of ice-cold 0.1 M LiCl.</li>
+    <li>Centrifuge the cells at 3000 rpm for 5 minutes at 4°C.</li>
+    <li>Discard the supernatant and resuspend the pellet in a small volume (e.g., 100-200 μL) of ice-cold 0.1 M LiCl.</li>
+</ul>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member25Info)">
+        <h2>Transformation</h2>
+      <div class="team-member-info" id="member25Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Competent cells</li>
+    <li>Plasmid DNA (positive control)</li>
+    <li>Gibson construct (3 µl)</li>
+    <li>BioBrick construct (2 µl)</li>
+    <li>LB medium</li>
+    <li>LB agar culture plates with appropriate antibiotic</li>
+    <li>Ice</li>
+    <li>Thermocycler</li>
+    <li>Centrifuge</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Thawing Competent Cells:</strong>
+      <ul>
+        <li>Thaw 25 µL of competent cells on ice.</li>
+      </ul>
+    </li>
+
+    <li><strong>Pre-incubation of Competent Cells:</strong>
+      <ul>
+        <li>Leave the cells on ice for 25 to 30 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>DNA Addition:</strong>
+      <ul>
+        <li>Add the following to the competent cells while keeping the tube on ice:
+          <ul>
+            <li>1 µL of plasmid DNA (positive control)</li>
+            <li>3 µL of Gibson construct</li>
+            <li>2 µL of BioBrick construct</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation on Ice:</strong>
+      <ul>
+        <li>Incubate the cells with DNA for 30 minutes on ice.</li>
+      </ul>
+    </li>
+
+    <li><strong>Heat Shock Treatment:</strong>
+      <ul>
+        <li>Place the tube with the cells and DNA in a thermocycler at 42°C for 45 seconds.</li>
+      </ul>
+    </li>
+
+    <li><strong>Cooling on Ice:</strong>
+      <ul>
+        <li>Place the cells on ice for 1 minute to cool down.</li>
+      </ul>
+    </li>
+
+    <li><strong>Addition of LB Medium:</strong>
+      <ul>
+        <li>Add 450 µL of LB medium to the cells.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation:</strong>
+      <ul>
+        <li>Incubate the cells for at least 60 minutes at 37°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Centrifugation (for Gibson Assembly):</strong>
+      <ul>
+        <li>Centrifuge the cells with Gibson Assembly constructs at 13,000 rpm for 1 minute.</li>
+        <li>Discard 350 µL of the supernatant, resuspend the pellet, and retain the remainder.</li>
+      </ul>
+    </li>
+
+    <li><strong>Plating of Cells:</strong>
+      <ul>
+        <li>Plate out 100 μL of the cell suspension directly onto LB agar culture plates with the appropriate antibiotic.</li>
+      </ul>
+    </li>
+
+    <li><strong>Overnight Incubation:</strong>
+      <ul>
+        <li>Incubate the culture plates overnight at 37°C.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member26Info)">
+        <h2>Quick plasmid analysis</h2>
+      <div class="team-member-info" id="member26Info">
+        <h2>Objective:</h2>
+  <p>The objective of this protocol is to quickly analyze Gibson-assembled plasmids.</p>
+
+  <h2>Materials:</h2>
+  <ul>
+    <li>Cell samples from the backup plates</li>
+    <li>Sterile ddH2O (deionized water)</li>
+    <li>2x NEB solution (NSEB)</li>
+    <li>25% Ficoll</li>
+    <li>Agarose gel</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Cell Preparation:</strong>
+      <ul>
+        <li>Extract a small amount of cells from the backup plates and dissolve them in 15 µl of sterile ddH2O.</li>
+      </ul>
+    </li>
+
+    <li><strong>Master Mix Preparation:</strong>
+      <ul>
+        <li>Prepare a Master Mix using 2x NSEB solution.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation:</strong>
+      <ul>
+        <li>Incubate the cell samples with the Master Mix for 1 hour at 98°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Ficoll Mixing:</strong>
+      <ul>
+        <li>Mix the incubated cells with 25% Ficoll.</li>
+      </ul>
+    </li>
+
+    <li><strong>Gel Application:</strong>
+      <ul>
+        <li>Apply the mixture onto an agarose gel for analysis.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member27Info)">
+        <h2>Colony-PCR</h2>
+      <div class="team-member-info" id="member27Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Bacterial colonies</li>
+    <li>NEB Q5 MasterMix</li>
+    <li>Primers specific to the target DNA</li>
+    <li>Sterile water</li>
+    <li>PCR tubes/strips</li>
+    <li>PCR machine</li>
+    <li>Agarose gel</li>
+    <li>Gel electrophoresis equipment</li>
+    <li>DNA ladder</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Colony Selection:</strong>
+      <ul>
+        <li>Select bacterial colonies from a freshly streaked agar plate that contains the desired DNA fragment.</li>
+      </ul>
+    </li>
+
+    <li><strong>Preparation of PCR Reaction Mix:</strong>
+      <ul>
+        <li>Prepare a master mix for the PCR reaction by combining the following components in a sterile microcentrifuge tube:
+          <ul>
+            <li>NEB Q5 MasterMix</li>
+            <li>Primers (forward and reverse) specific to the target DNA</li>
+            <li>Sterile water</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Reaction Setup:</strong>
+      <ul>
+        <li>Place a PCR tube or strip into a PCR tube rack.</li>
+        <li>Dispense an appropriate volume of the PCR reaction mix (calculated for each reaction) into each PCR tube.</li>
+      </ul>
+    </li>
+
+    <li><strong>Collection of Bacterial Cells:</strong>
+      <ul>
+        <li>Using a sterile pipette tip, pick a small amount of a bacterial colony from the streaked agar plate.</li>
+      </ul>
+    </li>
+
+    <li><strong>Inoculation into PCR Reaction Mix:</strong>
+      <ul>
+        <li>Transfer the picked colony directly into the PCR tube containing the reaction mix. Mix gently by pipetting up and down.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Amplification:</strong>
+      <ul>
+        <li>Load the PCR tubes into the PCR machine.</li>
+        <li>Set up the PCR program, including denaturation, annealing, and extension temperatures and times based on the primer specifications and target DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Program:</strong>
+      <ul>
+        <li>Perform PCR amplification using the following program as a general guideline:
+          <ul>
+            <li>Initial denaturation: 98°C for 30 seconds</li>
+            <li>Denaturation: 98°C for 10 seconds</li>
+            <li>Annealing: Optimal temperature for primer pair (e.g., 55-65°C) for 20 seconds</li>
+            <li>Extension: 72°C for appropriate time per kb of expected PCR product (e.g., 30 seconds per kb)</li>
+            <li>Final extension: 72°C for 2-5 minutes</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Product Analysis:</strong>
+      <ul>
+        <li>After PCR amplification, analyze the PCR products by running a portion of the reaction on an agarose gel with a DNA ladder for size comparison.</li>
+        <li>Visualize the DNA bands under UV light using a gel documentation system or UV table.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleInfo(member28Info)">
+        <h2>Colony-PCR</h2>
+      <div class="team-member-info" id="member28Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Bacterial colonies</li>
+    <li>Sterile water</li>
+    <li>20 µl of 20 mM NaOH</li>
+    <li>PCR master mix</li>
+    <li>PCR tubes/strips</li>
+    <li>PCR machine</li>
+    <li>Agarose gel</li>
+    <li>Gel electrophoresis equipment</li>
+    <li>DNA ladder</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Colony Selection and Lysis:</strong>
+      <ul>
+        <li>Select bacterial colonies from an agar plate.</li>
+        <li>In a sterile microcentrifuge tube, add a single colony from each selected bacterial colony to 20 µl of 20 mM NaOH.</li>
+        <li>Mix gently to ensure thorough mixing of cells with NaOH.</li>
+        <li>Incubate the mixture at 98°C for 45 minutes for cell lysis.</li>
+      </ul>
+    </li>
+
+    <li><strong>Neutralization:</strong>
+      <ul>
+        <li>After the incubation, allow the lysed cells to cool down to room temperature.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Setup:</strong>
+      <ul>
+        <li>Add 1-2 µl of the lysed cell suspension to the PCR tubes containing the PCR master mix.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Amplification:</strong>
+      <ul>
+        <li>Load the PCR tubes into the PCR machine.</li>
+        <li>Set up the PCR program, including denaturation, annealing, and extension temperatures and times based on the primer specifications and target DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>PCR Product Analysis:</strong>
+      <ul>
+        <li>After PCR amplification, analyze the PCR products by running a portion of the reaction on an agarose gel with a DNA ladder for size comparison.</li>
+        <li>Visualize the DNA bands under UV light using a gel documentation system or UV table.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member29Info)">
+        <h2>Plasmid isolation</h2>
+      <div class="team-member-info" id="member29Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>E. coli culture containing the plasmid of interest</li>
+    <li>innuPREP Plasmid Mini Kit 2.0 (Jena Analytik)</li>
+    <li>Lysis buffer</li>
+    <li>Neutralization buffer</li>
+    <li>Wash buffer (I and II)</li>
+    <li>Elution buffer</li>
+    <li>Microcentrifuge tubes</li>
+    <li>Microcentrifuge</li>
+    <li>Centrifuge</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Harvesting Bacterial Culture:</strong>
+      <ul>
+        <li>Inoculate a suitable volume of E. coli culture containing the plasmid of interest and grow it to the desired cell density.</li>
+      </ul>
+    </li>
+
+    <li><strong>Pellet Cells:</strong>
+      <ul>
+        <li>Transfer 1.5–2 mL of the bacterial culture into a microcentrifuge tube.</li>
+        <li>Centrifuge at 8,000 × g for 2 minutes to pellet the bacterial cells.</li>
+      </ul>
+    </li>
+
+    <li><strong>Resuspension of Cell Pellet:</strong>
+      <ul>
+        <li>Discard the supernatant carefully.</li>
+        <li>Resuspend the cell pellet in 250 µL of lysis buffer by gentle vortexing or pipetting.</li>
+        <li>Ensure thorough mixing to achieve a homogenous cell lysate.</li>
+      </ul>
+    </li>
+
+    <li><strong>Lysis of Cells:</strong>
+      <ul>
+        <li>Incubate the resuspended cells in lysis buffer at room temperature for 10 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>Neutralization:</strong>
+      <ul>
+        <li>Add 300 µL of neutralization buffer and mix gently by inverting the tube several times.</li>
+        <li>Incubate at room temperature for 5 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>Binding Plasmid DNA:</strong>
+      <ul>
+        <li>Load the lysate onto the innuPREP spin filter placed in a collection tube.</li>
+        <li>Centrifuge at 13,000 × g for 1 minute.</li>
+        <li>Discard the flow-through.</li>
+      </ul>
+    </li>
+
+    <li><strong>Washing:</strong>
+      <ul>
+        <li>Add 500 µL of wash buffer I to the spin filter.</li>
+        <li>Centrifuge at 13,000 × g for 1 minute.</li>
+        <li>Discard the flow-through.</li>
+        <li>Add 700 µL of wash buffer II to the spin filter.</li>
+        <li>Centrifuge at 13,000 × g for 1 minute.</li>
+        <li>Discard the flow-through.</li>
+      </ul>
+    </li>
+
+    <li><strong>Elution of Plasmid DNA:</strong>
+      <ul>
+        <li>Place the spin filter in a clean microcentrifuge tube.</li>
+        <li>Add 50 µL of elution buffer to the center of the spin filter.</li>
+        <li>Incubate at room temperature for 2 minutes.</li>
+        <li>Centrifuge at 13,000 × g for 1 minute to elute the plasmid DNA.</li>
+      </ul>
+    </li>
+
+    <li><strong>Quantification and Storage:</strong>
+      <ul>
+        <li>Quantify the isolated plasmid DNA using a Nanodrop.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member30Info)">
+        <h2>Sequencing </h2>
+      <div class="team-member-info" id="member30Info"
+        <h2>Materials:</h2>
+  <ul>
+    <li>DNA samples in a concentration of at least 50 ng/µl</li>
+    <li>Barcode labels</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Prepare DNA Samples:</strong>
+      <ul>
+        <li>Ensure you have DNA samples available, each with a concentration of at least 50 ng/µl.</li>
+      </ul>
+    </li>
+
+    <li><strong>Labeling with Barcode:</strong>
+      <ul>
+        <li>Affix a barcode label to each tube containing the DNA sample. </li>
+      </ul>
+    </li>
+
+    <li><strong>Volume Measurement:</strong>
+      <ul>
+        <li>Measure and pipette 5 µL of the DNA sample into each labeled tube.</li>
+        <li>Pipette 5 µL of the 5 µM primer into each labeled tube.</li>
+        <li>Send the labeled tube.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleInfo(member31Info)">
+        <h2>Post-staining Midori-Green</h2>
+      <div class="team-member-info" id="member31Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Agarose gel with separated DNA fragments</li>
+    <li>Midori Green DNA staining solution</li>
+    <li>Gel electrophoresis chamber</li>
+    <li>UV table</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Gel Preparation:</strong>
+      <ul>
+        <li>Perform agarose gel electrophoresis to separate DNA fragments based on size and charge.</li>
+      </ul>
+    </li>
+
+    <li><strong>Preparing Midori Green Staining Solution:</strong>
+      <ul>
+        <li>Dilute Midori Green DNA staining solution as per the manufacturer's instructions to the desired concentration for staining.</li>
+      </ul>
+    </li>
+
+    <li><strong>Poststaining:</strong>
+      <ul>
+        <li>After completing the gel electrophoresis, remove the gel from the gel electrophoresis chamber.</li>
+      </ul>
+    </li>
+
+    <li><strong>Midori Green Staining:</strong>
+      <ul>
+        <li>Submerge the gel in the prepared Midori Green staining solution, ensuring the gel is completely covered.</li>
+      </ul>
+    </li>
+
+    <li><strong>Staining Duration:</strong>
+      <ul>
+        <li>Allow the gel to stain for 20-30 minutes. The staining time can be adjusted based on the intensity of staining required.</li>
+        <li>Wash the gel twice for 30 minutes with water.</li>
+      </ul>
+    </li>
+
+    <li><strong>Visualization:</strong>
+      <ul>
+        <li>After staining, visualize the DNA bands under a UV table.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member32Info)">
+        <h2>Post-staining GelRed</h2>
+      <div class="team-member-info" id="member32Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Agarose gel with separated DNA fragments</li>
+    <li>GelRed nucleic acid stain</li>
+    <li>Gel electrophoresis chamber</li>
+    <li>UV table</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Gel Preparation:</strong>
+      <ul>
+        <li>Perform agarose gel electrophoresis to separate DNA fragments based on size and charge.</li>
+      </ul>
+    </li>
+
+    <li><strong>Preparing GelRed Staining Solution:</strong>
+      <ul>
+        <li>Dilute the GelRed nucleic acid stain according to the manufacturer's instructions to the desired concentration for staining.</li>
+      </ul>
+    </li>
+
+    <li><strong>Poststaining:</strong>
+      <ul>
+        <li>After completing the gel electrophoresis, remove the gel from the gel electrophoresis chamber.</li>
+      </ul>
+    </li>
+
+    <li><strong>GelRed Staining:</strong>
+      <ul>
+        <li>Submerge the gel in the prepared GelRed staining solution, ensuring the gel is completely covered.</li>
+      </ul>
+    </li>
+
+    <li><strong>Staining Duration:</strong>
+      <ul>
+        <li>Allow the gel to stain for 15 minutes. The staining time can be adjusted based on the intensity of staining required.</li>
+        <li>Wash the gel twice for 30 minutes with water.</li>
+      </ul>
+    </li>
+
+    <li><strong>Visualization:</strong>
+      <ul>
+        <li>After staining, visualize the DNA bands under a UV transilluminator. GelRed fluoresces under UV light, allowing for easy visualization of DNA bands.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<hr>
+
+<h1><b>Expression</b></h1>
+ <div class="team-member" onclick="toggleInfo(member33Info)">
+        <h2>Protein expression</h2>
+      <div class="team-member-info" id="member33Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Plasmid containing the protein of interest</li>
+    <li>E. coli strain BW25113</li>
+    <li>Antibiotic selection plates (ampicillin)</li>
+    <li>TB medium (Terrific Broth)</li>
+    <li>TB salt</li>
+    <li>10% arabinose</li>
+    <li>Spectrophotometer (measuring OD at 600 nm)</li>
+    <li>Shaking incubator</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Plasmid Transformation and Overnight Culture:</strong>
+      <ul>
+        <li>Transform the plasmid containing the protein of interest into BW25113 E. coli cells.</li>
+        <li>Plate the transformed cells on antibiotic selection plates (ampicillin) and incubate overnight at 37°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Preparing Overnight Culture:</strong>
+      <ul>
+        <li>Pick a single colony from the antibiotic selection plate and inoculate it into 5 ml of TB medium containing TB salt and ampicillin.</li>
+        <li>Incubate the culture overnight at 37°C with shaking.</li>
+      </ul>
+    </li>
+
+    <li><strong>Scaling Up the Culture:</strong>
+      <ul>
+        <li>Transfer the entire overnight culture into 500 ml of TB medium in a larger flask.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation and Growth Monitoring:</strong>
+      <ul>
+        <li>Incubate the culture at 37°C with shaking.</li>
+        <li>Continuously measure the optical density (OD) at 600 nm at regular intervals and record the values.</li>
+      </ul>
+    </li>
+
+    <li><strong>Induction:</strong>
+      <ul>
+        <li>When the OD value is between 0.7 and 0.9, induce protein expression.</li>
+        <li>Add 10 ml of 10% arabinose to reach the desired concentration for induction. Adjust the total volume accordingly.</li>
+      </ul>
+    </li>
+
+    <li><strong>Expressing Protein:</strong>
+      <ul>
+        <li>Continue incubation after induction for the desired period at the designated temperature:</li>
+        <li>37°C or 30°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Protein Harvesting:</strong>
+      <ul>
+        <li>Harvest the cells by centrifugation at an 14000 rpm and 15 minutes to obtain the cell pellet.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleInfo(member34Info)">
+        <h2>Bradford</h2>
+      <div class="team-member-info" id="member34Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Bovine Serum Albumin (BSA)</li>
+    <li>Distilled water (ddH2O)</li>
+    <li>Bradford reagent</li>
+    <li>Cuvettes</li>
+    <li>Spectrophotometer (set to 595 nm)</li>
+    <li>Parafilm</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <h3>Preparation of BSA Standard Curve:</h3>
+  <ol>
+    <li><strong>Prepare BSA Standard Solutions:</strong>
+      <ul>
+        <li>Dissolve 1 mg of BSA in 1 mL of ddH2O to prepare a 1 mg/mL BSA standard solution.</li>
+      </ul>
+    </li>
+
+    <li><strong>Prepare Triplicate Standard Samples:</strong>
+      <table>
+        <tr>
+          <th>BSA [µg]</th>
+          <th>BSA Standard [µL]</th>
+          <th>H2O [µL]</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2</td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>5</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>7</td>
+          <td>93</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>10</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>15</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>20</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>25</td>
+          <td>75</td>
+        </tr>
+      </table>
+    </li>
+
+    <li><strong>Prepare Cuvettes:</strong>
+      <ul>
+        <li>Pipette the triplicate standard samples directly into cuvettes as per the table.</li>
+      </ul>
+    </li>
+
+    <li><strong>Spectrophotometer Setup:</strong>
+      <ul>
+        <li>Set the spectrophotometer to measure at 595 nm.</li>
+      </ul>
+    </li>
+
+    <li><strong>Add Bradford Reagent:</strong>
+      <ul>
+        <li>Add the Bradford reagent to each cuvette and gently invert the samples using Parafilm.</li>
+        <li>Measure the absorbance at exactly 5 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>Record Absorbance:</strong>
+      <ul>
+        <li>Note the absorbance values at 595 nm for each standard sample.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Preparing Unknown Samples:</h3>
+  <ol>
+    <li><strong>Sample Preparation:</strong>
+      <ul>
+        <li>Use 100 µL of the diluted sample and add 900 µL of Bradford reagent.</li>
+      </ul>
+    </li>
+
+    <li><strong>Measurement:</strong>
+      <ul>
+        <li>Measure the absorbance at 595 nm following steps 3-5 of the BSA standard curve preparation.</li>
+      </ul>
+    </li>
+
+    <li><strong>Adjust Sample Volume:</strong>
+      <ul>
+        <li>Adjust the used sample volume as needed to stay within the linear range of the standard samples (2-25 µg/mL).</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member35Info)">
+        <h2>SDS PAGE</h2>
+      <div class="team-member-info" id="member355Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>Protein samples</li>
+    <li>2x SDS loading buffer</li>
+    <li>Marker</li>
+    <li>SDS-PAGE gel</li>
+    <li>SDS running buffer</li>
+    <li>Coomassie staining solution</li>
+    <li>20% acetic acid</li>
+    <li>Distilled water (ddH2O)</li>
+    <li>Electrophoresis apparatus</li>
+    <li>Power supply</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Sample Preparation:</strong>
+      <ul>
+        <li>Apply approximately 10 µg of protein per sample. If needed, dilute the sample to achieve the desired protein concentration.</li>
+      </ul>
+    </li>
+
+    <li><strong>Mixing with SDS Loading Buffer:</strong>
+      <ul>
+        <li>Mix 7.5 µL of each sample with 7.5 µL of 2x SDS loading buffer.</li>
+      </ul>
+    </li>
+
+    <li><strong>Boiling:</strong>
+      <ul>
+        <li>Boil the sample-buffer mixture at 95°C for 10 minutes.</li>
+      </ul>
+    </li>
+
+    <li><strong>Applying Marker and Samples:</strong>
+      <ul>
+        <li>Apply 5 µL of the marker and 15 µL of each sample mixed with the loading buffer onto the SDS-PAGE gel.</li>
+      </ul>
+    </li>
+
+    <li><strong>Running SDS-PAGE:</strong>
+      <ul>
+        <li>Run the SDS-PAGE at 100 V and 200 mA for 1.5 hours.</li>
+      </ul>
+    </li>
+
+    <li><strong>Staining with Coomassie:</strong>
+      <ul>
+        <li>Stain the gel with Coomassie staining solution for 40 minutes. Ensure the gel is completely covered.</li>
+      </ul>
+    </li>
+
+    <li><strong>Destaining:</strong>
+      <ul>
+        <li>Destain the gel with 20% acetic acid for 60 minutes.</li>
+        <li>Subsequently, destain the gel with distilled water (ddH2O) overnight.</li>
+      </ul>
+    </li>
+
+    <li><strong>Visualization:</strong>
+      <ul>
+        <li>Visualize the protein bands on the gel.</li>
+        <li>Document the results using an appropriate imaging system.</li>
+      </ul>
+    </li>
+  </ol>
+      
+      </div>
+    </div>
+
+<div class="team-member" onclick="toggleInfo(member36Info)">
+        <h2>Genomic DNA Isolation</h2>
+      <div class="team-member-info" id="member36Info">
+        <h2>Protocol for Isolating Genomic DNA from Pichia pastoris</h2>
+
+<h3>Materials:</h3>
+<ul>
+    <li>Pichia pastoris cells (grown culture)</li>
+    <li>TE buffer (10 mM Tris-HCl, 1 mM EDTA, pH 8.0)</li>
+    <li>Lysis buffer (50 mM Tris-HCl, 50 mM EDTA, 1% SDS, pH 8.0)</li>
+    <li>Phenol:chloroform:isoamyl alcohol (25:24:1)</li>
+    <li>Chloroform:isoamyl alcohol (24:1)</li>
+    <li>Ethanol (ice-cold)</li>
+    <li>Isopropanol (ice-cold)</li>
+    <li>70% ethanol (ice-cold)</li>
+    <li>Nuclease-free water</li>
+</ul>
+
+<h3>Procedure:</h3>
+
+<h4>1. Cell Lysis:</h4>
+<ul>
+    <li>Harvest Pichia pastoris cells and wash with TE buffer.</li>
+    <li>Resuspend the cells in lysis buffer and incubate at 65°C for 30-60 minutes.</li>
+</ul>
+
+<h4>2. DNA Extraction:</h4>
+<ul>
+    <li>Extract genomic DNA using phenol:chloroform:isoamyl alcohol (25:24:1) and centrifuge to separate phases.</li>
+    <li>Transfer the aqueous phase to a new tube.</li>
+    <li>Precipitate DNA with ice-cold ethanol or isopropanol and centrifuge at maximum speed for 10-15 minutes.</li>
+</ul>
+
+<h4>3. DNA Wash:</h4>
+<ul>
+    <li>Discard the supernatant and wash the DNA pellet with 70% ethanol.</li>
+    <li>Centrifuge at maximum speed for 5 minutes and carefully remove the ethanol.</li>
+</ul>
+
+<h4>4. DNA Resuspension:</h4>
+<ul>
+    <li>Allow the DNA pellet to air dry briefly and then resuspend in TE buffer or nuclease-free water.</li>
+    <li>Incubate at 65°C for 10-15 minutes to aid in resuspension.</li>
+</ul>
+
+<h4>5. DNA Quantification:</h4>
+<ul>
+    <li>Quantify the isolated genomic DNA using a spectrophotometer.</li>
+</ul>
+      
+      </div>
+    </div>
+
+<hr>
+
+
+<h1><b>Monolaurin </b></h1>
+ <div class="team-member" onclick="toggleInfo(member37Info)">
+        <h2>Monolaurin acid</h2>
+      <div class="team-member-info" id="member37Info">
+        <h2>Materials:</h2>
+  <ul>
+    <li>n-Hexane</li>
+    <li>tert-Butanol</li>
+    <li>Lauric Acid</li>
+    <li>Candida Antarctica Lipase B (CALB) immobilized on beads</li>
+    <li>Glycerol</li>
+    <li>Orbital shaker</li>
+    <li>Hot water (80°C)</li>
+    <li>Volumetric flasks</li>
+    <li>Ice bath</li>
+    <li>Whatman filter paper</li>
+    <li>Glycerol enzyme assay kit (Genaro)</li>
+    <li>Spectrophotometer (measuring at 340 nm)</li>
+  </ul>
+
+  <h2>Procedure:</h2>
+  <ol>
+    <li><strong>Preparation of Reaction Mixture:</strong>
+      <ul>
+        <li>In a shaking flask (200 ml end volume) with a cap, prepare a mixture containing:
+          <ul>
+            <li>5.21 g (0.13 mol) lauric acid dissolved in hexane</li>
+            <li>2.3944 g (0.13 mol) glycerol</li>
+            <li>Immobilized lipase (160 mg, do not dissolve in water)</li>
+            <li>Add hexane (or 1:1 hexane/tert-butanol) to make a total volume of 200 ml.</li>
+          </ul>
+        </li>
+        <li>Prepare a control without enzyme.</li>
+      </ul>
+    </li>
+
+    <li><strong>Incubation:</strong>
+      <ul>
+        <li>Incubate the mixture using an orbital shaker at 300 rpm/min at two different temperatures: 40°C and 65°C.</li>
+      </ul>
+    </li>
+
+    <li><strong>Sample Collection:</strong>
+      <ul>
+        <li>Take samples (1.5 ml) every 30 minutes and keep them on ice until further measurement or fat extraction.</li>
+      </ul>
+    </li>
+
+    <li><strong>Hot Water Extraction for Fat Separation:</strong>
+      <ul>
+        <li>For samples with high fat content:
+          <ul>
+            <li>Weigh the samples into a volumetric flask.</li>
+            <li>Extract with hot water (80°C).</li>
+            <li>Allow the sample solution to cool for fat separation (e.g., 15 min in an ice bath).</li>
+            <li>Fill the volumetric flask up to the mark with water.</li>
+            <li>Filter the aqueous solution before testing using Whatman filter paper.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><strong>Sample Dilution:</strong>
+      <ul>
+        <li>Dilute the samples 1:100 at the beginning of the measurements to achieve a linear range of 0.04 to 0.4 g/l.</li>
+      </ul>
+    </li>
+
+    <li><strong>Spectrophotometric Measurement:</strong>
+      <ul>
+        <li>Measure the samples at 340 nm using a spectrophotometer.</li>
+      </ul>
+    </li>
+
+    <li><strong>Glycerol Enzyme Assay:</strong>
+      <ul>
+        <li>Perform the glycerol enzyme assay using the Glycerol enzyme assay kit, following the provided manual.</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+    </div>
+<hr>
+
+</body>
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <footer class="pt-5 pb-5 footer py-5 mt-5 bg-white text-dark">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-2 col-md-6">
+        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-2 p-2">
+            <li><a href="https://igem.hg.stuvus.uni-stuttgart.de/de/" style="color:#000000;">iGEM Stuttgart Website </a></li>
+            <li><a href="https://www.instagram.com/igem_stuttgart/" style="color:#000000;">Instagram </a></li>
+
+          </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
+        <p>Allmandring 31, 70569 Stuttgart</p>
+        <p class="mb-0">Tel:+4971168565035</p>
+        <p>igem@ibvt.uni-stuttgart.de</p>
+      </div>
+    </div>
+
+<div> <h2> Our sponsors </h2>
+</div>
+<br>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="assets/teams/4575/wiki/tt-logo-rgb-300-dpi.jpg" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/fraunhofer-igb-evtl-hq-neu.jpg" style="width:50%">
+  <img class="mySlides" src="assets/teams/4575/wiki/srcsb.png" style="width:40%">
+  <img class="mySlides" src="assets/teams/4575/wiki/2560px-sarstedt-logo-svg.png" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/geneious-logo-hq.png" style="width:60%">
+  <img class="mySlides" src="assets/teams/4575/wiki/biozym-evtl-hq.jpg" style="width:65%">
+  <img class="mySlides" src="assets/teams/4575/wiki/zymo-logo-cmyk-hintergrundlos.png" style="width:80%">
+  <img class="mySlides" src="assets/teams/4575/wiki/logo-captainworkwear-on-transp-background-label-e1687182114554-1536x870.jpg" style="width:60%">
+  <img class="mySlides" src="assets/teams/4575/wiki/roth.jpg" style="width:40%">
+  <img class="mySlides" src="assets/teams/4575/wiki/reinhold.jpg" style="width:90%">
+  <img class="mySlides" src="assets/teams/4575/wiki/shirtexpress.png" style="width:30%">
+  <img class="mySlides" src="assets/teams/4575/wiki/unistuttgart-logo-de.jpg" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/03-mic-logo-seqlab-orangegrey-rgb.webp" style="width:80%">
+
+    <!--<div class="carousel">
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/tt-logo-rgb-300-dpi.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/fraunhofer-logo-igb-23ab5597.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/srcsb.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/2560px-sarstedt-logo-svg.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="https://static.igem.wiki/teams/4575/wiki/logo-geneious-dotmatics-white (1).png"></a>
+        <a target="_blank" ><img class="footer-logos" src="https://static.igem.wiki/teams/4575/wiki/Biozym.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/zymo-logo-cmyk-hintergrundlos.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/logo-captainworkwear-on-transp-background-label-e1687182114554-1536x870.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/roth.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/reinhold.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/shirtexpress.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/03-mic-logo-seqlab-orangegrey-rgb.webp"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/unistuttgart-logo-de.jpg"></a>
+         <!--<a target="_blank" href="https://inbiome.com/"><img class="footer-logos" src="assets/teams/4259/wiki/sponsors-page/inbiome-logo-rgb.png"></a>-->
+        
+
+  </div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+ <script>
+ var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+ </script>
+</body>    
+
+
+    <hr>
+    <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
+    <div class="row mt-4">
+      <div class="col">
+        <p class="mb-0"><small>© 2023 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license" style="color:#000000;">Creative Commons Attribution 4.0 International license</a>.</small></p>
+	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/stuttgart" style="color:#000000;">gitlab.igem.org/2023/stuttgart</a>.</small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="static/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+/* brobiotics 2026 – plain HTML/CSS version of the SynBio Stuttgart page */
+
+@font-face {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 160 700;
+  font-display: swap;
+  src: url("../fonts/ReadexPro-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --red: #a41a1a;
+  --navy: #1a1a2e;
+  --page-bg: #f4f6f8;
+  --lavender: rgba(150, 136, 252, 0.6);
+  --footer-bg: #d4d4ff;
+  --gutter: max(16px, 3.333vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--lavender);
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 20px var(--gutter);
+  background: var(--red);
+  color: #fdfdfd;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: block;
+  width: 314px;
+}
+
+.menu-open,
+.menu-close {
+  display: none;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-open svg,
+.menu-close svg {
+  display: block;
+  fill: currentColor;
+}
+
+.menu-list,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-list > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu-list a:hover {
+  text-decoration: underline;
+}
+
+.submenu-toggle {
+  display: inline-flex;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.25em;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.submenu-toggle svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Projects dropdown: opens on hover, keyboard focus, or click */
+.submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 2;
+  min-width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  color: #000000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s linear;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.5em 1em;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu,
+.submenu-toggle[aria-expanded="true"] + .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* ---------- Main area ---------- */
+.page {
+  margin-top: 24px;
+  padding: 0 var(--gutter);
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.banner {
+  display: block;
+  width: calc(100% + 2 * var(--gutter));
+  max-width: none;
+  margin: 0 calc(-1 * var(--gutter));
+}
+
+/* The Problem / A Next-Generation Probiotic */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 24px 40px;
+  max-width: 1344px;
+  margin: 24px auto 0;
+  padding: 48px 40px;
+}
+
+.card {
+  padding: 28.8px;
+  border-left: 5px solid var(--red);
+  border-radius: 18px;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-wide {
+  padding-left: 32px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 36px rgba(164, 26, 26, 0.13);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin: 4.8px 0 0;
+  color: var(--navy);
+  font-size: 20.8px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.card p {
+  margin: 24px 0 0;
+  color: #444444;
+  font-size: 15.2px;
+  line-height: 1.8;
+}
+
+/* The Mechanism */
+.mechanism {
+  max-width: 1344px;
+  margin: 24px auto 48px;
+  padding: 48px;
+  border-radius: 20px;
+  background: var(--red);
+}
+
+.mechanism-inner {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  gap: 24px 48px;
+}
+
+.mechanism h3 {
+  margin: 4.8px 0 0;
+  color: #ffffff;
+  font-size: 25.6px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.mechanism hr {
+  height: 1px;
+  margin: 8px 0 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mechanism p {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 15.2px;
+  line-height: 1.8;
+}
+
+.mechanism-figure {
+  position: relative;
+  margin-top: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.mechanism-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.mechanism-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.wave {
+  fill: none;
+  stroke: #cc2200;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: wave-pulse 2.4s ease-in-out infinite;
+}
+
+.wave-orange { stroke: #cc6600; }
+.wave-1 { animation-delay: 0s; }
+.wave-2 { animation-delay: 0.3s; }
+.wave-3 { animation-delay: 0.6s; }
+.wave-4 { animation-delay: 0.9s; }
+.wave-5 { animation-delay: 1.2s; }
+
+.glow-outer-1 { animation: glow-outer 2.2s ease-in-out infinite; }
+.glow-outer-2 { animation: glow-outer-2 2.2s ease-in-out 0.5s infinite; }
+.glow-core-1 { animation: glow-core 2.2s ease-in-out 0.1s infinite; }
+.glow-core-2 { animation: glow-core 2.2s ease-in-out 0.6s infinite; }
+
+@keyframes wave-pulse {
+  0%   { opacity: 0; stroke-width: 2; }
+  30%  { opacity: 0.85; stroke-width: 3; }
+  60%  { opacity: 0.5; stroke-width: 2; }
+  100% { opacity: 0; stroke-width: 1.5; }
+}
+
+@keyframes glow-outer {
+  0%, 100% { r: 36; opacity: 0.5; }
+  50%      { r: 50; opacity: 0.95; }
+}
+
+@keyframes glow-outer-2 {
+  0%, 100% { r: 36; opacity: 0.45; }
+  50%      { r: 50; opacity: 0.9; }
+}
+
+@keyframes glow-core {
+  0%, 100% { r: 18; opacity: 0.85; }
+  50%      { r: 24; opacity: 1; }
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  margin-top: 24px;
+  padding: 40px 48px;
+  background: var(--navy);
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px 64px;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+.contact p {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15.2px;
+  line-height: 1.7;
+}
+
+.contact .contact-team {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contact .contact-address {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14.4px;
+}
+
+.contact .contact-instagram {
+  font-size: 25.6px;
+  font-weight: 700;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+.contact a:hover,
+.site-footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 24px;
+  padding: 36.8px 24px;
+  background: var(--footer-bg);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px 16px;
+  max-width: 1344px;
+  margin: 0 auto;
+  font-size: 17.6px;
+  line-height: 1.1;
+  letter-spacing: 0.36px;
+  text-align: center;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+/* One word per line, like the original's narrow middle column (but without splitting "STUTTGART") */
+.footer-inner .footer-title {
+  width: min-content;
+  margin: 0 auto;
+  font-size: 38.4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-inner .footer-made {
+  margin-top: 24px;
+}
+
+/* ---------- Fade-in on scroll (class added in js/script.js) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+
+/* ---------- Tablet: columns stack ---------- */
+@media (max-width: 781px) {
+  .cards,
+  .mechanism-inner,
+  .contact-inner,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Phone: menu becomes a full-screen overlay ---------- */
+@media (max-width: 599px) {
+  .menu-open {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.is-open {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: block;
+    padding: 72px 56px 32px;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2em;
+    font-size: 22px;
+  }
+
+  .menu-list > li {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .submenu-toggle {
+    display: none;
+  }
+
+  .submenu {
+    position: static;
+    min-width: 0;
+    margin-top: 1.4em;
+    padding-right: 2em;
+    border: none;
+    background: none;
+    font-size: 16px;
+    opacity: 1;
+    visibility: visible;
+    text-align: right;
+  }
+
+  .submenu li + li {
+    margin-top: 2em;
+  }
+
+  .submenu a {
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .card,
+  .submenu {
+    transition: none;
+  }
+
+  .wave,
+  .mechanism-overlay circle {
+    animation: none;
+  }
+}

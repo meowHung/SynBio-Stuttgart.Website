@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <title> | Stuttgart - iGEM 2023</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  <html>
+<head>
+
+<style>
+nav { 
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 24%, rgba(16,255,148,1) 66%, rgba(0,212,255,1) 100%);
+}
+li {
+  color: #ffffff;
+}
+a 
+{
+  color: #ffffff; 
+}
+</style>
+</head>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+
+    <!---- TEAM NAME ---->
+    <a class="navbar-brand" href="../../index.html">Stuttgart 
+    <img src="assets/teams/4575/wiki/logo.png" alt="DentoZym-logo" width="90" height="auto" align="left-aligned"/> 
+    </a>
+
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        <!---- HOME ---->
+        <li class="nav-item">
+          <a class="nav-link" href="index_dentozym.html">Home</a>
+        </li>
+
+                <!---- Description ---->
+        <li class="nav-item">
+          <a class="nav-link" href="description.html">Description</a>
+        </li>
+
+        <!---- PROJECT ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="contribution.html">Contribution</a></li>
+            <li><a class="dropdown-item" href="safety.html">Safety</a></li>
+            <li><a class="dropdown-item" href="engineering.html">Engineering</a></li>
+            <li><a class="dropdown-item" href="experiments.html">Experiments</a></li>
+            <li><a class="dropdown-item" href="notebook.html">Notebook</a></li>
+            <li><a class="dropdown-item" href="results.html">Results</a></li>
+          </ul>
+        </li>
+
+        <!---- Human Practice mit Edu ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practice and Education
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="human-practices.html">Human Practices</a></li>
+            <li><a class="dropdown-item" href="education.html">Education</a></li>
+            <li><a class="dropdown-item" href="collaboration.html">Collaboration</a></li>
+            <li><a class="dropdown-item" href="socialmedia.html">Social Media</a></li>
+          </ul>
+        
+       <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="team.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="team.html">Team</a></li>
+            <li><a class="dropdown-item" href="attributions.html">Attributions</a></li>
+          </ul>
+        </li> 
+        <!---- AWARDS ---->
+        <!--
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Awards
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="education.html">Education</a></li>
+            <li><a class="dropdown-item" href="human-practices.html">Human Practices</a></li>
+          </ul>
+        </li> --->
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</html>
+
+  <!-- Header -->
+  
+
+  <!-- Page Content -->
+  <div class="container">
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iGEM Student Team - Stuttgart 2023</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(#00153f,#3bad98);
+      margin-top: 80px; 
+    }
+    
+    .logo {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .team-member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .team-member:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+    .team-member img {
+      max-width: 100px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .team-member-info {
+      flex: 1;
+      display: none;
+      padding-left: 15px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .main 
+    {
+      margin-top: 100px;
+    }
+  </style>
+  <script>
+    function toggleInfo(memberInfo) {
+      var infoDisplay = memberInfo.style.display;
+      var allMemberInfo = document.querySelectorAll('.team-member-info');
+      
+      allMemberInfo.forEach(function(info) {
+        info.style.display = 'none';
+      });
+      
+      memberInfo.style.display = (infoDisplay === 'block') ? 'none' : 'block';
+    }
+  </script>
+</head>
+
+<body>   
+  <br>
+<div class="text-center">
+      <figure class="figure">  
+      <img src= "assets/teams/4575/wiki/team.png" class="img-fluid" alt="team banner">
+    </div>
+
+<br>
+
+<div text-center> 
+  <p style="text-align: center"><font color=#FFFFFF> Feel free to click on the boxes to find out more about the team members! </font> </p> 
+    </div> 
+
+<br>
+  
+  <div class="container">
+    <h2 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 16px;"></h2>
+    <div class="team-member" onclick="toggleInfo(member1Info)">
+      <img src="assets/teams/4575/wiki/kati.jpg" width="130" height="130" alt="Kati">
+      <div class="team-member-info" id="member1Info">
+        <h3>Kati Hub</h3>
+        <p style="color: #017a7f;">Positions: Team Leader, Head of Wiki and Sponsoring, Education, Research</p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>6th Semester</p>
+        
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member2Info)">
+      <img src="assets/teams/4575/wiki/sumo.jpg" width="130" height="130" alt="Sumohit">
+      <div class="team-member-info" id="member2Info">
+        <h3>Sumohit Sharma</h3>
+        <p style="color: #017a7f;">Positions: Head of Wet-Lab and Research, Head of Collaboration and Sponsoring, Head of Wiki and Education, Human Practice</p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>2nd Semester</p>
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleInfo(member3Info)">
+      <img src="assets/teams/4575/wiki/sarahh.jpeg" width="130" height="130" alt="Sarah H">
+      <div class="team-member-info" id="member3Info">
+        <h3>Sarah Hutzl</h3>
+        <p style="color: #017a7f;">Positions: Head of Wet-Lab and Wiki, Sponsoring, Research, Education, Human Practice</p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>3rd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member5Info)">
+      <img src="assets/teams/4575/wiki/fatma.jpg" width="130" height="130" alt="Fatma">
+      <div class="team-member-info" id="member5Info">
+        <h3>Fatma Caliskan</h3>
+        <p style="color: #017a7f;">Positions: Head of Finance and Human Practice, Sponsoring, Wiki </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>8th Semester</p>
+        
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member6Info)">
+      <img src="assets/teams/4575/wiki/ronja.jpg" width="130" height="130" alt="Ronja">
+      <div class="team-member-info" id="member6Info">
+        <h3>Ronja Schiffler</h3>
+        <p style="color: #017a7f;">Positions: Head of Education and Human Practice, Wet-Lab </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>6th Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member7Info)">
+      <img src="https://static.igem.wiki/teams/4575/wiki/
+sharkey.jpeg" width="130" height="130" alt="Sharkey">
+      <div class="team-member-info" id="member7Info">
+        <h3>Sarah Sharkey</h3>
+        <p style="color: #017a7f;">Positions: Wet-Lab, Human Practice, Sponsoring, Education </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>8th Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member8Info)">
+      <img src="assets/teams/4575/wiki/lukas.jpg" width="130" height="130" alt="Lukas">
+      <div class="team-member-info" id="member8Info">
+        <h3>Lukas Filipovic</h3>
+        <p style="color: #017a7f;">Positions: Wet-Lab, Sponsoring </p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>3rd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member9Info)">
+      <img src="assets/teams/4575/wiki/jana.jpg" width="130" height="130" alt="Jana">
+      <div class="team-member-info" id="member9Info">
+        <h3>Jana Kehl</h3>
+        <p style="color: #017a7f;">Positions: Wet-Lab </p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>2nd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member10Info)">
+      <img src="assets/teams/4575/wiki/michi.jpg" width="130" height="130" alt="Michi">
+      <div class="team-member-info" id="member10Info">
+        <h3>Michael Polonski</h3>
+        <p style="color: #017a7f;">Positions: Head of Education, Wet-Lab </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>6th Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member11Info)">
+      <img src="assets/teams/4575/wiki/logo.png" width="130" height="130" alt="Magdalena">
+      <div class="team-member-info" id="member11Info">
+        <h3>Magdalena Müller</h3>
+        <p style="color: #017a7f;">Positions: Sponsoring, Wiki </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>8th Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member12Info)">
+      <img src="assets/teams/4575/wiki/anna.jpg" width="130" height="130" alt="Annie">
+      <div class="team-member-info" id="member12Info">
+        <h3>Anna Minakova</h3>
+        <p style="color: #017a7f;">Positions: Head of Social Media, Wiki, Wet-Lab </p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>2nd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member13Info)">
+      <img src="assets/teams/4575/wiki/logo.png" width="130" height="130" alt="Jessica">
+      <div class="team-member-info" id="member13Info">
+        <h3>Jessica Wiepcke</h3>
+        <p style="color: #017a7f;">Positions: Wet-Lab, Sponsoring, Research </p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>2nd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member14Info)">
+      <img src="assets/teams/4575/wiki/logo.png" width="130" height="130" alt="Sarah V">
+      <div class="team-member-info" id="member14Info">
+        <h3>Sarah Vettermann</h3>
+        <p style="color: #017a7f;">Positions: Wet-Lab, Sponsoring</p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>3rd Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member15Info)">
+      <img src="assets/teams/4575/wiki/pamela.jpg" width="130" height="130" alt="Pamela">
+      <div class="team-member-info" id="member15Info">
+        <h3>Pamela Tesic</h3>
+        <p style="color: #017a7f;">Positions: Head of Wiki, Sponsoring</p>
+        <h4>B.Sc. Technical Biology</h4>
+        <p>6th Semester</p>
+      </div>
+    </div>
+    <div class="team-member" onclick="toggleInfo(member16Info)">
+      <img src="assets/teams/4575/wiki/logo.png" width="130" height="130" alt="Wintana">
+      <div class="team-member-info" id="member16Info">
+        <h3>Wintana Ghebrezghi</h3>
+        <p style="color: #017a7f;">Positions: Sponsoring, Wet-Lab</p>
+        <h4>M.Sc. Technical Biology</h4>
+        <p>2nd Semester</p>
+      </div>
+    </div>
+
+    <!-- Add more team members here -->
+  </div>
+</body>
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <footer class="pt-5 pb-5 footer py-5 mt-5 bg-white text-dark">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-lg-2 col-md-6">
+        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+          <ul class="m-2 p-2">
+            <li><a href="https://igem.hg.stuvus.uni-stuttgart.de/de/" style="color:#000000;">iGEM Stuttgart Website </a></li>
+            <li><a href="https://www.instagram.com/igem_stuttgart/" style="color:#000000;">Instagram </a></li>
+
+          </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
+        <p>Allmandring 31, 70569 Stuttgart</p>
+        <p class="mb-0">Tel:+4971168565035</p>
+        <p>igem@ibvt.uni-stuttgart.de</p>
+      </div>
+    </div>
+
+<div> <h2> Our sponsors </h2>
+</div>
+<br>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="assets/teams/4575/wiki/tt-logo-rgb-300-dpi.jpg" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/fraunhofer-igb-evtl-hq-neu.jpg" style="width:50%">
+  <img class="mySlides" src="assets/teams/4575/wiki/srcsb.png" style="width:40%">
+  <img class="mySlides" src="assets/teams/4575/wiki/2560px-sarstedt-logo-svg.png" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/geneious-logo-hq.png" style="width:60%">
+  <img class="mySlides" src="assets/teams/4575/wiki/biozym-evtl-hq.jpg" style="width:65%">
+  <img class="mySlides" src="assets/teams/4575/wiki/zymo-logo-cmyk-hintergrundlos.png" style="width:80%">
+  <img class="mySlides" src="assets/teams/4575/wiki/logo-captainworkwear-on-transp-background-label-e1687182114554-1536x870.jpg" style="width:60%">
+  <img class="mySlides" src="assets/teams/4575/wiki/roth.jpg" style="width:40%">
+  <img class="mySlides" src="assets/teams/4575/wiki/reinhold.jpg" style="width:90%">
+  <img class="mySlides" src="assets/teams/4575/wiki/shirtexpress.png" style="width:30%">
+  <img class="mySlides" src="assets/teams/4575/wiki/unistuttgart-logo-de.jpg" style="width:100%">
+  <img class="mySlides" src="assets/teams/4575/wiki/03-mic-logo-seqlab-orangegrey-rgb.webp" style="width:80%">
+
+    <!--<div class="carousel">
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/tt-logo-rgb-300-dpi.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/fraunhofer-logo-igb-23ab5597.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/srcsb.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/2560px-sarstedt-logo-svg.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="https://static.igem.wiki/teams/4575/wiki/logo-geneious-dotmatics-white (1).png"></a>
+        <a target="_blank" ><img class="footer-logos" src="https://static.igem.wiki/teams/4575/wiki/Biozym.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/zymo-logo-cmyk-hintergrundlos.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/logo-captainworkwear-on-transp-background-label-e1687182114554-1536x870.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/roth.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/reinhold.jpg"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/shirtexpress.png"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/03-mic-logo-seqlab-orangegrey-rgb.webp"></a>
+        <a target="_blank" ><img class="footer-logos" src="assets/teams/4575/wiki/unistuttgart-logo-de.jpg"></a>
+         <!--<a target="_blank" href="https://inbiome.com/"><img class="footer-logos" src="assets/teams/4259/wiki/sponsors-page/inbiome-logo-rgb.png"></a>-->
+        
+
+  </div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+ <script>
+ var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+ </script>
+</body>    
+
+
+    <hr>
+    <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
+    <div class="row mt-4">
+      <div class="col">
+        <p class="mb-0"><small>© 2023 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license" style="color:#000000;">Creative Commons Attribution 4.0 International license</a>.</small></p>
+	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/stuttgart" style="color:#000000;">gitlab.igem.org/2023/stuttgart</a>.</small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="static/bootstrap.bundle.min.js"></script>
+</body>
+</html>

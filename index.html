@@ -3,134 +3,433 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <script>
-    (function () {
-      var stored = null;
-      try { stored = localStorage.getItem('theme'); } catch (err) {}
-      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-  <title>SynBio Stuttgart - Home</title>
+  <title>SynBio Team University of Stuttgart - Synthetic Biology Research</title>
+  <meta name="description" content="A student driven research team from the University of Stuttgart striving for more synthetic biology research and participating at iGEM.">
+  <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-icon icon-sun" aria-hidden="true">☀️</span>
-    <span class="theme-toggle-icon icon-moon" aria-hidden="true">&#127769;</span>
+  <!-- Work In Progress (WIP) Top Banner -->
+  <aside class="wip-bar" id="wipBar" role="status" aria-label="Work In Progress Notice">
+    <div class="wip-bar-content">
+      <span class="wip-badge">
+        <span class="wip-pulse-dot" aria-hidden="true"></span>
+        WIP • 2026/2027
+      </span>
+      <span>This website is actively evolving for the upcoming iGEM competition cycle.</span>
+      <button type="button" class="wip-bar-link open-wip-modal">View Roadmap &amp; Status &rarr;</button>
+    </div>
+    <button type="button" class="wip-bar-close" id="wipBarClose" aria-label="Dismiss work in progress banner">&times;</button>
+  </aside>
+
+  <!-- Floating WIP Badge when banner is dismissed -->
+  <button type="button" class="wip-floating-pill" id="wipFloatingPill" style="display: none;" title="Open Website Status &amp; Milestones">
+    <span class="wip-pulse-dot" aria-hidden="true"></span>
+    <span>WIP STATUS</span>
   </button>
 
+  <!-- WIP Modal Dialog -->
+  <div class="wip-modal-backdrop" id="wipModal" role="dialog" aria-modal="true" aria-labelledby="wipModalTitle">
+    <div class="wip-modal">
+      <div class="wip-modal-header">
+        <h2 class="wip-modal-title" id="wipModalTitle">
+          <span>🔬</span> Project &amp; Website Status
+        </h2>
+        <button type="button" class="wip-modal-close" id="wipModalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="wip-modal-body">
+        <p>Welcome to the SynBio Stuttgart development environment! We are actively designing and engineering our research presentation for the iGEM 2026/2027 cycle.</p>
+        
+        <div class="wip-milestones">
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>1:1 Wireframe Implementation:</strong> Faithful desktop and mobile layout from the Hang Minh Hoang wireframes.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Instant Sponsor Explorer:</strong> Direct search and category filters replacing slow infinite ticker.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Interactive Project Discography:</strong> Smooth interactive timeline from 2017 to 2027.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">In Progress</span>
+            <div>
+              <strong>Lab Data &amp; Modeling:</strong> Finalizing wet-lab assays and dry-lab molecular simulations for <em>brobiotics</em>.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a4a8b5;">Have feedback on the design? Feel free to reach out via our contact page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Top Header (Wireframe: Light Background #E6E7EA) -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img class="logo-img logo-light" src="images/SynBio_logo.svg" alt="SynBio Stuttgart">
-        <img class="logo-img logo-dark" src="images/SynBio_logo_dark.svg" alt="SynBio Stuttgart">
+      <a href="index.html" class="brand-link" aria-label="SynBio Team University of Stuttgart">
+        <img class="brand-logo-img" src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
       </a>
-      <div class="header-right">
-        <nav class="site-nav" id="siteNav">
-          <a href="news.html">News</a>
-          <div class="nav-dropdown" id="projectsDropdown">
-            <button class="nav-dropdown-toggle" id="projectsToggle" aria-haspopup="true" aria-expanded="false">
-              Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
-            </button>
-            <div class="nav-dropdown-menu nav-dropdown-menu-wide" id="projectsMenu">
-              <a href="brobiotics/index_brobiotics.html">2027 - brobiotics</a>
-              <a href="aralex/index_aralex.html">2025 - ARALEX</a>
-              <a href="dentozym/index_dentozym.html">2023 - DentoZym</a>
-              <a href="tardisun/index_tardisun.html">2021 - Tardisun</a>
-              <a href="lac-man/index_lac-man.html">2020 - LAC-MAN</a>
-              <a href="VNOO/index_VNOO.html">2019 - Vibrio natriegens Operon Optimization</a>
-              <a href="AGBC/index_AGBC.html">2018 - Anti-Germ Bio-coating</a>
-              <a href="BDO/index_BDO.html">2017 - Biological Drain Opener</a>
-            </div>
+
+      <!-- Left nav: Projects + What is iGEM? immediately after logo -->
+      <ul class="nav-links nav-links-left" id="navWrap">
+        <li class="nav-item nav-dropdown">
+          <a href="#discography" class="nav-dropdown-toggle">
+            Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="projects/brobiotics/index_brobiotics.html">2027 &mdash; brobiotics</a>
+            <a href="projects/aralex/index_aralex.html">2025 &mdash; ARALEX</a>
+            <a href="projects/dentozym/index_dentozym.html">2023 &mdash; DentoZym</a>
+            <a href="projects/tardisun/index_tardisun.html">2021 &mdash; Tardisun</a>
+            <a href="projects/lac-man/index_lac-man.html">2020 &mdash; LAC-MAN</a>
+            <a href="projects/PhyCoVi/index_PhyCoVi.html">2019 &mdash; PhyCoVi</a>
+            <a href="projects/TAGC/index_TAGC.html">2018 &mdash; TAGC</a>
+            <a href="projects/LOTP/index_LOTP.html">2017 &mdash; LOTP</a>
           </div>
-          <a href="mission.html">Our Mission</a>
-          <a href="igem.html">What is iGEM?</a>
-          <div class="nav-dropdown" id="headercontactDropdown">
-            <button class="nav-dropdown-toggle" id="headercontactToggle" aria-haspopup="true" aria-expanded="false">
-              For those interesed <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
-            </button>
-            <div class="nav-dropdown-menu" id="headercontactMenu">
-              <a href="contact_students.html">For students</a>
-              <a href="contact_companies.html">For companies & organizations</a>
-            </div>
-          </div>
-        </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        </li>
+        <li class="nav-item"><a href="igem.html">What is iGEM?</a></li>
+      </ul>
+
+      <!-- Right nav: spacer pushes About Us + CONTACT US! to far right -->
+      <div class="nav-right">
+        <ul class="nav-links nav-links-right">
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+        </ul>
+        <a href="contact.html" class="nav-contact-btn">CONTACT US!</a>
       </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>It's us</h1>
-      <h2> SynBio-Team University of Stuttgart</h2>
-      <p>A student driven research team striving for more synthetical Biology research</p>
-      <a href="brobiotics/index_brobiotics.html" class="btn btn-primary">Current research project</a>
-      <a href="contact.html" class="btn btn-primary">Join us!</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Who we are</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>&#128104;&#8205;&#128300; MINT-Students &#128105;&#8205;&#128300;</h3>
-          <p>We are undergraduate and post-graduate students from the University of Stuttgart majoring in STEM</p>
-        </div>
-        <div class="card">
-          <h3>Research &#128300; &#x1F9EA; &#x1F9EB;</h3>
-          <p>As students we thrive discovering new things and testing our concepts in our own student lab</p>
-        </div>
-        <div class="card">
-          <h3>Participating at iGEM &#129440;</h3>
-          <p>We try to participate at iGEM and present our research to the whole world</p>
+  <main>
+    <!-- 2. Hero Section (Wireframe: Dark Charcoal #323439) -->
+    <section class="hero-wireframe" id="hero">
+      <div class="container">
+        <h1 class="hero-main-title">
+          A STUDENT DRIVEN RESEARCH TEAM<br>
+          STRIVING FOR MORE SYNTHETICAL<br>
+          BIOLOGY RESEARCH
+        </h1>
+        <div class="hero-project-arrow-row">
+          <span class="hero-long-arrow" aria-hidden="true">──────►</span>
+          <a href="projects/brobiotics/index_brobiotics.html" class="brobiotics-pill" title="Explore brobiotics">
+            brobiotics<span class="star">*</span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta">
-    <div class="container">
-      <h2>Want to join our journey or help us achieve our goal?</h2>
-      <a href="contact.html" class="btn btn-primary">Contact us!</a>
-    </div>
-  </section>
+    <!-- 3. WHO ARE WE? Section (Wireframe: Mid Slate #4D5056) -->
+    <section class="section-who-we-are" id="who-we-are">
+      <div class="container">
+        <div class="split-2col-wireframe">
+          <!-- Left: Rounded Light-Grey Placeholder Box -->
+          <div class="wireframe-placeholder-box"></div>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2>For our current project special thanks</h2>
-      <div class="sponsor-slider">
-        <div class="sponsor-track" id="sponsorTrack" aria-hidden="true">
-          <a href="https://www.carlroth.com/de/en/"><img class="sponsor" src="images/sponsor/Carl_Roth_Logo.svg" alt="Carl Roth Logo"></a>
-          <a href="https://shop.brand.de/de/"><img class="sponsor logo-light" src="images/sponsor/Brand_Logo.svg" alt="Brand Logo"></a>
-          <a href="https://shop.brand.de/de/"><img class="sponsor logo-dark" src="images/sponsor/Brand_Logo_dark.svg" alt="Brand Logo"></a>
-          <a href="https://www.biorender.com/"><img class="sponsor" src="images/sponsor/Biorender_Logo.svg" alt="Biorender Logo" alt="BioRender Logo"></a>
-          <a href="https://www.snapgene.com/"><img class="sponsor logo-light" src="images/sponsor/Snapgene_Logo.svg" alt="Snapgene Logo"></a>
-          <a href="https://www.snapgene.com/"><img class="sponsor logo-dark" src="images/sponsor/Snapgene_Logo_dark.svg" alt="Snapgene Logo"></a>
-          <a href="https://www.srcsb.uni-stuttgart.de/"><img class="sponsor" src="images/sponsor/SRCSB_Logo.svg" alt="SRCSB Logo"></a>
-          <p class="sponsor-text">Dr. Monika Hann</p>
-          <a href="https://www.neb.com/"><img class="sponsor logo-light" src="images/sponsor/NEB_Logo.svg" alt="NEB Logo"></a>
-          <a href="https://www.neb.com/"><img class="sponsor logo-dark" src="images/sponsor/NEB_Logo_dark.svg" alt="NEB Logo"></a>
-          <a href="https://www.microsynth.com/"><img class="sponsor" src="images/sponsor/Microsynth_Logo.svg" alt="Microsynth Logo"></a>
-          <a href="https://www.sigmaaldrich.com/DE/de"><img class="sponsor" src="images/sponsor/merck_Logo.svg" alt="Sigma-Aldrich Merck Logo"></a>
-          <a href="https://www.captainworkwear.de/"><img class="sponsor" src="images/sponsor/Captain_Workwear_Logo.svg" alt="Captain Workwear Logo"></a>
+          <!-- Right: Text Content with Purple Title -->
+          <div class="info-content-wireframe">
+            <h2 class="wireframe-purple-title">
+              WHO ARE WE?<br>
+              WHAT ARE WE STRIVING FOR?
+            </h2>
+            <p>
+              We are undergraduate and post-graduate students from the University of Stuttgart majoring in STEM
+            </p>
+            <p>
+              As students we thrive discovering new things and testing our concepts in our own student lab
+            </p>
+            <p>
+              We try to participate at iGEM and present our research to the whole world
+            </p>
+            <a href="about.html" class="btn-wireframe-pill">
+              <span>READ MORE</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <a class="underline" href="impressum.html">Impressum</a>
-      <a class="underline" href="datenschutz.html">Datenschutz</a>
-      <a class="underline" href="contact.html">Contact</a>
-      <a class="underline" href="team.html">Team</a>
-      <p> Made with love in Stuttgart &#10084;&#65039;&#128052; </p>
+    <!-- 4. [Project Discography] (Wireframe: Grey #5B5B5B) -->
+    <section class="section-discography" id="discography" aria-label="Project Discography">
+      <div class="container">
+        <div class="discography-tag">[Project Discography]</div>
+      </div>
+
+      <!-- Carousel stage: timeline nodes + grey boxes are built from PROJECTS_DATA in js/script.js -->
+      <div class="disco-stage" id="projectDiscography" tabindex="0" aria-label="Project timeline, use left and right arrow keys">
+        <div class="disco-line"></div>
+        <ol class="disco-nodes" id="discoNodes" role="tablist"></ol>
+        <div class="disco-boxes" id="discoBoxes"></div>
+
+        <div class="discography-arrow-btn" id="discoPrev" role="button" aria-label="Previous project"><svg width="64" height="16" viewBox="0 0 64 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M63 8H1M8 1L1 8l7 7"/></svg></div>
+        <div class="discography-arrow-btn" id="discoNext" role="button" aria-label="Next project"><svg width="64" height="16" viewBox="0 0 64 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 8h62M56 1l7 7-7 7"/></svg></div>
+
+        <!-- Active centerpiece purple card -->
+        <article class="discography-purple-card" id="discoActiveCard">
+          <div class="purple-card-inner" id="discoCardInner">
+            <div class="purple-card-placeholder"></div>
+            <h3 class="purple-card-title" id="discoTitle">DENTOZYM</h3>
+            <p class="purple-card-desc" id="discoDesc">
+              iGEM is an international not-for-profit organization dedicated to advancing the field of synthetic biology and building the global synbio workforce through education and competition, while cultivating an
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. WHAT IS iGEM? Section (Wireframe: Mid Slate #4D5056) -->
+    <section class="section-what-is-igem" id="what-is-igem">
+      <div class="container">
+        <div class="split-2col-wireframe">
+          <!-- Left: Text with Purple Title & Pill Button -->
+          <div class="info-content-wireframe">
+            <h2 class="wireframe-purple-title">WHAT IS iGEM?</h2>
+            <p>
+              iGEM is an international not-for-profit organization dedicated to advancing the field of synthetic biology and building the global synbio workforce through education and competition, while cultivating an open, collaborative and cooperative community that strives to find solutions for a healthier, more resilient and sustainable world.
+            </p>
+            <a href="igem.html" class="btn-wireframe-pill">
+              <span>VISIT WEBSITE</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </a>
+          </div>
+
+          <!-- Right: Rounded Light-Grey Placeholder Box -->
+          <div class="wireframe-placeholder-box"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SPECIAL THANKS TO OUR SPONSORS (Interactive Filter & Visit Website Buttons) -->
+    <section class="section-sponsors" id="sponsors" aria-label="Sponsors &amp; Partners">
+      <div class="container">
+        <div class="sponsors-header">
+          <h2 class="sponsors-title">SPECIAL THANKS TO OUR SPONSORS</h2>
+          <p class="sponsors-subtitle">
+            Our research and student lab operations are made possible through the generous support of our sponsors &amp; partners. Filter by category or search below to explore.
+          </p>
+        </div>
+
+        <!-- Toolbar: Instant Categories + Real-time Search -->
+        <div class="sponsors-toolbar">
+          <div class="sponsor-filter-tabs" role="tablist" aria-label="Filter sponsors by category">
+            <button type="button" class="sponsor-tab-btn is-active" data-filter="all" role="tab" aria-selected="true">All Partners</button>
+            <button type="button" class="sponsor-tab-btn" data-filter="reagents" role="tab" aria-selected="false">Reagents &amp; Enzymes</button>
+            <button type="button" class="sponsor-tab-btn" data-filter="software" role="tab" aria-selected="false">Software &amp; Tools</button>
+            <button type="button" class="sponsor-tab-btn" data-filter="equipment" role="tab" aria-selected="false">Lab Equipment</button>
+            <button type="button" class="sponsor-tab-btn" data-filter="partners" role="tab" aria-selected="false">Safety &amp; Patrons</button>
+          </div>
+
+          <div class="sponsor-search-box">
+            <span class="sponsor-search-icon" aria-hidden="true">&#128269;</span>
+            <input type="text" id="sponsorSearchInput" class="sponsor-search-input" placeholder="Quick find sponsor (e.g. Roth, NEB, SnapGene)..." aria-label="Search sponsors">
+          </div>
+        </div>
+
+        <!-- Responsive Sponsors Grid (Cards with Logo, Category & Direct Visit Buttons) -->
+        <div class="sponsors-grid" id="sponsorsGrid">
+          <!-- 1. Carl Roth -->
+          <article class="sponsor-card" data-category="reagents equipment" data-name="Carl Roth" data-keywords="chemicals laboratory labware safety life science">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Carl_Roth_Logo.svg" alt="Carl Roth Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">Carl Roth</h3>
+              <span class="sponsor-category-tag">Chemicals &amp; Lab Supplies</span>
+              <a href="https://www.carlroth.com/de/en/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit Carl Roth</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. BRAND -->
+          <article class="sponsor-card" data-category="equipment" data-name="BRAND" data-keywords="liquid handling pipettes labware consumables">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Brand_Logo.svg" alt="BRAND Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">BRAND</h3>
+              <span class="sponsor-category-tag">Liquid Handling &amp; Pipetting</span>
+              <a href="https://shop.brand.de/de/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit BRAND</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. BioRender -->
+          <article class="sponsor-card" data-category="software" data-name="BioRender" data-keywords="scientific illustration graphics figures communication">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Biorender_Logo.svg" alt="BioRender Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">BioRender</h3>
+              <span class="sponsor-category-tag">Scientific Illustration</span>
+              <a href="https://www.biorender.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit BioRender</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. SnapGene -->
+          <article class="sponsor-card" data-category="software" data-name="SnapGene" data-keywords="dna plasmid cloning molecular biology software">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Snapgene_Logo.svg" alt="SnapGene Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">SnapGene</h3>
+              <span class="sponsor-category-tag">Molecular Biology Software</span>
+              <a href="https://www.snapgene.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit SnapGene</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 5. SRCSB -->
+          <article class="sponsor-card" data-category="equipment partners" data-name="SRCSB" data-keywords="stuttgart research center systems biology university">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/SRCSB_Logo.svg" alt="SRCSB Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">SRCSB</h3>
+              <span class="sponsor-category-tag">Systems Biology Research</span>
+              <a href="https://www.srcsb.uni-stuttgart.de/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit SRCSB</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 6. New England Biolabs (NEB) -->
+          <article class="sponsor-card" data-category="reagents" data-name="NEB New England Biolabs" data-keywords="enzymes restriction cloning pcr molecular biology">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/NEB_Logo.svg" alt="NEB Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">New England Biolabs</h3>
+              <span class="sponsor-category-tag">Enzymes &amp; Reagents</span>
+              <a href="https://www.neb.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit NEB</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 7. Microsynth -->
+          <article class="sponsor-card" data-category="reagents" data-name="Microsynth" data-keywords="sequencing sanger ngs oligonucleotides primers">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Microsynth_Logo.svg" alt="Microsynth Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">Microsynth</h3>
+              <span class="sponsor-category-tag">DNA Sequencing &amp; Synthesis</span>
+              <a href="https://www.microsynth.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit Microsynth</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 8. Merck / Sigma-Aldrich -->
+          <article class="sponsor-card" data-category="reagents" data-name="Merck Sigma-Aldrich" data-keywords="biochemicals media antibiotics cell culture">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/merck_Logo.svg" alt="Merck Sigma-Aldrich Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">Merck / Sigma-Aldrich</h3>
+              <span class="sponsor-category-tag">Life Science Biochemicals</span>
+              <a href="https://www.sigmaaldrich.com/DE/de" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit Merck</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 9. Captain Workwear -->
+          <article class="sponsor-card" data-category="partners" data-name="Captain Workwear" data-keywords="apparel coats lab workwear clothing safety">
+            <div class="sponsor-logo-holder">
+              <img src="images/sponsor/Captain_Workwear_Logo.svg" alt="Captain Workwear Logo" loading="lazy">
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">Captain Workwear</h3>
+              <span class="sponsor-category-tag">Lab Apparel &amp; Protective Gear</span>
+              <a href="https://www.captainworkwear.de/" target="_blank" rel="noopener noreferrer" class="sponsor-link-btn">
+                <span>Visit Captain Workwear</span> &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- 10. Dr. Monika Hann -->
+          <article class="sponsor-card" data-category="partners" data-name="Dr. Monika Hann" data-keywords="benefactor individual personal donor mentor patron">
+            <div class="sponsor-logo-holder sponsor-logo-avatar-holder">
+              <div class="sponsor-individual-avatar">MH</div>
+            </div>
+            <div class="sponsor-info">
+              <h3 class="sponsor-name">Dr. Monika Hann</h3>
+              <span class="sponsor-category-tag">Individual Patron &amp; Supporter</span>
+              <a href="contact.html" class="sponsor-link-btn">
+                <span>Contact &amp; Support</span> &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty State message if search has no match -->
+        <div class="sponsors-empty-state" id="sponsorsEmptyState" style="display: none;">
+          <p>No sponsors found matching your criteria.</p>
+          <button type="button" class="btn-reset-filter" id="btnResetSponsors">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Wireframe Footer (Exact Purple #8E82FE Background) -->
+  <footer class="wireframe-footer">
+    <div class="container footer-inner-content">
+      <!-- SynBio Logo with Pixel Circle -->
+      <a href="index.html" class="footer-logo-row" aria-label="SynBio Stuttgart Home">
+        <img src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <!-- CONTACT US Pill Button with Arrow -->
+      <a href="contact.html" class="btn-footer-contact">
+        <span>CONTACT US</span>
+        <span class="btn-arrow" aria-hidden="true">──────►</span>
+      </a>
+
+      <!-- 4 Square Social Icons -->
+      <div class="footer-social-squares">
+        <a href="https://www.instagram.com/synbioteam_stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="Instagram">
+          <span>📷</span>
+        </a>
+        <a href="https://www.linkedin.com/company/synbio-team-stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://gitlab.igem.org" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="GitLab">
+          <span>🧬</span>
+        </a>
+        <a href="mailto:synbioteam@uni-stuttgart.de" class="social-square-box" aria-label="Email">
+          <span>✉️</span>
+        </a>
+      </div>
+
+      <!-- Exact Credits from Wireframe -->
+      <div class="footer-wireframe-credits">
+        <p>Research group at Uni Stuttgart &bull; 2027</p>
+        <p>Design by Hang Minh Hoang [<a href="https://www.instagram.com/lu_lounaa/" target="_blank" rel="noopener noreferrer">lu_lounaa on Instagram</a>]</p>
+      </div>
+
+      <p class="footer-legal"><a href="impressum.html">Legal Notice</a> &bull; <a href="datenschutz.html">Privacy Policy</a></p>
     </div>
   </footer>
 

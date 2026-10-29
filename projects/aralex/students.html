@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Member | Stuttgart - iGEM 2025</title>
+  <link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+  <script src="static/tailwind.min.css"></script>
+  <script>tailwind.config = {theme: {extend: {colors: {primary: '#3b82f6', secondary: '#64748b'}, borderRadius: {'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+    i[class^="ri-"], i[class*=" ri-"] {
+      font-size: 1.2rem;     
+      line-height: 1;        
+      vertical-align: middle; 
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+  <!-- Reiter -->
+  <header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+  </a>
+  <nav class="hidden md:flex items-center space-x-8">
+  <a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+  <div class="relative" id="projectDropdown">
+  <button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+  Project
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+  <a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+  <a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+  <a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+  <a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+  <a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+  <a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+  <a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+  </div>
+  </div>
+  <div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+  <div class="relative" id="groupsDropdown">
+  <button class="text-sky-700 hover:text-sky-700 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+  Team
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+  <a href="students.html" class="block px-4 py-2 text-sky-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+  <a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+  <a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+  </div>
+  </div>
+  <a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+  <button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+  Dark Mode
+  </button>
+  </nav>
+  <div class="md:hidden w-10 h-10 flex items-center justify-center">
+  <i class="ri-menu-line ri-lg"></i>
+  </div>
+  </div>
+  </header>
+  <!-- Überschrift -->
+  <section class="bg-sky-200 dark:bg-gray-900 py-10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Team Members</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">Get to know the team and find out what they like to do outside of iGem. </p>
+      </div>
+    </div>
+  </section>
+  <!-- Filter -->
+  <section class="py-8 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-center mb-8">
+          <div class="flex flex-wrap gap-2">
+            <a href="#leader">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Leaders</button>
+            </a>
+            <a href="#mitglieder">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Team Members</button>
+            </a>
+            <a href="#advisor">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Instructor</button>
+            </a>
+            <a href="#pis">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">PIs</button>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2 py-4">
+          <span class="text-sm text-gray-600 dark:text-gray-400">Groups:</span>
+          <a href="groups.html#biotech">
+            <button class="text-sm text-sky-600 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">BioTech</button>
+          </a>
+          <span class="text-sky-800 dark:text-sky-50">•</span>
+          <a href="groups.html#chemistry">
+            <button class="text-sm text-sky-600 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Chemistry</button>
+          </a>
+          <span class="text-sky-800 dark:text-sky-50">•</span>
+          <a href="groups.html#finanzen">
+            <button class="text-sm text-sky-600 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Finances</button>
+          </a>
+          <span class="text-sky-800 dark:text-sky-50">•</span>
+          <a href="groups.html#tdw1">
+            <button class="text-sm text-sky-600 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Education</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container bg-sky-200 dark:bg-gray-900 mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 id="leader" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">Student Leaders</h2>
+      <!-- Studenten -->
+      <section class="py-12 bg-sky-200 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Student 1 -->
+            <div id="hene"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/alex-rq.webp" alt="Alexander Hene"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Alexander <br/> Hene</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Team leader, Sponsoring, Acquisition, BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="flex items-start text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Writing short stories and poems</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Teaching myself how to code</li>
+                  </ul>
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 2 -->
+            <div id="reusing"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/noemi-rq.webp" alt="Noemi Reusing"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 id="noemireusing" class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Noemi <br/> Reusing</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech leader</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4 my-7"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Playing table tennis</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Playing the piano</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="maurer"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/theresa-rq-2.webp" alt="Theresa Maurer"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 id="theresamaurer" class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Theresa <br/> Maurer</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Finances leader, BioTech, Social Media</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Working out</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Meeting up with friends</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Traveling</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 4 -->
+            <div id="ahmad"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/yazan-rq.webp" alt="Yazan Ahmad"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 id="yazanahmad" class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Yazan <br/> Ahmad</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech leader</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4 my-7"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Football</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Gym</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Metabolic Engineering</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Physiology</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 2 -->
+            <div id="strom"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/nathanael-rq.webp" alt="Nathanael Strom"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 id="nathanaelstrom" class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Nathanael <br/> Strom</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Chemistry <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Chemistry Leader</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4 my-7"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class=" flex items-start text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Badminton</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Climbing</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Chess</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="container bg-sky-200 dark:bg-gray-900 mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 id="mitglieder" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">Student Team Members</h2>
+      <!-- Studenten -->
+      <section class="py-12 bg-sky-200 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Student 2 -->
+            <div id="schneider"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/amasia-rq.webp" alt="Amasia Schneider Rocha"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 id="amasiaschneiderrocha" class="text-left text-lg font-semibold text-gray-900 dark:text-sky-50">Amasia <br> Schneider Rocha</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech, Education</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4 my-7"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class=" flex items-start text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Playing the oboe and English horn in the orchestra</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Learning Portuguese</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Dry felting</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="waller"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/amelie-rq.webp" alt="Amelie Waller"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Amelie <br/> Waller</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2 my-9">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4 my-7"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Being outdoors</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Mountain biking</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Running</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 4 -->
+            <div id="titus"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/ayleen-rq.webp" alt="Ayleen Titus"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Ayleen <br/> Titus</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2 my-9">Role: BioTech, Wiki Coding, Chemistry, Modeling</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Gaming</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Working out</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <div id="bechel"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/dani-rq.webp" alt="Daniel Dorta Bechel"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Daniel <br/> Dorta Bechel</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Bioengineering <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech, Sponsoring, Social Media, Modeling</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Design</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Working out</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="ringel"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/daniel-rq.webp" alt="Daniel Ringel"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 id="danielringel" class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Daniel <br/> Ringel</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2 my-9">Role: <a href="groups.html#chemie">Chemistry</a>, Modeling, Wiki Coding <a href="groups.html#biotech">BioTech</a>, <a href="groups.html#education">Education</a></p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Maths </li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Football </li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Coding  </li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="strauß"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/janina-rq.webp" alt="Janina Strauß"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Janina <br/> Strauß</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Meeting up with friends</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Working out</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Drawing</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="meingast"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/johannes-1.webp" alt="Johannes Meingast"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Johannes <br/> Meingast</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Chemistry</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Dancing</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Singing</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Climbing</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="stark"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/julius-rq.webp" alt="Julius Stark"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Julius <br/> Stark</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Meeting up with friends</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Volunteering</li>
+                  </ul>
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="wührl"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/lea-rq.webp" alt="Lea Wührl"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Lea <br/> Wührl</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Hiking and climbing in the mountains</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Bouldering</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Meeting with friends</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Playing piano</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="baumann"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/manu.webp" alt="Manuel Baumann"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Manuel <br/> Baumann </h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    M.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Finances, Acquise</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Science</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Traveling</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Gaming</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Cooking</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> YouTube</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="jess"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/nio-rq.webp" alt="Nio Jess"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Nio <br/> Jess</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 6. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Fotography</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="ronczka"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/olivia-rq.webp" alt="Olivia Ronczka"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Olivia <br/> Ronczka</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    M.Sc., 1. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech, Sponsoring</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Cooking</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Hiking in the mountains</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Reading</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Meeting up with friends</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            <div id="schart"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/paul-rq.webp" alt="Paul Schart"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="text-lg text-left font-semibold text-gray-900 dark:text-sky-50">Paul <br/> Schart</h3>
+                  <span class="text-[10px] font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 padding: 4px 10px rounded-full block text-center">Technical Biology <br/>
+                    B.Sc., 4. semester</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: BioTech</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Working out</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Creative stuff</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+            <!-- Student 3 -->
+            
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 id="advisor" class="text-3xl font-bold text-gray-900 mb-3">Instructors</h2>
+      <!-- Advisor -->
+      <section class="py-12 bg-sky-200 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Student 1 -->
+            <div id="höninger"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/marvin-rq.webp" alt="Marvin Höninger"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                    <a href="mailto:Marvin.hoeninger@ibvt.uni-stuttgart.de"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-mail-line text-white"></i>
+                    </a>
+                    <a href="https://www.ibvt.uni-stuttgart.de/institute/team/Hoeninger/"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-global-line text-white"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Marvin Höninger</h3>
+                  <span class="text-xs font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 rounded-full">PhD Student at
+                    IBVT</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Instructor</p>
+                <p class="text-sky-600 dark:text-sky-400 text-sm mb-4"> What I like to do outside of the lab:
+                  <ul class="list-none space-y-2">
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Motorcycling</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Gaming</li>
+                  <li class="text-gray-600 dark:text-gray-400 text-sm text-left"><span class="mr-2 text-blue-500">🧬</span> Car tuning</li>
+                  </ul></p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 id="pis" class="text-3xl font-bold text-gray-900 mb-3">Principal Investigators (PIs)</h2>
+      <!-- PIs -->
+      <section class="py-12 bg-sky-200 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Student 1 -->
+            <div id="voss"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/voss.webp" alt="Björn Voß"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                    <a href="mailto:bjoern.voss@ibmg.uni-stuttgart.de"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-mail-line text-white"></i>
+                    </a>
+                    <a href="https://www.ibmg.uni-stuttgart.de/de/institut/team/Voss-00010/"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-global-line text-white"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Prof. Dr. rer. nat. Björn Voß</h3>
+                  <span class="text-xs font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 rounded-full">Director of
+                    Department RNA Biology & Bioinformatics</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Primary PI</p>
+              </div>
+            </div>
+            <div id="herzberg"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/siemann-herzberg.webp" alt="Martin Siemann-Herzberg"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                    <a href="mailto:siemann@ibvt.uni-stuttgart.de"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-mail-line text-white"></i>
+                    </a>
+                    <a href="https://www.ibvt.uni-stuttgart.de/institute/team/Siemann-Herzberg/"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-global-line text-white"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Prof. Dr. habil. Martin Siemann-Herzberg</h3>
+                  <span class="text-xs font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 rounded-full">Deputy Institute Director/ Academic Director</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Secondary PI</p>
+              </div>
+            </div>
+            <div id="heymann"
+              class="bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+              <div class="aspect-square relative overflow-hidden">
+                <img src="assets/teams/5829/images/heymann.webp" alt="Michael Heymann"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div class="flex gap-2">
+                    <a href="mailto:michael.heymann@bio.uni-stuttgart.de"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-mail-line text-white"></i>
+                    </a>
+                    <a href="https://www.bio.uni-stuttgart.de/institut/team/Heymann-00001/"
+                      class="w-8 h-8 flex items-center justify-center bg-black backdrop-blur-sm rounded-full hover:bg-sky-700 transition-colors">
+                      <i class="ri-global-line text-white"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50">Prof. Dr. rer. nat. Michael Heymann</h3>
+                  <span class="text-xs font-medium text-sky-50 bg-black dark:text-black dark:bg-sky-50 px-2 py-1 rounded-full">Department IBBS</span>
+                </div>
+                <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Role: Secondary PI</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Links -->
+        <div>
+          <a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+            <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+          </a>
+          <p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+          <div class="flex space-x-4">
+            <a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+        <!-- Quick links -->
+        <div>
+        <h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+        <li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+        <li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+        <li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+        <li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+        <li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Members</a></li>
+        <li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+        </ul>
+        </div>
+        <!-- Kontakt -->
+        <div>
+          <h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+          <ul class="space-y-3">
+            <li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Datenschutz -->
+        <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+        <p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+        </div>
+      </div>
+    <script src="static/gsap.min.js"></script>
+    <script src="static/ScrollTrigger.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+         
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+            
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+
+    // gsap.from("#hene", {
+    //   x: -3000,
+    //   duration: 1.5.5,
+    //   ease: "power2.out",
+    //   stagger: 1
+    // })
+    //   gsap.from("#reusing", {
+    //   x: -3500,
+    //   duration: 1.5.5,
+    //   ease: "power2.out"
+    // })
+    // gsap.from("#maurer", {
+    //   x: 3500,
+    //   duration: 1.5.5,
+    //   ease: "power2.out"
+    // })
+    // gsap.from("#ahmad", {
+    //   x: 4000,
+    //   duration: 1.5.5,
+    //   ease: "power2.out"
+    // })
+
+// gsap.registerPlugin(ScrollTrigger);
+
+gsap.from("#hene", {
+  y: 500,
+  // duration: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scale: 0.5,
+  scrollTrigger: {
+    trigger: "#hene",
+    animationRange: "entry 0% cover 40%"
+  }
+})
+gsap.from("#reusing", {
+  y: 500,
+  // duration: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scale: 0.5,
+  scrollTrigger: {
+    trigger: "#hene",
+    // start: "top 80%",
+    animationRange: "entry 0% cover 40%"
+  }
+})
+gsap.from("#maurer", {
+  y: 500,
+  opacity: 0,
+  ease: "power2.out",
+  scale: 0.5,
+  scrollTrigger: {
+    trigger: "#hene",
+    animationRange: "entry 0% cover 40%"
+  }
+})
+gsap.from("#ahmad", {
+  y: 500,
+  opacity: 0,
+  ease: "power2.out",
+  scale: 0.5,
+  scrollTrigger: {
+    trigger: "#hene",
+    animationRange: "entry 0% cover 40%"
+  }
+})
+
+gsap.from("#strom", {
+  y: 500,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#hene",
+    animationRange: "entry 0% cover 40%"
+  }
+})
+
+gsap.from("#schneider", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#strom",
+    scrub: 2
+  }
+})
+gsap.from("#waller", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#strom",
+    scrub: 2
+  }
+})
+gsap.from("#titus", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#strom",
+    scrub: 2
+  }
+})
+gsap.from("#ringel", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#schneider",
+    scrub: 2,
+  }
+})
+
+gsap.from("#strauß", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#schneider",
+    scrub: 2,
+  }
+})
+gsap.from("#meingast", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#schneider",
+    scrub: 2,
+  }
+})
+gsap.from("#stark", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#schneider",
+    scrub: 2,
+  }
+})
+gsap.from("#wührl", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#ringel",
+    scrub: 2
+  }
+})
+
+gsap.from("#baumann", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#ringel",
+    scrub: 2
+  }
+})
+gsap.from("#jess", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#ringel",
+    scrub: 2
+  }
+})
+gsap.from("#ronczka", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#ringel",
+    scrub: 2
+  }
+})
+gsap.from("#schart", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#strauß",
+    start: "top 80%",
+    scrub: 2
+  }
+})
+
+gsap.from("#bechel", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#strom",
+    scrub: 2
+  }
+})
+
+gsap.from("#höninger", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#bechel",
+    scrub: 2
+  }
+})
+
+gsap.from("#voss", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#höninger",
+    scrub: 2
+  }
+})
+gsap.from("#herzberg", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#höninger",
+    scrub: 2
+  }
+})
+gsap.from("#heymann", {
+  y: 500,
+  duration: 0.5,
+  scale: 0.5,
+  opacity: 0,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: "#höninger",
+    scrub: 2
+  }
+})
+
+
+    </script>
+</body>
+
+</html>

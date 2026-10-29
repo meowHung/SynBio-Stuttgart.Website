@@ -3,123 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <script>
-    (function () {
-      var stored = null;
-      try { stored = localStorage.getItem('theme'); } catch (err) {}
-      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-  <title>SynBio Stuttgart - Contact</title>
+  <title>Contact Us - SynBio Team University of Stuttgart</title>
+  <meta name="description" content="Contact the SynBio Stuttgart student research team.">
+  <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-icon icon-sun" aria-hidden="true">☀️</span>
-    <span class="theme-toggle-icon icon-moon" aria-hidden="true">&#127769;</span>
+    <!-- Work In Progress (WIP) Top Banner -->
+  <aside class="wip-bar" id="wipBar" role="status" aria-label="Work In Progress Notice">
+    <div class="wip-bar-content">
+      <span class="wip-badge">
+        <span class="wip-pulse-dot" aria-hidden="true"></span>
+        WIP • 2026/2027
+      </span>
+      <span>This website is actively evolving for the upcoming iGEM competition cycle.</span>
+      <button type="button" class="wip-bar-link open-wip-modal">View Roadmap &amp; Status &rarr;</button>
+    </div>
+    <button type="button" class="wip-bar-close" id="wipBarClose" aria-label="Dismiss work in progress banner">&times;</button>
+  </aside>
+
+  <!-- Floating WIP Badge when banner is dismissed -->
+  <button type="button" class="wip-floating-pill" id="wipFloatingPill" style="display: none;" title="Open Website Status &amp; Milestones">
+    <span class="wip-pulse-dot" aria-hidden="true"></span>
+    <span>WIP STATUS</span>
   </button>
 
+  <!-- WIP Modal Dialog -->
+  <div class="wip-modal-backdrop" id="wipModal" role="dialog" aria-modal="true" aria-labelledby="wipModalTitle">
+    <div class="wip-modal">
+      <div class="wip-modal-header">
+        <h2 class="wip-modal-title" id="wipModalTitle">
+          <span>🔬</span> Project &amp; Website Status
+        </h2>
+        <button type="button" class="wip-modal-close" id="wipModalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="wip-modal-body">
+        <p>Welcome to the SynBio Stuttgart development environment! We are actively designing and engineering our research presentation for the iGEM 2026/2027 cycle.</p>
+        
+        <div class="wip-milestones">
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>1:1 Wireframe Implementation:</strong> Faithful desktop and mobile layout from the Hang Minh Hoang wireframes.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Instant Sponsor Explorer:</strong> Direct search and category filters replacing slow infinite ticker.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Interactive Project Discography:</strong> Smooth interactive timeline from 2017 to 2027.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">In Progress</span>
+            <div>
+              <strong>Lab Data &amp; Modeling:</strong> Finalizing wet-lab assays and dry-lab molecular simulations for <em>brobiotics</em>.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a4a8b5;">Have feedback on the design? Feel free to reach out via our contact page.</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- 1. Top Header (Wireframe: Light Background #E6E7EA) -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img class="logo-img logo-light" src="images/SynBio_logo.svg" alt="SynBio Stuttgart">
-        <img class="logo-img logo-dark" src="images/SynBio_logo_dark.svg" alt="SynBio Stuttgart">
+      <a href="index.html" class="brand-link" aria-label="SynBio Team University of Stuttgart">
+        <img class="brand-logo-img" src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
       </a>
-      <div class="header-right">
-        <nav class="site-nav" id="siteNav">
-          <a href="news.html">News</a>
-          <div class="nav-dropdown" id="projectsDropdown">
-            <button class="nav-dropdown-toggle" id="projectsToggle" aria-haspopup="true" aria-expanded="false">
-              Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
-            </button>
-            <div class="nav-dropdown-menu nav-dropdown-menu-wide" id="projectsMenu">
-              <a href="brobiotics/index_brobiotics.html">2027 - brobiotics</a>
-              <a href="aralex/index_aralex.html">2025 - ARALEX</a>
-              <a href="dentozym/index_dentozym.html">2023 - DentoZym</a>
-              <a href="tardisun/index_tardisun.html">2021 - Tardisun</a>
-              <a href="lac-man/index_lac-man.html">2020 - LAC-MAN</a>
-              <a href="VNOO/index_VNOO.html">2019 - Vibrio natriegens Operon Optimization</a>
-              <a href="AGBC/index_AGBC.html">2018 - Anti-Germ Bio-coating</a>
-              <a href="BDO/index_BDO.html">2017 - Biological Drain Opener</a>
-            </div>
+
+      <!-- Left nav: Projects + What is iGEM? immediately after logo -->
+      <ul class="nav-links nav-links-left" id="navWrap">
+        <li class="nav-item nav-dropdown">
+          <a href="#discography" class="nav-dropdown-toggle">
+            Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="projects/brobiotics/index_brobiotics.html">2027 &mdash; brobiotics</a>
+            <a href="projects/aralex/index_aralex.html">2025 &mdash; ARALEX</a>
+            <a href="projects/dentozym/index_dentozym.html">2023 &mdash; DentoZym</a>
+            <a href="projects/tardisun/index_tardisun.html">2021 &mdash; Tardisun</a>
+            <a href="projects/lac-man/index_lac-man.html">2020 &mdash; LAC-MAN</a>
+            <a href="projects/PhyCoVi/index_PhyCoVi.html">2019 &mdash; PhyCoVi</a>
+            <a href="projects/TAGC/index_TAGC.html">2018 &mdash; TAGC</a>
+            <a href="projects/LOTP/index_LOTP.html">2017 &mdash; LOTP</a>
           </div>
-          <a href="mission.html">Our Mission</a>
-          <a href="igem.html">What is iGEM?</a>
-          <div class="nav-dropdown" id="headercontactDropdown">
-            <button class="nav-dropdown-toggle" id="headercontactToggle" aria-haspopup="true" aria-expanded="false">
-              For those interesed <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
-            </button>
-            <div class="nav-dropdown-menu" id="headercontactMenu">
-              <a href="contact_students.html">For students</a>
-              <a href="contact_companies.html">For companies & organizations</a>
-            </div>
-          </div>
-        </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        </li>
+        <li class="nav-item"><a href="igem.html">What is iGEM?</a></li>
+      </ul>
+
+      <!-- Right nav: spacer pushes About Us + CONTACT US! to far right -->
+      <div class="nav-right">
+        <ul class="nav-links nav-links-right">
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+        </ul>
+        <a href="contact.html" class="nav-contact-btn">CONTACT US!</a>
       </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <section class="page-header">
-    <div class="container">
-      <h1>Inquiries</h1>
-      <p>Reach out to us and we'll get back to you as soon as possible</p>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container narrow">
-      <form id="contactForm" class="contact-form" novalidate>
+  <main>
+    <!-- Wireframe Page 6/7: Centered CONTACT US -->
+    <section class="page-content-wireframe" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <div class="container" style="max-width: 900px;">
+        <h1 class="wireframe-purple-title" style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 30px;">
+          CONTACT US
+        </h1>
 
-        <div class="form-group">
-          <label for="firstname">First name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Max">
-          <span class="error-message" id="firstnameError"></span>
+        <!-- Sitemap (Website_Pitch): Sponsor Info is the most important function, Student Info next to it -->
+        <div class="contact-info-grid">
+          <article class="contact-info-card contact-info-sponsor">
+            <p class="contact-info-label">[For Sponsors]</p>
+            <h2>SUPPORT OUR RESEARCH</h2>
+            <p>As a student team, every iGEM project depends on partners from industry and research. If you would like to support our work, write to us and we will send you our sponsoring information.</p>
+            <a href="mailto:synbioteam@uni-stuttgart.de?subject=Sponsoring" class="btn-wireframe-pill">
+              <span>BECOME A SPONSOR</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </a>
+          </article>
+
+          <article class="contact-info-card">
+            <p class="contact-info-label">[For Students]</p>
+            <h2>JOIN THE TEAM</h2>
+            <p>You study at the University of Stuttgart and want to try out your own ideas in synthetic biology? We are looking for motivated students from all STEM fields.</p>
+            <a href="mailto:synbioteam@uni-stuttgart.de?subject=Joining%20the%20team" class="btn-wireframe-pill">
+              <span>JOIN US</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </a>
+          </article>
         </div>
 
-        <div class="form-group">
-          <label for="lastname">Last name</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Mustermann">
-          <span class="error-message" id="lastnameError"></span>
+        <p class="contact-info-label contact-form-label">[Write us a message]</p>
+
+        <div style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.15); padding: 36px; text-align: left;">
+          <form onsubmit="event.preventDefault(); document.getElementById('msgSent').style.display = 'block';">
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Your Name</label>
+              <input type="text" placeholder="e.g. Jane Doe" style="width: 100%; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit;" required>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Email Address</label>
+              <input type="email" placeholder="max@example.com" style="width: 100%; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit;" required>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Message</label>
+              <textarea rows="4" placeholder="How can we help you?" style="width: 100%; padding: 10px 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: #fff; font-family: inherit;" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-wireframe-pill" style="width: 100%; justify-content: center;">
+              <span>SEND MESSAGE</span>
+              <span class="btn-arrow" aria-hidden="true">──────►</span>
+            </button>
+
+            <div id="msgSent" style="display: none; margin-top: 16px; padding: 12px; background: rgba(142,130,254,0.2); border: 1px solid var(--wf-purple); text-align: center;">
+              Thank you! Your message has been sent.
+            </div>
+          </form>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="max.muster@example.com">
-          <span class="error-message" id="emailError"></span>
-        </div>
+  <!-- Wireframe Purple Footer -->
+  <footer class="wireframe-footer">
+    <div class="container footer-inner-content">
+      <a href="index.html" class="footer-logo-row" aria-label="SynBio Stuttgart Home">
+        <img src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
 
-        <div class="form-group">
-          <label for="Occupation">Occupation</label>
-          <select id="Occupation" name="budget">
-            <option value="">Select an occupation</option>
-            <option value="iInter-unistu">Internal university student</option>
-            <option value="exter-unistu">External university student</option>
-            <option value="organization">Organization</option>
-            <option value="company">Company</option>
-          </select>
-        </div>
+      <a href="contact.html" class="btn-footer-contact">
+        <span>CONTACT US</span>
+        <span class="btn-arrow" aria-hidden="true">──────►</span>
+      </a>
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
-          <span class="error-message" id="messageError"></span>
-        </div>
+      <div class="footer-social-squares">
+        <a href="https://www.instagram.com/synbioteam_stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="Instagram">
+          <span>📷</span>
+        </a>
+        <a href="https://www.linkedin.com/company/synbio-team-stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://gitlab.igem.org" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="GitLab">
+          <span>🧬</span>
+        </a>
+        <a href="mailto:synbioteam@uni-stuttgart.de" class="social-square-box" aria-label="Email">
+          <span>✉️</span>
+        </a>
+      </div>
 
-        <button type="submit" class="btn btn-primary">Send message</button>
+      <div class="footer-wireframe-credits">
+        <p>Research group at Uni Stuttgart in COOP with iGEM &bull; 2026/2027</p>
+        <p>Design by Hang Minh Hoang [<a href="https://www.instagram.com/lu_lounaa/" target="_blank" rel="noopener noreferrer">lu_lounaa on Instagram</a>]</p>
+      </div>
 
-        <p class="form-success" id="formSuccess" hidden>Your message has been sent - we'll contact you soon.</p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Brightside Studio. All rights reserved.</p>
+      <p class="footer-legal"><a href="impressum.html">Legal Notice</a> &bull; <a href="datenschutz.html">Privacy Policy</a></p>
     </div>
   </footer>
 

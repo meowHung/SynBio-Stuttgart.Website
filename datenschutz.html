@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Privacy Policy - SynBio Team University of Stuttgart</title>
+  <meta name="description" content="Privacy policy of the SynBio Team University of Stuttgart website: what data is processed when you visit and what rights you have.">
+  <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Work In Progress (WIP) Top Banner -->
+  <aside class="wip-bar" id="wipBar" role="status" aria-label="Work In Progress Notice">
+    <div class="wip-bar-content">
+      <span class="wip-badge">
+        <span class="wip-pulse-dot" aria-hidden="true"></span>
+        WIP • 2026/2027
+      </span>
+      <span>This website is actively evolving for the upcoming iGEM competition cycle.</span>
+      <button type="button" class="wip-bar-link open-wip-modal">View Roadmap &amp; Status &rarr;</button>
+    </div>
+    <button type="button" class="wip-bar-close" id="wipBarClose" aria-label="Dismiss work in progress banner">&times;</button>
+  </aside>
+
+  <!-- Floating WIP Badge when banner is dismissed -->
+  <button type="button" class="wip-floating-pill" id="wipFloatingPill" style="display: none;" title="Open Website Status &amp; Milestones">
+    <span class="wip-pulse-dot" aria-hidden="true"></span>
+    <span>WIP STATUS</span>
+  </button>
+
+  <!-- WIP Modal Dialog -->
+  <div class="wip-modal-backdrop" id="wipModal" role="dialog" aria-modal="true" aria-labelledby="wipModalTitle">
+    <div class="wip-modal">
+      <div class="wip-modal-header">
+        <h2 class="wip-modal-title" id="wipModalTitle">
+          <span>🔬</span> Project &amp; Website Status
+        </h2>
+        <button type="button" class="wip-modal-close" id="wipModalClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="wip-modal-body">
+        <p>Welcome to the SynBio Stuttgart development environment! We are actively designing and engineering our research presentation for the iGEM 2026/2027 cycle.</p>
+        
+        <div class="wip-milestones">
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>1:1 Wireframe Implementation:</strong> Faithful desktop and mobile layout from the Hang Minh Hoang wireframes.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Instant Sponsor Explorer:</strong> Direct search and category filters replacing slow infinite ticker.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">Completed</span>
+            <div>
+              <strong>Interactive Project Discography:</strong> Smooth interactive timeline from 2017 to 2027.
+            </div>
+          </div>
+          <div class="wip-milestone">
+            <span class="wip-milestone-status">In Progress</span>
+            <div>
+              <strong>Lab Data &amp; Modeling:</strong> Finalizing wet-lab assays and dry-lab molecular simulations for <em>brobiotics</em>.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a4a8b5;">Have feedback on the design? Feel free to reach out via our contact page.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Top Header (Wireframe: Light Background #E6E7EA) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="SynBio Team University of Stuttgart">
+        <img class="brand-logo-img" src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <!-- Left nav: Projects + What is iGEM? immediately after logo -->
+      <ul class="nav-links nav-links-left" id="navWrap">
+        <li class="nav-item nav-dropdown">
+          <a href="#discography" class="nav-dropdown-toggle">
+            Projects <span class="nav-dropdown-arrow" aria-hidden="true">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="projects/brobiotics/index_brobiotics.html">2027 &mdash; brobiotics</a>
+            <a href="projects/aralex/index_aralex.html">2025 &mdash; ARALEX</a>
+            <a href="projects/dentozym/index_dentozym.html">2023 &mdash; DentoZym</a>
+            <a href="projects/tardisun/index_tardisun.html">2021 &mdash; Tardisun</a>
+            <a href="projects/lac-man/index_lac-man.html">2020 &mdash; LAC-MAN</a>
+            <a href="projects/PhyCoVi/index_PhyCoVi.html">2019 &mdash; PhyCoVi</a>
+            <a href="projects/TAGC/index_TAGC.html">2018 &mdash; TAGC</a>
+            <a href="projects/LOTP/index_LOTP.html">2017 &mdash; LOTP</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="igem.html">What is iGEM?</a></li>
+      </ul>
+
+      <!-- Right nav: spacer pushes About Us + CONTACT US! to far right -->
+      <div class="nav-right">
+        <ul class="nav-links nav-links-right">
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+        </ul>
+        <a href="contact.html" class="nav-contact-btn">CONTACT US!</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Privacy Policy (Datenschutzerklärung) -->
+    <section class="page-content-wireframe">
+      <div class="container legal-content">
+        <h1 class="wireframe-purple-title">PRIVACY POLICY</h1>
+        <p class="legal-updated">[Last updated: October 2026]</p>
+
+        <h2>1. Who is responsible</h2>
+        <p>
+          The controller responsible for data processing on this website within the meaning of the General Data Protection Regulation (GDPR) is:
+        </p>
+        <p>
+          <strong>SynBio Team of the University of Stuttgart</strong><br>
+          Institute of Biomedical Genetics<br>
+          Department RNA-Biology &amp; Bioinformatics<br>
+          Allmandring 31<br>
+          70569 Stuttgart, Germany<br>
+          Email: <a href="mailto:synbioteam@ibmg.uni-stuttgart.de">synbioteam@ibmg.uni-stuttgart.de</a>
+        </p>
+        <p>Further details can be found in our <a href="impressum.html">Legal Notice</a>.</p>
+
+        <h2>2. Overview</h2>
+        <p>
+          We keep the processing of personal data to a minimum. This website does not use cookies, analytics or tracking tools, advertising, or embedded content from third parties (such as videos, maps or social media plugins).
+        </p>
+
+        <h2>3. Hosting and server log files</h2>
+        <p>
+          When you open this website, the server that hosts it automatically records information that your browser transmits. This includes:
+        </p>
+        <ul>
+          <li>your IP address,</li>
+          <li>the date and time of the request,</li>
+          <li>the page or file requested,</li>
+          <li>the website from which you came (referrer),</li>
+          <li>the browser and operating system you use.</li>
+        </ul>
+        <p>
+          This data is needed to deliver the website and to keep it secure and stable. It is not combined with other data sources. The legal basis is Art. 6(1)(f) GDPR; our legitimate interest is the technically error-free and secure operation of the website. Log files are deleted as soon as they are no longer needed for this purpose.
+        </p>
+
+        <h2>4. Fonts</h2>
+        <p>
+          The fonts used on this website are stored on our own server. When you visit the website, no connection is made to servers of Google or other font providers.
+        </p>
+
+        <h2>5. Local storage in your browser</h2>
+        <p>
+          If you close the &ldquo;Work in Progress&rdquo; notice or change the colour theme, the website saves this choice in the local storage of your browser so that it is remembered on your next visit. This information stays on your device and is never sent to us or anyone else. Storing it is strictly necessary to provide the function you asked for (&sect; 25(2) TDDDG). You can delete it at any time in your browser settings.
+        </p>
+
+        <h2>6. Contacting us</h2>
+        <p>
+          If you contact us by email, we process the data you send us (for example your name, email address and message) only to answer your request. The legal basis is Art. 6(1)(b) GDPR if your request relates to a contract or to joining or sponsoring the team, and Art. 6(1)(f) GDPR otherwise; our legitimate interest is responding to the enquiries sent to us. We delete your data once your request has been fully dealt with, unless legal retention periods require us to keep it.
+        </p>
+
+        <h2>7. Links to other websites</h2>
+        <p>
+          This website contains links to other websites, for example Instagram, LinkedIn, GitLab, iGEM and the University of Stuttgart. No data is transferred to these providers until you click a link. After that, the privacy policy of the respective provider applies.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>Under the GDPR you have the right to:</p>
+        <ul>
+          <li>access the personal data we hold about you (Art. 15),</li>
+          <li>have incorrect data corrected (Art. 16),</li>
+          <li>have your data deleted (Art. 17),</li>
+          <li>restrict the processing of your data (Art. 18),</li>
+          <li>receive your data in a portable format (Art. 20),</li>
+          <li>object to processing based on Art. 6(1)(f) GDPR (Art. 21).</li>
+        </ul>
+        <p>
+          To exercise these rights, simply write to us at the email address above. You also have the right to lodge a complaint with a data protection supervisory authority, for example the State Commissioner for Data Protection and Freedom of Information of Baden-W&uuml;rttemberg (LfDI Baden-W&uuml;rttemberg).
+        </p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>
+          We update this privacy policy when the website or the legal requirements change. The current version is always available on this page.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Wireframe Purple Footer -->
+  <footer class="wireframe-footer">
+    <div class="container footer-inner-content">
+      <a href="index.html" class="footer-logo-row" aria-label="SynBio Stuttgart Home">
+        <img src="images/SynBio_logo_dark.svg" alt="SynBioTeam University of Stuttgart">
+      </a>
+
+      <a href="contact.html" class="btn-footer-contact">
+        <span>CONTACT US</span>
+        <span class="btn-arrow" aria-hidden="true">──────►</span>
+      </a>
+
+      <div class="footer-social-squares">
+        <a href="https://www.instagram.com/synbioteam_stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="Instagram">
+          <span>📷</span>
+        </a>
+        <a href="https://www.linkedin.com/company/synbio-team-stuttgart/" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="LinkedIn">
+          <span>💼</span>
+        </a>
+        <a href="https://gitlab.igem.org" target="_blank" rel="noopener noreferrer" class="social-square-box" aria-label="GitLab">
+          <span>🧬</span>
+        </a>
+        <a href="mailto:synbioteam@uni-stuttgart.de" class="social-square-box" aria-label="Email">
+          <span>✉️</span>
+        </a>
+      </div>
+
+      <div class="footer-wireframe-credits">
+        <p>Research group at Uni Stuttgart in COOP with iGEM &bull; 2026/2027</p>
+        <p>Design by Hang Minh Hoang [<a href="https://www.instagram.com/lu_lounaa/" target="_blank" rel="noopener noreferrer">lu_lounaa on Instagram</a>]</p>
+      </div>
+
+      <p class="footer-legal"><a href="impressum.html">Legal Notice</a> &bull; <a href="datenschutz.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

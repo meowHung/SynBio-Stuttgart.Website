@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subgroups | Stuttgart - iGEM 2025</title>
+  <link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+  <script src="static/tailwind.min.css"></script>
+  <script>tailwind.config = {theme: {extend: {colors: {primary: '#3b82f6', secondary: '#64748b'}, borderRadius: {'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px'}}}}</script>
+  <link rel="stylesheet" href="static/remixicon.min.css">
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+    i[class^="ri-"], i[class*=" ri-"] {
+      font-size: 1.2rem;     
+      line-height: 1;        
+      vertical-align: middle; 
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+
+<body class="bg-white min-h-screen">
+  <!-- Reiter -->
+  <header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+  </a>
+  <nav class="hidden md:flex items-center space-x-8">
+  <a href="index_aralex.html" class="text-gray-700 dark:text-sky-200 transition-colors">Home</a>
+  <div class="relative" id="projectDropdown">
+  <button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+  Project
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+  <a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+  <a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+  <a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+  <a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+  <a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+  <a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+  <a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+  </div>
+  </div>
+  <div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+  <div class="relative" id="groupsDropdown">
+  <button class="text-sky-700 hover:text-sky-700 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+  Team
+  <i class="ri-arrow-down-s-line ml-1"></i>
+  </button>
+  <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+  <a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+  <a href="groups.html" class="block px-4 py-2 text-sky-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+  <a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+  </div>
+  </div>
+  <a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+  <button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+      Dark Mode
+  </button>
+  </nav>
+  <div class="md:hidden w-10 h-10 flex items-center justify-center">
+  <i class="ri-menu-line ri-lg"></i>
+  </div>
+  </div>
+  </header>
+  <!-- Überschrift -->
+  <section class="bg-sky-200 dark:bg-gray-900 py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Subgroups</h1>
+        <p class="text-lg text-gray-600 dark:text-sky-50">Find out about the subgroups that make up the project.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Filter -->
+  <section class="py-8 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-center mb-8">
+          <div class="flex flex-wrap gap-2">
+            <a href="#biotech">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">BioTech</button>
+            </a>
+            <a href="#chemistry">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Chemistry</button>
+            </a>
+            <a href="#finanzen">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Finances</button>
+            </a>
+            <a href="#it">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">IT</button>
+            </a>
+            <a href="#tdw1">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-sky-600 text-sm font-medium hover:bg-sky-50 dark:hover:bg-gray-900 dark:hover:text-sky-50 !rounded-button whitespace-nowrap">Education</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gruppen -->
+  <section class="py-12 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 id="biotech" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">Biotech</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="w-1/2 mx-auto bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+          <div class="relative overflow-hidden">
+            <img src="assets/teams/5829/images/labor-rq-2-zu-1.webp" alt="BioTech"
+              class="w-full h-full object-contain object-top group-hover:scale-105 transition-transform duration-300">
+            <div
+              class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex gap-2"></div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Teamleader: <a href="students.html#reusing">Noemi
+                  Reusing </a>, <a href="students.html#ahmad">Yazan Ahmad</a></h3>
+              <span class="text-xs font-medium text-sky-50 bg-gray-900 hover:bg-sky-50 hover:text-gray-900 dark:text-black dark:bg-sky-50 dark:hover:bg-black dark:hover:text-sky-50 px-2 py-1 text-center rounded-full"><a
+                  href="https://www.ibvt.uni-stuttgart.de/de/" target="_blank">Institut of Biochemical Engineering </a> </span>
+            </div>
+            <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Task: Genome integration of the <i>ohaA</i>-gene and optimization of the oxalate synthesis.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              We worked on the plasmid contruction for our bacteria, cultivation experiments, the optimization of our oxalate
+              production, and our own oxalate assay. Find out more about our work on the <a href="project.html">Project</a> page.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <section class="py-12 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 id="chemistry" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">Chemistry</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="w-1/2 mx-auto bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="assets/teams/5829/images/chemie-rq-ungeschnitten.webp" alt="Chemistry"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div
+              class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex gap-2"></div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Teamleader: <a href="students.html#strom">Nathanael
+                  Strom</a></h3>
+              <span class="text-xs font-medium text-sky-50 bg-gray-900 hover:bg-sky-50 hover:text-gray-900 dark:text-black dark:bg-sky-50 dark:hover:bg-black dark:hover:text-sky-50 px-2 py-1 text-center rounded-full"><a
+                  href="https://www.ipoc.uni-stuttgart.de/" target="_blank">Cooperation with Institute of Polymer Chemistry</a> </span>
+            </div>
+            <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Task: Investigation of the leaching process, its optimization and complex separation.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Chemistry is in its basics a science of experimentation and its proper refinement. It bodes a striving for understanding the reactions taking place on every scale and reaches out for turning the acquainted knowledge into practical use for developing new ideas which reshape our everyday life and improve our status and possibilities of research. Nothing else has been done by those of us who wanted to combine the disciplines of biotechnology and chemistry for improving the current method of the recycling of critical (raw) metals. We have directed our attention towards a very special of these metals, the so-called PGM’s. PGM is an abbreviation for Platin Group Metals and refers to a group of metals being crucial to catalysts. They are supposed to overall reduce dangerous emissions from vehicles. The recycling of the PGM’s is, given taken place at all, very expensive and takes a lot of time, as a lot of chemicals are involved. This results in dumping a considerable high percentage of PGM’s together with the broken and old catalysts in which they originally had been built. As each new problem demands a new and inventive solution, we wanted to elaborate a new and better method for recycling PGM’s. Our method is working without the use of expensive chemicals or exquisite equipment. Furthermore, it holds the potential to create a (continuous) working circle together with the realization of our biotechnological projects being fed on by the addition of further remains of shredded catalysts. Find out more about the chemistry part on our <a href="project.html">Project</a> page.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="py-12 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 id="finanzen" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">PR</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="w-1/2 mx-auto bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="assets/teams/5829/images/finanzen-rq-ungeschnitten.webp" alt="Finanzen"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div
+              class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex gap-2"></div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Teamleader: <a href="students.html#maurer"> Theresa
+                  Maurer </a> </h3>
+              <span class="text-xs font-medium text-sky-50 bg-gray-900 hover:bg-sky-50 hover:text-gray-900 dark:text-black dark:bg-sky-50 dark:hover:bg-black dark:hover:text-sky-50 px-2 py-1 rounded-full">PR und Sponsoring</span>
+            </div>
+            <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Task: Sponsoring for iGem funding, PR work.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Our work mostly focuses on the promotion and the acquisition of our project.
+Participating at the iGEM competition is very expensive/ has grown very expensive over the past years and our team faced that challenge by net-working with various institutions at the university related with Biology like the <a href="https://www.srcsb.uni-stuttgart.de/">Stuttgarter Research Center for Systems Biology</a> and with many (major) companies like Audi which all supported our vision with financial aid as well as with promoting our project further.
+Additionally, we keep people constantly informed about all activities, successes and break-throughs on our <a href="https://www.instagram.com/igem_stuttgart/">Instagram channel</a> and on this <a href="index_aralex.html">website</a>.
+<br>Don't miss to also check out the work of the <a href="https://teams.igem.org/">other teams</a>. Enjoy.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="py-12 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 id="it" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">IT</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="w-1/2 mx-auto bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="assets/teams/5829/images/ox-an.webp" alt="IT"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+            <div
+              class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex gap-2"></div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Responsible: <a href="students.html#ringel"> Daniel
+                  Ringel </a> </h3>
+            </div>
+            <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Task: Wiki Coding, Data analysis and Modeling.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">We conduct both energetic modeling of the complex to explore its coordination and kinetic modeling to create first a descriptive and further a predictive model. Additionally we coded this Wiki.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>  
+  <section class="py-12 bg-sky-200 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 id="tdw1" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3">Education</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="w-1/2 mx-auto bg-sky-50 dark:bg-black rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
+          <div class="relative overflow-hidden">
+            <img src="assets/teams/5829/images/education-rq-ungeschnitten.webp" alt="Education"
+              class="w-full h-full object-contain object-top group-hover:scale-105 transition-transform duration-300">
+            <div
+              class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="flex gap-2"></div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-sky-50 hover:text-sky-700 dark:hover:text-sky-200">Responsible: <a href="students.html#schneider"> Amasia
+                  Schneider Rocha </a> </h3>
+            </div>
+            <p class="text-gray-900 dark:text-sky-50 font-medium text-sm mb-2">Task: Educate on synthetic biology, iGem to youth, families and science enthusiasts.</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">To introduce synthetic biology and our project we used the yearly Tag der Wissenschaft at the University of Stuttgart. A very broad audience was interested about our project, leaving with a new point of view. Further we visited schools to spark interest in synthetic biology to young people who are choosing their next steps. Find out more on our <a href="education.html"> Education </a> site.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>   <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Links -->
+        <div>
+          <a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+            <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+          </a>
+          <p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+          <div class="flex space-x-4">
+            <a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+              <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+        <!-- Quick links -->
+        <div>
+        <h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+        <li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+        <li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+        <li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+        <li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+        <li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Member</a></li>
+        <li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+        </ul>
+        </div>
+        <!-- Kontakt -->
+        <div>
+          <h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+          <ul class="space-y-3">
+            <li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Datenschutz -->
+        <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+        <p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+        </div>
+      </div>
+  </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+         
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+            
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Success | Stuttgart - iGEM 2025</title>
+<link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+<script src="static/tailwind.min.css"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+i[class^="ri-"], i[class*=" ri-"] {
+  font-size: 1.2rem;     
+  line-height: 1;        
+  vertical-align: middle; 
+}
+
+body {
+font-family: 'Inter', sans-serif;
+}
+
+  .tab-panel {
+    margin-top: 1rem;
+  }
+
+  .active-tab {
+    font-weight: bold;
+    color: #4F46E5;
+  }
+
+  .gallery-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gallery-col {
+float: center;
+width: 25%;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.gallery-col img {
+width: 100%;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.gallery-col img:hover {
+transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 9999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+margin: auto;
+display: block;
+max-width: 80%;
+max-height: 80%;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+</style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+<!-- Reiter -->
+<header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+<div class="relative" id="projectDropdown">
+<button class="text-sky-700 hover:text-sky-700 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+Project
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+<a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+<a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+<a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+<a href="engineering.html" class="block px-4 py-2 text-sky-700 hover:text-sky-500 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+<a href="measurement.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+<a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+<a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+</div>
+</div>
+<div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+<div class="relative" id="groupsDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+Team
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+<a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+<a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+<a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+</div>
+</div>
+<a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+<button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+Dark Mode
+</button>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<!-- Überschrift -->
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Our engineering success</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400 text-center">
+    <strong>Design.</strong> Every project starts with an idea. This idea is then refined into a concise plan.</p>
+<p class="text-lg text-gray-600 dark:text-gray-400 text-center">
+    <strong>Build.</strong> The plan is then applied. DNA constructs are assembled.</p>
+<p class="text-lg text-gray-600 dark:text-gray-400 text-center">
+    <strong>Design.</strong> The design is put to the test. Does it work? How does it perform?
+<p class="text-lg text-gray-600 dark:text-gray-400 text-center">
+    <strong>Learn.</strong> The takeaways from this cycle are gathered. Improvements are made. The cycle begins again.
+</p>
+</div>
+</div>
+</section>
+<body>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<div class="text-center mb-12">
+<h2 id="bio" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 scroll-mt-24">The biological cycles</h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="tabbed-content">
+<div class="tab-nav">
+  <div class="flex flex-row justify-center items-center bg-white dark:bg-black w-[80%] mx-auto text-center space-x-[20%] py-4
+  border-4 border-indigo-300 dark:border-indigo-600 dark:text-sky-200 rounded-lg">
+    <p class="relative cursor-pointer before:content-['👉'] before:opacity-0 hover:before:opacity-100 before:mr-1 transition-all">Cycle 1</p>
+    <p class="relative cursor-pointer before:content-['👉'] before:opacity-0 hover:before:opacity-100 before:mr-1 transition-all">Cycle 2</p>
+    <p class="relative cursor-pointer before:content-['👉'] before:opacity-0 hover:before:opacity-100 before:mr-1 transition-all">Cycle 3</p>
+    <p class="relative cursor-pointer before:content-['👉'] before:opacity-0 hover:before:opacity-100 before:mr-1 transition-all">Cycle 4</p>
+  </div>
+</div>
+    <div class="tab-panels">
+    <div class="tab-panel" id="cycle1">
+    <div class="text-center mt-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-24">Cycle 1 – testing <i>pEKEx2</i> & <i>pPBEx2</i> as expression systems</h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-4">
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Carousel track -->
+    <div id="carousel" class="overflow-hidden">
+      <div id="carouselTrack" class="flex transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-8">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#C4B5FD;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#7C3AED;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#C4B5FD;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Design</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8 mb-2">
+              Our team successfully engineered the bacterium <i>Corynebacterium glutamicum</i> to produce oxalic acid, a valuable chemical used
+              in everything from cleaning products to pharmaceuticals. We used <i>C. glutamicum</i> because it’s a proven industrial workhorse,
+              and we gave it a new ability by borrowing a gene from the fungus <i>Aspergillus niger</i> [<a href="#Ray" class="hover:underline">Ray et al, 2022</a>].
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              The key was the oxaloacetate hydrolase (<i>OAH</i>) gene. In theory, implementing <i>OAH</i> in C. glutamicum’s metabolism should lead to the conversion of oxaloacetate to oxalate and acetate:
+            </p>
+              <!-- Video + Image Container -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 w-[95%] mx-auto">
+
+              <!-- Image -->
+              <img class="w-[30%] shadow-lg" src="assets/teams/5829/images/metabolicpathway.webp" alt="Description">
+
+            </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              For optimal translation conditions, we chose a codon-optimized variant of <i>oahA</i>. Additionally, we added a His6Tag a the c-terminus so that <i>OAH</i>-purification is possible.
+              As expression systems, we decided to test the IPTG-inducible expression vector <i>pEKEx2</i>, which is well-established at our institution as well as ist derivative <i>pPBEx2</i>.
+              The latter was designed by <a href="#Bakkes" class="hover:underline">Bakkes et al.</a> (Jülich, Germany) and should present with lower leakiness.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#C4B5FD;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#7C3AED;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#C4B5FD;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+              </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Build</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              Codon optimized <i>oahA</i> was ordered from Gigabases, a DNA synthesis company from Switzerland. The gene of interest was subcloned into linearized <i>pEKEx2</i>
+              and <i>pPBEx2</i> by amplifying it via Q5-PCR and using the NEBuilder DNA Assembly protocol for assembly. After successfully creating <i>pEKEx2_oahA</i> and <i>pPBEx2_oahA</i>,
+              both vectors were transformed into <i>E. coli</i> and subsequently electroporated into the target organism <i>C. glutamicum</i>.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6 max-h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#C4B5FD;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#7C3AED;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#C4B5FD;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Test</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8">
+              To test the production capability of our new mutants as well as their viability, we conducted a first cultivation with both mutants and the wildtype as control.
+              Oxalate production was induced by adding 2.5 mM IPTG after 3 h of cultivation. Two mutant cultures were not induced to test for leakiness.
+              The extracellular oxalate level was measured after 6 hours using a commercially available enzymatic assay and biomass formation was tracked by measuring optical density (OD600).
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The results show that our mutants indeed produce oxalic acid and their growth rate is only slightly decreased in comparison to the wildtype.
+            </p>
+
+          <div class="flex flex-col md:flex-row justify-center items-start gap-8 w-[95%] mx-auto">
+            <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/growthcurve1.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mb-2 text-center text-gray-700 dark:text-gray-300">
+              Growth curve of the first cultivation with induction (+) after 3 hours. High variance after 20 hours is probably due to dilution errors.
+            </figcaption>
+            </figure>
+          <figure class="w-[50%] flex flex-col items-center justify-center mx-auto">
+          <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300">
+            Growth rates in exponential phase. Induced mutants show slightly decreased values.
+          </figcaption>
+          <table class="text-xs">
+            <thead class="bg-sky-300">
+              <tr>
+                <th class="border px-4 py-2 text-left">culture</th>
+                <th class="border px-4 py-2 text-left">µ<sub>max</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white">
+                <td class="border px-4 py-2">WT</td>
+                <td class="border px-4 py-2">0.43</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pEKEx2</i></td>
+                <td class="border px-4 py-2">0.42</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pEKEx2</i>+</td>
+                <td class="border px-4 py-2">0.37</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pPBEx2</i></td>
+                <td class="border px-4 py-2">0.40</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>pPBEx2</i></td>
+                <td class="border px-4 py-2">0.38</td>
+              </tr>
+            </tbody>
+          </table>
+          </figure>
+          </div>
+
+          <div class="flex flex-col md:flex-row justify-center items-center gap-8 w-[95%] mx-auto ml-[5%]">
+            <figure class="gallery-col w-[30%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/oxalate1.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mb-2 text-center text-gray-700 dark:text-gray-300 w-[150%]">
+              First oxalate measurement after 6 hours of cultivation using an enzymatic oxalate assay (Sigma-Aldrich).
+              Distinct blue color reaction in the plasmid-containing culture (right) shows high oxalate content in comparison to the wildtype (left).             </figcaption>
+            </figure>
+          <figure class="w-[50%] flex flex-col items-center justify-center mx-auto">
+          <table class="border border-gray-300 dark:border-gray-600 text-xs">
+            <thead class="bg-sky-300">
+              <tr>
+                <th class="border px-4 py-2 text-left">culture</th>
+                <th class="border px-4 py-2 text-left">Oxalate[µM]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>C.g.</i> Wildtype</td>
+                <td class="border px-4 py-2">74</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="border px-4 py-2"><i>C.g. pPBEx2_oahA</i> induced</td>
+                <td class="border px-4 py-2">360</td>
+              </tr>
+            </tbody>
+          </table>
+          </figure>
+          </div>
+
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 ml-8 mr-8">
+              We also measured oxalate concentration kinetics throughout the whole cultivation (data not shown), however
+              since the results showed extremely high variance they were not reliable.
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8">
+              To quantify oxalate production and further evaluate growth characteristics in larger scale, we tested <i>C.g. pPBEx2_oahA</i>
+              in a 1 L stirred tank reactor system. The results validated our previous data and confirms that the growth rate is
+              decreased by introducing the <i>pPBEx2_oahA</i> plasmid.
+            </p>
+            <div class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/growthcurve-largescale.webp"
+            alt="Justice scale"
+            class="w-full h-full object-cover rounded-md"
+          />
+            </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8">
+              Oxalate production was again tested using the same enzymatic kit as before. The results once again showed extremely high variance.
+              The only take-away is that the plasmid-containing induced cultures showed elevated oxalate levels while the wildtype cultures only showed traces.
+            </p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6  h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#C4B5FD;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#7C3AED;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#C4B5FD;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Learn</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              This first cycle provided us with a proof of concept. We learned that the plasmid burden on the organism is reasonable and
+              oxalate production is possible with our approach. The unreliable oxalate data remain a problem which we will try to solve by
+              testing different quantification methods including HPLC and a chemical precipitation assay (see cycle:
+              <a href="contribution.html" class="hover:underline">Oxalate Assay</a>).
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              To further optimize oxalate production, we decided to try genome integration of the <i>oahA</i> gene for a more stable production without
+              having to rely on antibiotics. Apart from that, different induction times and inducer concentrations should be tested to find the optimal conditions.
+            </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prevBtn" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ‹
+    </button>
+    <button id="nextBtn" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ›
+    </button>
+  </div>
+</section>
+</div>
+    </div>
+    <div class="tab-panel" id="cycle2" style="display:none;">
+      <!-- Carousel 2 -->
+<div class="text-center mt-12">
+<h2 id="opt" class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-24">Cycle 2 – genome integration trial 1 – integration of <i>oahA</i> </h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-4">
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Carousel track -->
+    <div id="carousel2" class="overflow-hidden">
+      <div id="carouselTrack2" class="flex transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6  h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#7DD3FC;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#0284C7;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#7DD3FC;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Design</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              For the first genome integration trial, we chose to integrate the <i>oahA</i> gene under a <i>tac</i> promoter via 2 step homologous recombination
+              by introducing an integration plasmid containing our insert. Upon the recommendation of our experts, we used <i>pK19mobsacB</i> as the integration vector.
+              After extensive literature research, we identified the region between <i>cg3228</i> and <i>cgIldA</i> as a suitable integration locus [<a href="#lange" class="hover:underline">Lange et al., 2017</a>].
+            </p>
+            <div class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/firstintegration.webp"
+            alt="first integration"
+            class="w-full h-full object-cover rounded-md"
+          />
+            </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              The first goal is to create <i>pK19_oahA</i> (<i>pK19</i> containing <i>oahA</i> with <i>Ptac</i> and <i>lac</i> operator derived from <i>pEKEx2_oahA</i> as well as
+              two adapter regions for homologue recombination) and transforming it into <i>E. coli</i> for plasmid amplification.
+              After that, we can electroporate the isolated plasmid into our target organism <i>C. glutamicum</i> for genome integration.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#7DD3FC;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#0284C7;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#7DD3FC;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Build</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The integration vector <i>pK19_oahA</i> was built by first creating fragments of (1) the upstream adapter region,
+              (2) the <i>oahA</i> fragment containing <i>Ptac</i> and <i>lac</i> operator and (3) the downstream adapter region via Q5-PCR.
+              The fragments were amplified with overlapping primers so that DNA assembly using NEB’s assembly protocol was possible.
+              The 3 fragments were assembled into the BamHI/EcoRI-linearized <i>pK19</i> vector.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#7DD3FC;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#0284C7;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#7DD3FC;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Test</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              Correct assembly was tested by (1) gel electrophoresis of the assembly reaction and (2) transforming the plasmid into
+              <i>E. coli</i> followed by colony PCR, gel electrophoresis and sequencing. Gel electrophoresis of the assembly reaction showed promising results,
+              however after checking the grown colonies with sequencing, no positive clones could be confirmed:
+            </p>
+            <figure class="gallery-col w-[40%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/sequencing-firstintegration.webp"
+            alt="sequencing"
+            class="w-full h-full object-cover rounded-md"
+          />
+              <figcaption class="mb-2 text-center text-gray-700 dark:text-gray-300 w-[150%]">
+              Sequencing results aligned with the expected sequence. Each line shows one tested sequence. Red indicates matches, blank indicates mismatches/missing basepairs.
+              </figcaption>
+            </figure>
+            </div>
+          </div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="flex-shrink-0 w-full px-2 mr-2">
+        <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#7DD3FC;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#0284C7;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#7DD3FC;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Learn</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The sequencing results all have in common that no tested sequence contains a functional <i>tac</i> promoter. This lead us to conclude
+              that the plasmid is too high of a burden for <i>E. coli</i> if not regulated since the expressed <i>oahA</i> gene constantly removes oxaloacetate from the TCA cycle.
+              This means that no cell containing the whole <i>Ptac-oahA</i> sequence could survive which is exactly what we see in the sequencing results.
+              To solve this problem, we decided to try integrating an additional repressor system alongside the oahA and Ptac to inhibit constant OAH-expression.
+            </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prevBtn2" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ‹
+    </button>
+    <button id="nextBtn2" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ›
+    </button>
+  </div>
+</section>
+</div>
+    </div>
+    <div class="tab-panel" id="cycle3" style="display:none;">
+      <!-- Carousel 3 -->
+<div class="text-center mt-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-24">Cycle 3 – genome integration trial 2 – integration of <i>oahA</i> and <i>lacI</i></h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-4">
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Carousel track -->
+    <div id="carousel3" class="overflow-hidden">
+      <div id="carouselTrack3" class="flex transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-8">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDE047;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#CA8A04;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDE047;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Design</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8 mb-2">
+              To lighten the burden of <i>pK19_oahA</i>, we decided to integrate the <i>lac</i>-repressor system:
+            </p>
+            <div class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/secondintegration.webp"
+            alt="first integration"
+            class="w-full h-full object-cover rounded-md"
+          />
+            </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 ml-8 mr-8">
+              Without addition of the inducer IPTG, the repressor system consisting of lacI, its promoter <i>lacIq</i> and the <i>lac</i> operator
+              should inhibit the expression of <i>oahA</i>. LacI is a DNA binding protein which binds to the <i>lac</i> operator and inhibits transcription
+              of subsequent genes [<a href="#bell" class="hover:underline">Bell, Lewis, 2001</a>].
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8">
+              The first step to genome integration is once again building the integration vector, this time with the lacI system: <i>pK19_lacI_oahA</i>.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDE047;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#CA8A04;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDE047;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+              </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Build</h2>
+              </div>
+            <div class="flex items-center gap-[50px] ml-8 mr-8">
+            <p class="text-gray-900 dark:text-sky-200 text-justify">
+              <i>pK19_lacI_oahA</i> was created by constructing 4 overlapping fragments via Q5-PCR: (1) Upstream adapter region,
+              (2) <i>lacIq</i>+lacI, (3) <i>Ptac-lac</i> operator-oahA, (4) Downstream adapter region. These fragments were assembled into
+              linearized <i>pK19</i> following NEB’s DNA assembly protocol.
+            </p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDE047;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#CA8A04;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDE047;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Test</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              After assembly, the reactions were directly transformed into <i>E. coli</i> by heat shock. After selection on agar plates containing Kanamycin overnight,
+              the surviving colonies were checked with colony PCR and subsequent gel electrophoresis. Unfortunately, no positive colonies had formed:
+            </p>
+            <figure class="w-[50%] flex flex-col items-center justify-center mx-auto">
+          <img
+            src="assets/teams/5829/images/gel-thirdintegration.webp"
+            alt="Justice scale"
+            class="w-full h-full object-cover"
+          />
+          <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300 w-[150%]">
+            Expected size of the correctly assembled fragment was 4170 bp. However, none of the 40 tested colonies contained the right fragment; most had a size of 500-1000 bp.
+          </figcaption>
+            </figure>
+            </div>
+          </div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDE047;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#CA8A04;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDE047;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Learn</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The results proved our previous theory wrong; integrating a repressor system alone does not lead to survival of correctly transformed colonies.
+              We suspected that one cause could be that we did not add a terminator to our <i>oahA</i> gene.
+              To eliminate this problem we decided to try including the T7 terminator and see how this influences colony formation.
+            </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prevBtn3" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ‹
+    </button>
+    <button id="nextBtn3" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ›
+    </button>
+  </div>
+</section>
+</div>
+    </div>
+    <div class="tab-panel" id="cycle4" style="display:none;">
+      <div class="text-center mt-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-24">Cycle 4 – genome integration trial 3 – integration of <i>oahA</i> with lacI and terminator</h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-4">
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Carousel track -->
+    <div id="carousel4" class="overflow-hidden">
+      <div id="carouselTrack4" class="flex transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDBA74;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#EA580C;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDBA74;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Design</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              To design a functional integration vector, we decided to add the <a href="https://parts.igem.org/Part:BBa_B0012" class="hover:underline">T7 terminator</a> to our <i>oahA</i> unit:
+            </p>
+            <figure class="gallery-col bg-white w-[90%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/fourthintegration.webp"
+            alt="fourth integration"
+            class="w-full h-full object-cover rounded-md"
+          />
+            </figure>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              The terminator is supposed to end transcription after reaching the end of the protein coding sequence <i>oahA</i> which should decrease energy demand.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDBA74;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#EA580C;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDBA74;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Build</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              This time, the whole fragment was ordered from TwistBiosciences to eliminate any assembly mistakes. The fragment was amplified using Q5-PCR
+              and cloned into the linearized <i>pK19</i> vector. This time, <i>pK19</i> was linearized with HindIII and BamHI.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDBA74;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#EA580C;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDBA74;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Test</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The assembled <i>pK19_lacI_oahA_TE</i> was tested by transforming it into <i>E. coli</i> and testing for positive colonies with cPCR after selection on Kan50 agar plates.
+              However, the gel electrophoresis of the PCR-products showed no positive results:
+            </p>
+            <figure class="gallery-col w-[50%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox(this)">
+          <img
+            src="assets/teams/5829/images/gel-fourthintegration.webp"
+            alt="gel"
+            class="w-full h-full object-cover rounded-md"
+          />
+          <figcaption class="mt-2 text-center text-gray-700 dark:text-gray-300 w-[150%]">
+            Expected length was 3642 bp -> no positive clones
+          </figcaption>
+            </figure>
+            </div>
+          </div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6  h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#FDBA74;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#EA580C;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#FDBA74;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Learn</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              We learned that adding a terminator alongside the <i>lac</i>-repressor system did not help with decreasing the metabolic burden on <i>E. coli</i>.
+              After some further literature research, we found that a possible problem could be the high copy number of <i>pK19</i> (~500).
+              In comparison, the expression vector <i>pEKEx2</i> we used in previous experiments only has a copy number of 30.
+              Possible solutions could be chossing a different integration vector with medium copy number for <i>E. coli</i> or directly electroporating
+              the assembly product into <i>C. glutamicum</i> for direct genome integration. Although not optimal due to low plasmid concentrations,
+              this would eliminate the need for a plasmid that is suitable not only for <i>C. glutamicum</i> but also for <i>E. coli</i>.
+              This will be tested in further experiments.
+            </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prevBtn4" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ‹
+    </button>
+    <button id="nextBtn4" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ›
+    </button>
+  </div>
+</section>
+</div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-2 mb-4 w-[95%] mx-auto">
+
+<!-- Carousel 3 -->
+<div class="text-center mb-12">
+<h2 id="chem" class="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-3 scroll-mt-24">Chemistry</h2>
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Carousel track -->
+    <div id="carousel5" class="overflow-hidden">
+      <div id="carouselTrack5" class="flex transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-start gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-8">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#F9A8D4;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#DB2777;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#F9A8D4;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Design</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify ml-8 mr-8 mb-2">
+              Oxalate ions can form soluble metal oxalato complexes with PGMs like platinum, predominately as [Pt(C₂O₄)₂]²⁻
+              [<a href="#Krishnamurty" class="hover:underline">Krishnamurty, 1961</a>].
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              To make our own claims about PGM yields from leaching with oxalic acid, we designed a simple experimental set-up
+              with varying parameters to determine the optimal conditions. For this, we used spent catalysts ground-up into
+              PGM dust (courtesy of Mairec) that was mixed with oxalic acid and heated up over an oil bath. The resulting solution
+              with the metal oxalato complexes was filtered and distilled. The samples were analyzed via inductively coupled plasma
+              optical emission spectroscopy (ICP-OES).
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6 max-h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#F9A8D4;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#DB2777;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#F9A8D4;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+              </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Build</h2>
+              </div>
+            <div class="flex items-center gap-[50px] ml-8 mr-8">
+            <p class="text-gray-900 dark:text-sky-200 text-justify">
+              The experiment was set up as follows: The PGM dust and the oxalic acid were deposited into a
+              three-neck round-bottom flask placed in an oil bath and solved in water. The leaching process
+              takes several hours, during which the oxalate ions form soluble complexes with the PGMs.
+            </p>
+            <div class="flex-shrink-0 w-1/5">
+          <img
+            src="assets/teams/5829/images/chemprocess.webp"
+            alt="Justice scale"
+            class="w-full object-cover rounded-md"
+          />
+          </div>
+            </div>
+            <div class="flex items-center gap-[50px] ml-8 mr-8">
+            <div class="flex-shrink-0 w-1/4">
+          <img
+            src="assets/teams/5829/images/chemprocess2.webp"
+            alt="Justice scale"
+            class="w-full object-cover rounded-md"
+          />
+            </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify">
+              Then, the solution is filtered to separate the complexes solved in the solution from the remaining
+              unsolved PGM dust components. This time is also used to heat up the oil bath to >100°C to evaporate
+              the water, leaving behind the desired metal oxalato complexes. This is done with the help of a reflux
+              cooler. The dry sample was then analyzed via ICP-OES.
+            </p>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6 max-h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#F9A8D4;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#DB2777;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#F9A8D4;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Test</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              The ICP-OES analysis offered the following results.
+            </p>
+            <figure class="gallery-col w-[60%] flex flex-col items-center justify-center mx-auto" onclick="openLightbox">
+          <img
+            src="assets/teams/5829/images/pgmmeasurement.webp"
+            alt="First growth curve"
+            class="w-full h-full object-cover rounded-md"
+          />
+            <figcaption class="mt-2 text-center text-gray-700">
+              PGM measurement of the three samples and reference via ICP-OES in <sup>mg</sup>&frasl;<sub>L</sub>
+            </figcaption>
+            </figure>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              In this simple set-up, it seems that no other PGMs than platinum were leached by the oxalic acid.
+              The leaching rate for Pt is relatively low compared to rates acquired from leaching cycles performed
+              with <i>A. niger</i> [37% <a href="#Malekian" class="hover:underline">Malekian, 2019</a>].
+            </p>
+            </div>
+          </div>
+        </div>
+
+      <!-- Card 4 -->
+      <div class="flex-shrink-0 w-full px-2 mr-2">
+          <div class="bg-sky-50 dark:bg-black shadow-lg rounded-lg p-6 flex items-center gap-6 h-[450px]">
+            <div class="flex-1 overflow-y-auto max-h-[400px] flex flex-col gap-4 pr-4 pt-4 pb-4">
+              <div class="flex items-center gap-4">
+              <div class="flex-shrink-0 w-[10%] flex items-center justify-center">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 513.156 513.156"
+             xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+             stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#F9A8D4;" d="M272.108,0.578l1.048,276h-272c10.216,132.028,121.352,236,256,236c141.384,0,256-114.612,256-256 C513.156,120.218,405.44,9.086,272.108,0.578z"></path>
+             <path style="fill:#DB2777;" d="M254.844,0.606C114.844,1.166,0,115.538,0,256.578c0,1.34,1.132,2.664,1.156,4h253.688V0.606z"></path> <path style="fill:#F9A8D4;" d="M273.156,284.578h5.688v-8V0.994c0-0.252-4.696-0.248-7.368-0.416l1.68,276h-272 c0.208,2.684,0.524,5.34,0.816,8H273.156z"></path> </g>
+              </svg>
+            </div>
+              <h2 class="text-2xl text-gray-900 dark:text-sky-50 font-bold mb-2">Learn</h2>
+              </div>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mb-2 ml-8 mr-8">
+              These first rudimentary cycles confirmed that we could leach platinum out of spent catalysts with oxalic acid.
+              Yet, it also proved that both the analysis of our samples as well as the complexity of the experimental set-up
+              to be more complicated than previously anticipated.
+            </p>
+            <p class="text-gray-900 dark:text-sky-200 text-justify mt-2 mb-2 ml-8 mr-8">
+              We drew the following conclusions:
+            </p>
+            <ul class="list-disc pl-6 mt-2 ml-8 mr-8">
+            <li class="text-gray-900 dark:text-sky-200 text-justify"> We needed to reach out to chemists in the field who could
+              provide necessary know-how on how and where we could analyze our samples.
+            </li>
+            <li class="text-gray-900 dark:text-sky-200 text-justify"> To improve the leaching yield, we should pretreat the
+              PGM dust. This started a lengthy process of literature research, which helped us finalize the process in theory.
+            </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prevBtn5" class="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ‹
+    </button>
+    <button id="nextBtn5" class="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-sky-800 dark:bg-sky-200 text-white dark:text-gray-900 p-2 rounded-full z-10">
+      ›
+    </button>
+  </div>
+</section>
+</div>
+
+
+
+<!-- Referenzen-->
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+  <div class="container mx-auto">
+    <div class="flex justify-center relative">
+      <div class="w-[75%] bg-white dark:bg-black shadow-lg p-6 flex items-center gap-6 rounded-lg">
+        <div>
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-sky-200 mb-4">
+        References
+        </h2>
+          <p id="Ray" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          1. Ray, D. et al. (2022). The soil bacterium, Corynebacterium glutamicum, from biosynthesis of value-added products to bioremediation: A master of many trades. Environmental Research, 213, 113622. URL: <a href="https://doi.org/10.1016/j.envres.2022.113622" target="_blank">https://doi.org/10.1016/j.envres.2022.113622</a>
+          </p>
+          <p id="Bakkes" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          2. Bakkes, P. J. et al. (2020). Improved pEKEx2-derived expression vectors for tightly controlled production of recombinant proteins in Corynebacterium glutamicum. Plasmid, 112, 102540. URL: <a href="https://doi.org/10.1016/j.plasmid.2020.102540" target="_blank">https://doi.org/10.1016/j.plasmid.2020.102540</a>
+          </p>
+          <p id="lange" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          3. Lange, J. et al. (2018). Harnessing novel chromosomal integration loci to utilize an organosolv-derived hemicellulose fraction for isobutanol production with engineered Corynebacterium glutamicum. Microb Biotechnol., 11(1), 257-263. URL: <a href="https://doi.org/10.1111/1751-7915.12879" target="_blank">https://doi.org/10.1111/1751-7915.12879</a>
+          </p>
+          <p id="bell" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          4. Bell, L. (2001). The Lac repressor: a second generation of structural and functional studies. Current Opinion in Structural Biology, 11, 1, 19-25. URL: <a href="https://doi.org/10.1016/S0959-440X(00)00180-9" target="_blank">https://doi.org/10.1016/S0959-440X(00)00180-9</a>
+          </p>
+          <p id="Krishnamurty" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          5. Krishnamurty, K. V. et al. (1961). The Chemistry of the Metal Oxalato Complexes. Chem. Rev., 61, 213-246. URL: <a href="https://doi.org/10.1021/cr60211a001" target="_blank">https://doi.org/10.1021/cr60211a001</a>
+          </p>
+          <p id="Malekian" class="text-sm text-justify text-gray-900 dark:text-sky-200 max-w-[90%] my-2 scroll-mt-24">
+          6. Malekian, H. et al. (2019). Investigation of platinum recovery from a spent refinery catalyst with a hybrid of oxalic acid produced by Aspergillus niger and mineral acids. Waste Manag, 85, 264–271. URL: <a href="https://doi.org/10.1016/j.wasman.2018.12.045" target="_blank">https://doi.org/10.1016/j.wasman.2018.12.045</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Links -->
+<div>
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+</a>
+<p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+<div class="flex space-x-4">
+<a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+</a>
+<a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+</a>
+</div>
+</div>
+<!-- Quick links -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+<li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+<li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+<li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Members</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+</ul>
+</div>
+<!-- Kontakt -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+<ul class="space-y-3">
+<li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Datenschutz -->
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+</div>
+</div>
+</footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+const track = document.getElementById('carouselTrack');
+const cards = track.children;
+let index = 0;
+
+function updateSlide() {
+  const cardWidth = cards[0].offsetWidth + 8;
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  index = (index + 1) % cards.length;  // wrap around forward
+  updateSlide();
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  index = (index - 1 + cards.length) % cards.length; // wrap around backward
+  updateSlide();
+});
+
+window.addEventListener('resize', updateSlide);
+updateSlide();
+
+const track2 = document.getElementById('carouselTrack2');
+const cards2 = track2.children;
+let index2 = 0;
+
+function updateSlide2() {
+  const cardWidth = cards2[0].offsetWidth + 8;
+  track2.style.transform = `translateX(-${index2 * cardWidth}px)`;
+}
+
+document.getElementById('nextBtn2').addEventListener('click', () => {
+  index2 = (index2 + 1) % cards2.length;  // wrap around forward
+  updateSlide2();
+});
+
+document.getElementById('prevBtn2').addEventListener('click', () => {
+  index2 = (index2 - 1 + cards2.length) % cards.length; // wrap around backward
+  updateSlide2();
+});
+
+window.addEventListener('resize', updateSlide2);
+updateSlide2();
+
+const track3 = document.getElementById('carouselTrack3');
+const cards3 = track3.children;
+let index3 = 0;
+
+function updateSlide3() {
+  const cardWidth = cards3[0].offsetWidth + 8;
+  track3.style.transform = `translateX(-${index3 * cardWidth}px)`;
+}
+
+document.getElementById('nextBtn3').addEventListener('click', () => {
+  index3 = (index3 + 1) % cards3.length;  // wrap around forward
+  updateSlide3();
+});
+
+document.getElementById('prevBtn3').addEventListener('click', () => {
+  index3 = (index3 - 1 + cards3.length) % cards.length; // wrap around backward
+  updateSlide3();
+});
+
+window.addEventListener('resize', updateSlide3);
+updateSlide3();
+
+const track4 = document.getElementById('carouselTrack4');
+const cards4 = track4.children;
+let index4 = 0;
+
+function updateSlide4() {
+  const cardWidth = cards4[0].offsetWidth + 8;
+  track4.style.transform = `translateX(-${index4 * cardWidth}px)`;
+}
+
+document.getElementById('nextBtn4').addEventListener('click', () => {
+  index4 = (index4 + 1) % cards4.length;  // wrap around forward
+  updateSlide4();
+});
+
+document.getElementById('prevBtn4').addEventListener('click', () => {
+  index4 = (index4 - 1 + cards4.length) % cards.length; // wrap around backward
+  updateSlide4();
+});
+
+window.addEventListener('resize', updateSlide4);
+updateSlide4();
+
+const track5 = document.getElementById('carouselTrack5');
+const cards5 = track5.children;
+let index5 = 0;
+
+function updateSlide5() {
+  const cardWidth = cards5[0].offsetWidth + 8;
+  track5.style.transform = `translateX(-${index5 * cardWidth}px)`;
+}
+
+document.getElementById('nextBtn5').addEventListener('click', () => {
+  index5 = (index5 + 1) % cards5.length;  // wrap around forward
+  updateSlide5();
+});
+
+document.getElementById('prevBtn5').addEventListener('click', () => {
+  index5 = (index5 - 1 + cards5.length) % cards5.length; // wrap around backward
+  updateSlide5();
+});
+
+window.addEventListener('resize', updateSlide5);
+updateSlide5();
+
+
+
+
+  const tabs = document.querySelectorAll('.tab-nav p');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active-tab'));
+      panels.forEach(p => (p.style.display = 'none'));
+
+      tab.classList.add('active-tab');
+      panels[index].style.display = 'block';
+    });
+  });
+
+ const images = document.querySelectorAll('.gallery-col img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox if clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+    }
+  });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+
+    </script>
+</body>
+</html>

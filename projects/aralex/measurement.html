@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement | Stuttgart - iGEM 2025</title>
+<link rel="icon" type="image/png" href="assets/teams/5829/images/logo-icon.webp">
+<script src="static/tailwind.min.css"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#64748b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="static/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+i[class^="ri-"], i[class*=" ri-"] {
+  font-size: 1.2rem;     
+  line-height: 1;        
+  vertical-align: middle; 
+}
+
+body {
+font-family: 'Inter', sans-serif;
+}
+
+.gallery-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.gallery-col {
+float: center;
+width: 25%;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.gallery-col img {
+width: 100%;
+border-radius: 8px;
+transition: transform 0.3s ease;
+}
+
+.gallery-col img:hover {
+transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+display: none;
+position: fixed;
+z-index: 9999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+margin: auto;
+display: block;
+max-width: 80%;
+max-height: 80%;
+border-radius: 8px;
+}
+
+.close {
+position: absolute;
+top: 20px;
+right: 35px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+}
+</style>
+<script>
+tailwind.config = {
+darkMode: 'class',
+};
+if (localStorage.getItem("darkmode") === "active") {
+  document.documentElement.classList.add("dark");
+}
+</script>
+<script src="static/darkmode.js" defer></script>
+</head>
+<body class="bg-sky-200 dark:bg-gray-900 min-h-screen">
+<!-- Reiter -->
+<header class="sticky top-0 z-50 bg-sky-100 dark:bg-black shadow-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu-light.webp" alt="Home" class="h-20 w-auto block dark:hidden">
+    <img src="assets/teams/5829/images/logo-neu-dark.webp" alt="Home" class="h-20 w-auto hidden dark:block">
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index_aralex.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Home</a>
+<div class="relative" id="projectDropdown">
+<button class="text-sky-700 hover:text-sky-700 dark:text-gray-200 dark:hover:text-gray-700 transition-colors" id="projectButton">
+Project
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="projectMenu">
+<a href="project.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Project</a>
+<a href="notebook.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Lab documentation</a>
+<a href="contribution.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Contribution</a>
+<a href="engineering.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Engineering success</a>
+<a href="measurement.html" class="block px-4 py-2 text-sky-700 rounded-lg hover:bg-sky-50 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-sky-100">Measurement</a>
+<a href="modeling.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Modeling</a>
+<a href="results.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Results</a>
+</div>
+</div>
+<div class="relative" id="engagementDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="engagementButton">
+Human Practices
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="engagementMenu">
+<a href="human-practices.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Human Practices</a>
+<a href="education.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Education</a>
+</div>
+</div>
+<div class="relative" id="groupsDropdown">
+<button class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors" id="groupsButton">
+Team
+<i class="ri-arrow-down-s-line ml-1"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-black rounded-lg shadow-lg py-2 hidden" id="groupsMenu">
+<a href="students.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Members</a>
+<a href="groups.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Subgroups</a>
+<a href="attributions.html" class="block px-4 py-2 text-gray-700 rounded-lg hover:bg-sky-50 dark:text-gray-300 dark:hover:bg-gray-900 dark:hover:text-sky-100">Attributions</a>
+</div>
+</div>
+<a href="contact.html" class="text-gray-700 hover:text-sky-700 dark:text-sky-200 dark:hover:text-gray-700 transition-colors">Contact</a>
+<button id="darkToggle" onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-sky-100 text-gray-700 hover:bg-gray-900 hover:text-sky-100 rounded dark:text-sky-200 dark:bg-black dark:hover:bg-sky-100 dark:hover:text-gray-700">
+Dark Mode
+</button>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</header>
+<!-- Überschrift -->
+<section class="bg-sky-200 dark:bg-gray-900 py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">Measurement</h1>
+<p class="text-lg text-gray-600 dark:text-gray-400">Over the course of nearly six months, we have been developing a new (semi-) analytical assay
+for the detection and quantification of oxalate in CGXII cell medium samples. Although the assay is
+not yet fully finalized and further refinements are possible, significant progress has been achieved,
+enabling reliable measurement of oxalate in CGXII medium samples obtained from our reactor runs. </p>
+</div>
+</div>
+</section>
+<body>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-28">Our RevION Assay</h2>
+  <div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mb-4">
+    <div>
+    <h2 class="w-full text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        <i>RevION, a new way to quantify Oxalate in CGXII media Samples.</i>
+    </h2>
+    </div>
+  <div class="flex flex-col items-center gap-4">
+    <p class="text-gray-900 bg-sky-100 dark:text-sky-200 dark:bg-black p-4 rounded-lg text-justify">
+          Our final version of the RevION assay is based on the indirect quantification of oxalate in our
+            CGXII medium samples via the detection and measurement of calcium. The procedure starts with an
+            initial precipitation step (after cell removal) of the oxalate present in our cell culture samples through
+            the addition of calcium chloride in a defined excess, thus providing the necessary calcium ions for the
+            formation of calcium oxalate complexes. Followed by a centrifugation step, the supernatant,
+            containing the unbound excess of calcium ions, is transferred, and subjected to further analysis. After
+            a series of dilution steps, the supernatant samples, along with their corresponding blanks (which did
+            not undergo the precipitation step), are loaded in triplicates onto a standard polystyrene 96-well plate.
+      </p>
+  </div>
+    <div class="flex items-center gap-4">
+    <!-- text -->
+    <div>
+      <p class="text-gray-900 bg-sky-100 dark:text-sky-200 dark:bg-black p-4 rounded-lg text-justify mb-4">
+          Subsequently, a defined amount of our o-Cresolphthalein Complexone (oCPC, also known as
+            Methalphthalein) is added. oCPC forms stable violet-red complexes with the present calcium, whose
+            absorbance intensity is directly proportional to the calcium concentration in the analyzed well.
+            Measurements are then performed via TECAN Spark plate reader absorption analysis in a range from
+            500-580nm, with its peak absorption at 572nm, thus providing high-precision absorbance data
+            output. By subtracting the measured and blanked excess calcium concentration from the initially
+            added calcium concentration through the precipitation, the effective oxalate content of the sample
+            can be recalculated.
+      </p>
+      <p class="text-gray-900 bg-sky-100 dark:text-sky-200 dark:bg-black p-4 rounded-lg text-justify mb-4">
+          The final mathematical framework, modeled in Microsoft Excel, is composed of four
+        main submodules that together enable the precise and automated calibration of the assay.
+      <ul class="list-decimal pl-6 mt-2 text-gray-900 bg-sky-100 dark:text-sky-200 dark:bg-black p-4 rounded-lg text-justify">
+        <li><strong>Calibration Standard Design</strong>
+            <p class="text-justify">
+            The first submodule defines the calibration standard set. Here, the concentrations, dilution
+            factors, and corresponding reagent volumes are systematically calculated and optimized to
+            achieve a consistent and accurate set of calibration results across the entire target range.
+            </p>
+        </li>
+        <li class="mt-2"><strong> Sample Spiking and Precipitation Parameters </strong>
+            <p class="text-justify">
+            The second submodule incorporates all parameters related to sample spiking and the calcium
+            chloride (CaCl₂) precipitation step. It ensures that the correct stoichiometric excess of calcium
+            ions is provided for efficient oxalate complex formation and subsequent quantification.
+            </p>
+        </li>
+        <li class="mt-2"><strong> oCPC Complexation and Plate Configuration </strong>
+            <p class="text-justify">
+            The third submodule models and optimizes the conditions relevant to oCPC complex
+            formation and the 96-well plate setup. This includes calculations for reagent volumes and
+            concentrations, reaction ratios, and absorbance normalization, ensuring compatibility with the
+            TECAN Spark® plate reader’s operational and linear range.
+            </p>
+        </li>
+        <li class="mt-2"><strong> Quality Control and Evaluation  </strong>
+            <p class="text-justify">
+            The fourth and final submodule performs a quality control (QC) and data evaluation prior to
+            sample result analysis. It assesses calibration performance, linearity (R2), and statistical
+            accuracy metrics such as residuals and variances throughout the protocol and measurement,
+            thereby validating the system before proceeding with actual sample evaluation.
+            </p>
+        </li>
+      </ul>
+      </p>
+    </div>
+    <!-- image -->
+    <div class="gallery-col flex-shrink-0 w-[50%] mt-2 mb-2" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/revionworkflow.webp"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+    </div>
+  <div class="flex flex-col items-center gap-6">
+    <p class="text-gray-900 bg-sky-100 dark:text-sky-200 dark:bg-black p-4 rounded-lg text-justify mt-2">
+          After careful evaluation and validation of the calibration set output, the analysis
+        continues with the sample measurements. Each sample and its corresponding blank have
+        been parallelly processed following the exact same procedure as the calibration standards to
+        ensure methodological consistency. After blank correction of the raw absorbance values, the
+        adjusted data are inserted into the established calibration equation, which then provides the
+        corresponding oxalic acid concentration for each sample under the conditions the QC analysis
+        provided.
+      </p>
+  </div>
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mt-4 mb-4">
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-28">Proof of concept</h2>
+<div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mb-4">
+<div class="flex flex-col items-center">
+    <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        Throughout the course of our research and assay development, several major breakthroughs
+        were achieved. One of the most significant milestones was the first successful detection and
+        quantification of oxalate within the millimolar concentration range. The graph displayed below
+        illustrates a representative test using standards with known oxalate concentrations created in CGXII
+        medium as their matrix. It compares both the expected values with those measured by our RevION
+        assay.
+      </p>
+    <!-- image -->
+    <div class="gallery-col flex-shrink-0 w-[50%] mt-2 mb-2" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/oxalate-calibrationcurve.avif"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+    <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        The results clearly demonstrate that the assay´s core system and workflow functions
+        effectively and is fully operational. We are now in the process of further optimizing the RevION method
+        to enhance its precision and fully exploit its analytical potential. As noted earlier, the mean absolute
+        error (MAE) of this calibration set was approximately 6,82%, which is an excellent outcome for the first
+        successful validation. Moreover, the calibration equation achieved an R2 value of 0,9692, indicating
+        that the model describes oxalate concentrations with a precision of roughly 97% relative to the
+        measured absorbance data.
+      </p>
+    <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        Interestingly, this calibration also provided a crucial insight that significantly advanced our
+        understanding of the system’s chemistry. In calibration standard 11 (designed as a blank containing
+        no oxalate) a measurable signal was detected, revealing that not only oxalate but also phosphate
+        species present in the CGXII medium were forming complexes with calcium. This unexpected
+        observation marked a turning point, leading to the ongoing resolution of phosphate-induced
+        interferences within the system. This standard blank was expected to show a concentration of
+        approximately 13.09 mM, corresponding to the effective phosphate concentration in the CGXII
+        medium. However, the measured value was only 5.24 mM, indicating that the calcium–phosphate
+        complexation efficiency is relatively low. This finding highlights the poor complexing rate of
+        phosphate with calcium compared to oxalate and provides key evidence for the instability of calcium
+        phosphate complexes under the given assay conditions, an aspect that will be discussed in greater
+        detail in the following section.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        To investigate this further, we performed an additional test in the micromolar range, including
+        two calibration sets, one consisting only of CGXII medium and ddH₂O, to specifically assess the
+        calcium phosphate complex formation. The results yielded a precise calibration equation for different
+        phosphate concentrations in the CGXII medium. Although a direct comparison graph (as shown in the
+        millimolar example) could not be constructed due to issues with the oxalate calibration, the data
+        confirmed that oxalate and phosphate can be independently calibrated. Moreover, it demonstrated
+        that scaling the system from the millimolar to the micromolar range does not significantly alter the
+        variance between expected and measured oxalate concentrations.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        This can be attributed to the high stability and precision of calcium–oxalate complexation,
+        which reaches up to 99.96% complexing rates at 1mM Ca concentration, compared to phosphate
+        complexation, which peaks at roughly 48% and remains highly unstable particularly at lower
+        concentrations as shown in the graphic below. Consequently, as both analyte and phosphate levels
+        decrease, the nucleation rate of phosphate diminishes, reducing the standard error and the
+        phosphate-induced deviations, and thus enabling more reliable analytical outputs.
+      </p>
+      <!-- image -->
+    <div class="gallery-col flex-shrink-0 w-[50%] mt-2 mb-2" onclick="openLightbox(this)">
+      <img
+      src="assets/teams/5829/images/removalkinetics.avif"
+      class="w-full h-full object-cover rounded-md"
+      />
+    </div>
+      <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        Overall, the assay performs with remarkable consistency in the millimolar range, achieving a
+        mean match rate of about 93.18%. When scaled into the micromolar range using samples with low
+        concentrations and a maximum spiking concentration of 5 mM theoretically, the reduced phosphate
+        nucleation rate is expected to further enhance the RevIONs precision beyond this benchmark. Having
+        demonstrated both the chemical and mathematical reliability of the RevION system, it becomes
+        evident that the accuracy of the final analysis predominantly depends on procedural precision. Even
+        minor pipetting inaccuracies, decalibrated instruments, or slight deviations in pH or reagent
+        concentrations can accumulate and visibly impact the assays output which will be reflected in the
+        quality control (QC) results.
+      </p>
+      <p class="text-gray-900 dark:text-sky-200 px-4 rounded-lg text-justify mt-2">
+        With continued refinement of pipetting accuracy, blanking procedures, and reagent handling,
+        the RevION assay is expected to shift further into the optimal analytical zone, unlocking the system’s
+        complete potential and setting a new standard for accessible analytical biochemistry, where
+        precision and simplicity converge.
+      </p>
+</div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-sky-50 scroll-mt-28">Conclusion</h2>
+<div class="flex justify-center">
+  <div class="w-[95%] bg-sky-200 dark:bg-gray-900 rounded-lg p-6 flex flex-col">
+    <hr class="border-t-4 border-indigo-300 dark:border-indigo-600 mb-4">
+<div class="flex flex-col items-center">
+    <p class="text-gray-900 dark:text-sky-200 p-4 rounded-lg text-justify mt-2">
+        Over the course of several months, the development of our (semi-)analytical RevION assay has
+        evolved from a concept into a versatile analytical tool for the detection and quantification of oxalate
+        in CGXII cell media samples. Despite the challenges encountered during the process, ranging from
+        matrix-induced interferences to achieving measurement linearity and precise scalability, the assay
+        has advanced through systematic experimentation, quantitative modeling, and iterative refinement.
+      </p>
+    <p class="text-gray-900 dark:text-sky-200 p-4 rounded-lg text-justify mt-2">
+        A major breakthrough was achieved through the transition from direct oxalate quantification to
+        an indirect, calcium-based detection method which uses the ability of oCPC to complexate with
+        calcium ions, enabling reliable colorimetric analysis with high reproducibility rates. Critical analytical
+        limitations, such as the phosphate’s interference in measurements, were met with innovative
+        solutions, such as the selective phosphate precipitation and model-based absorption correction
+        approaches. Furthermore, the assay’s mathematical framework was optimized to ensure scalability
+        across several orders of magnitude, successfully adapting from the millimolar to the micromolar
+        concentration range without significant loss in precision.
+      </p>
+    <p class="text-gray-900 dark:text-sky-200 p-4 rounded-lg text-justify mt-2">
+        Equally important, attention to the plate reader’s linear detection zone and optimized dilution
+        strategies minimized instrumental bias and variance, resulting in a stable and reliable analytical
+        workflow. Together, these developments not only demonstrate the assay’s analytical strength but
+        also its adaptability to diverse experimental conditions and sample matrices.
+        Finally, the cost per sample was approximately €0.18, including both the samples and their
+        corresponding blanks which are run in triplicates, as well as the expenses for all needed reagent
+        stock solutions and the 96-well microplate. This low cost per sample highlights the assay’s
+        accessibility and suitability for routine, high-throughput applications.
+        The RevION assay now stands as far more than just another analytical tool, it is the
+        embodiment of persistence, innovation, and the belief that precision science can be made
+        accessible to all in need of it. With continued refinements, such as automated phosphate correction
+        and standardized calibration routines, it is poised to become a reliable and affordable method for the
+        quantification of oxalate in CGXII medium across diverse biological systems. Designed around
+        simplicity and accuracy, the assay relies only on low-cost, widely available reagents and standard
+        laboratory equipment, supported by an intuitive mathematical framework designed in excel that
+        transforms complexity into clarity.
+      </p>
+    <p class="text-gray-900 dark:text-sky-200 p-4 rounded-lg text-justify mt-2">
+        What once began as a challenge born from limitation has evolved into a system that empowers
+        others who face the same constraints we once did. The RevION assay breaks down barriers between
+        resource-rich and resource-limited laboratories, between theory and application, between
+        uncertainty and understanding. It stands as a symbol of how science, driven by curiosity and
+        determination, can create not only precise and reproducible results, but also open doors for future
+        discoveries.
+      </p>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+</body>
+
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Links -->
+<div>
+<a href="../../index.html" class="text-2xl font-['Pacifico'] text-primary">
+    <img src="assets/teams/5829/images/logo-neu.avif" alt="Home" class="h-24 w-auto">
+</a>
+<p class="text-violet-50 font-semibold mb-6">Find us here:</p>
+<div class="flex space-x-4">
+<a href="https://teams.igem.org/5829" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/igem-logo.webp" alt="Logo" class="w-6 h-6" />
+</a>
+<a href="https://www.instagram.com/igem_stuttgart/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+  <img src="assets/teams/5829/images/instagram-logo-2016-svg.webp" alt="Logo" class="w-6 h-6" />
+</a>
+</div>
+</div>
+<!-- Quick links -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="index_aralex.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="project.html" class="text-gray-400 hover:text-violet-50 transition-colors">Project</a></li>
+<li><a href="notebook.html" class="text-gray-400 hover:text-violet-50 transition-colors">Labdocumentation</a></li>
+<li><a href="groups.html" class="text-gray-400 hover:text-violet-50 transition-colors">Groups</a></li>
+<li><a href="students.html" class="text-gray-400 hover:text-violet-50 transition-colors">Member</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-violet-50 transition-colors">Contact</a></li>
+</ul>
+</div>
+<!-- Kontakt -->
+<div>
+<h3 class="text-violet-50 font-semibold mb-6">Direct Contact</h3>
+<ul class="space-y-3">
+<li>
+<a href="mailto:synbioteam@ibmg.uni-stuttgart.de" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>synbioteam@ibmg.uni-stuttgart.de</span>
+</a>
+</li>
+<li>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4799dc403b966fb1:0xfdc3e256ffac2fff?sa=X&ved=1t:8290&ictx=111" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start" target="_blank">
+<i class="ri-home-3-line mr-3 mt-1"></i>
+<span>Allmandring 31, 70569 Stuttgart</span>
+</a>
+</li>
+<li>
+<a href="tel:071168564574" class="text-gray-400 hover:text-sky-50 transition-colors flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>0711 68564574</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Datenschutz -->
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">© 2025 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+<p class="mt-4 text-gray-400 hover:text-sky-50 transition-colors">The repository used to create this website is available at <a href="https://gitlab.igem.org/2025/stuttgart">gitlab.igem.org/2025/stuttgart</a>.</p>
+</div>
+</div>
+</footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ===== DESKTOP DROPDOWNS =====
+      const projectButton = document.getElementById('projectButton');
+      const projectMenu = document.getElementById('projectMenu');
+      const groupsButton = document.getElementById('groupsButton');
+      const groupsMenu = document.getElementById('groupsMenu');
+      const engagementButton = document.getElementById('engagementButton');
+      const engagementMenu = document.getElementById('engagementMenu');
+
+      projectButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+
+      projectButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      groupsButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+      });
+         
+      groupsButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        groupsMenu.classList.toggle('hidden');
+        projectMenu.classList.add('hidden');
+        engagementMenu.classList.add('hidden');
+        }
+      });
+
+      engagementButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        engagementMenu.classList.toggle('hidden');
+        groupsMenu.classList.add('hidden');
+        projectMenu.classList.add('hidden');
+      });
+            
+      engagementButton.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+        event.stopPropagation();
+        projectMenu.classList.add('hidden');
+        groupsMenu.classList.add('hidden');
+        engagementMenu.classList.toggle('hidden');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!projectButton.contains(e.target) && !projectMenu.contains(e.target)) {
+          projectMenu.classList.add('hidden');
+        }
+        if (!groupsButton.contains(e.target) && !groupsMenu.contains(e.target)) {
+          groupsMenu.classList.add('hidden');
+        }
+        if (!engagementButton.contains(e.target) && !engagementMenu.contains(e.target)) {
+          engagementMenu.classList.add('hidden');
+        }
+      });
+
+      const images = document.querySelectorAll('.gallery-col img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close lightbox if clicking outside the image
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+    }
+  });
+
+      // ===== MOBILE MENU TOGGLE =====
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.createElement('div');
+      mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+
+      // Define submenu toggle BEFORE use
+      window.toggleMobileSubmenu = function (button) {
+        const submenu = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        submenu.classList.toggle('hidden');
+        icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      };
+
+      mobileMenu.innerHTML = `
+        <div class="flex justify-between items-center p-4 border-b">
+          <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+          <button class="close-menu w-10 h-10 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 text-gray-900 font-medium">Home</a></li>
+            <li><a href="#" class="block py-2 text-gray-500">Projects</a></li>
+            <li class="relative">
+              <button class="flex items-center justify-between w-full py-2 text-gray-500" onclick="toggleMobileSubmenu(this)">
+                <span>Groups</span>
+                <i class="ri-arrow-down-s-line transition-transform duration-200"></i>
+              </button>
+              <ul class="hidden pl-4 space-y-2 mt-2">
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">View Groups</a></li>
+                <li><a href="#" class="block py-2 text-gray-500 hover:text-primary">Students</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="block py-2 text-gray-500">Contact</a></li>
+          </ul>
+        </nav>
+      `;
+
+      document.body.appendChild(mobileMenu);
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+      });
+
+      mobileMenu.querySelector('.close-menu').addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+      });
+    });
+    </script>
+</body>
+</html>
